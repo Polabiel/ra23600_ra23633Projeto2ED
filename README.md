@@ -55,3 +55,19 @@ MoverProximo()
 MoverAnterior()
 ListarTodos()
 SalvarEmArquivo(string caminho)
+🧼 Regras para Submissão
+📦 Enviar apenas arquivos essenciais (.cs, .sln, .resx etc.)
+
+❌ Não incluir as pastas bin/, obj/, .vs/
+
+🗂️ Nome do ZIP: RA1_RA2_Projeto1ED.zip
+
+⚠️ Observação Importante
+🔴 Este projeto não deve conter nenhuma referência a "alunos" ou funcionalidades de cadastro de alunos.
+
+✔️ O foco deve ser exclusivamente no Jogo da Forca!
+
+🧠 Créditos
+Desenvolvido como parte da disciplina de Estrutura de Dados - 2025
+👨‍💻 Aluno: Gabriel Oliveira
+📅 Data: 04/05/2025
