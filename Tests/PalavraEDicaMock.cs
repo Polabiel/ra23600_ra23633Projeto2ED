@@ -123,4 +123,3 @@ public class ListaDuplaTests
         Assert.AreEqual("Banana", tras[1].Palavra);
     }
 }
-}
