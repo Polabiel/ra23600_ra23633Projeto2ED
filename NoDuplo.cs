@@ -1,5 +1,4 @@
 ﻿using System;
-
 public class NoDuplo<Dado> where Dado : IComparable<Dado>, IRegistro                                      
 {
   NoDuplo<Dado> ant;
@@ -36,6 +35,5 @@ public class NoDuplo<Dado> where Dado : IComparable<Dado>, IRegistro
     get => prox;
     set => prox = value;
   }
-
 }
 
