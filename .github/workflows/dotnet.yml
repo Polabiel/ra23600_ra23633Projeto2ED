@@ -1,0 +1,23 @@
+name: .NET Framework Build and Test
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET Framework
+      uses: microsoft/setup-msbuild@v1
+    - name: Restore NuGet packages
+      run: nuget restore
+    - name: Build
+      run: msbuild /p:Configuration=Release
+    - name: Test
+      run: vstest.console.exe **\Tests.dll
