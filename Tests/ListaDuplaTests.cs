@@ -1,19 +1,18 @@
 ﻿using apListaLigada;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-
-internal class PalavraEDicaMock : IComparable<PalavraEDicaMock>, IRegistro
+internal class ListaDuplaTestItem : IComparable<ListaDuplaTestItem>, IRegistro
 {
     public string Palavra { get; set; }
     public string Dica { get; set; }
 
-    public PalavraEDicaMock(string palavra, string dica)
+    public ListaDuplaTestItem(string palavra, string dica)
     {
         Palavra = palavra;
         Dica = dica;
     }
 
-    public int CompareTo(PalavraEDicaMock other)
+    public int CompareTo(ListaDuplaTestItem other)
     {
         return string.Compare(Palavra, other.Palavra, StringComparison.Ordinal);
     }
@@ -28,7 +27,7 @@ public class ListaDuplaTests
     [TestMethod]
     public void TestaListaVazia()
     {
-        var lista = new ListaDupla<PalavraEDicaMock>();
+        var lista = new ListaDupla<ListaDuplaTestItem>();
         Assert.IsTrue(lista.EstaVazia);
         Assert.AreEqual(0, lista.QuantosNos);
     }
@@ -36,10 +35,10 @@ public class ListaDuplaTests
     [TestMethod]
     public void TestaInserirEmOrdem()
     {
-        var lista = new ListaDupla<PalavraEDicaMock>();
-        var p1 = new PalavraEDicaMock("Banana", "Fruta amarela");
-        var p2 = new PalavraEDicaMock("Abacate", "Fruta verde");
-        var p3 = new PalavraEDicaMock("Caju", "Fruta do nordeste");
+        var lista = new ListaDupla<ListaDuplaTestItem>();
+        var p1 = new ListaDuplaTestItem("Banana", "Fruta amarela");
+        var p2 = new ListaDuplaTestItem("Abacate", "Fruta verde");
+        var p3 = new ListaDuplaTestItem("Caju", "Fruta do nordeste");
 
         lista.InserirEmOrdem(p1);
         lista.InserirEmOrdem(p2);
@@ -54,20 +53,20 @@ public class ListaDuplaTests
     [TestMethod]
     public void TestaExiste()
     {
-        var lista = new ListaDupla<PalavraEDicaMock>();
-        var p1 = new PalavraEDicaMock("Banana", "Fruta amarela");
+        var lista = new ListaDupla<ListaDuplaTestItem>();
+        var p1 = new ListaDuplaTestItem("Banana", "Fruta amarela");
         lista.InserirEmOrdem(p1);
 
-        Assert.IsTrue(lista.Existe(new PalavraEDicaMock("Banana", "")));
-        Assert.IsFalse(lista.Existe(new PalavraEDicaMock("Maçã", "")));
+        Assert.IsTrue(lista.Existe(new ListaDuplaTestItem("Banana", "")));
+        Assert.IsFalse(lista.Existe(new ListaDuplaTestItem("Maçã", "")));
     }
 
     [TestMethod]
     public void TestaRemover()
     {
-        var lista = new ListaDupla<PalavraEDicaMock>();
-        var p1 = new PalavraEDicaMock("Banana", "Fruta amarela");
-        var p2 = new PalavraEDicaMock("Abacate", "Fruta verde");
+        var lista = new ListaDupla<ListaDuplaTestItem>();
+        var p1 = new ListaDuplaTestItem("Banana", "Fruta amarela");
+        var p2 = new ListaDuplaTestItem("Abacate", "Fruta verde");
         lista.InserirEmOrdem(p1);
         lista.InserirEmOrdem(p2);
 
@@ -80,23 +79,23 @@ public class ListaDuplaTests
     [TestMethod]
     public void TestaIndexador()
     {
-        var lista = new ListaDupla<PalavraEDicaMock>();
-        var p1 = new PalavraEDicaMock("Banana", "Fruta amarela");
-        var p2 = new PalavraEDicaMock("Abacate", "Fruta verde");
+        var lista = new ListaDupla<ListaDuplaTestItem>();
+        var p1 = new ListaDuplaTestItem("Banana", "Fruta amarela");
+        var p2 = new ListaDuplaTestItem("Abacate", "Fruta verde");
         lista.InserirEmOrdem(p1);
         lista.InserirEmOrdem(p2);
 
         Assert.AreEqual("Abacate", lista[0].Palavra);
-        lista[0] = new PalavraEDicaMock("Ameixa", "Fruta roxa");
+        lista[0] = new ListaDuplaTestItem("Ameixa", "Fruta roxa");
         Assert.AreEqual("Ameixa", lista[0].Palavra);
     }
 
     [TestMethod]
     public void TestaInserirAposFim()
     {
-        var lista = new ListaDupla<PalavraEDicaMock>();
-        var p1 = new PalavraEDicaMock("Banana", "Fruta amarela");
-        var p2 = new PalavraEDicaMock("Caju", "Fruta do nordeste");
+        var lista = new ListaDupla<ListaDuplaTestItem>();
+        var p1 = new ListaDuplaTestItem("Banana", "Fruta amarela");
+        var p2 = new ListaDuplaTestItem("Caju", "Fruta do nordeste");
         lista.InserirAposFim(p1);
         lista.InserirAposFim(p2);
 
@@ -108,9 +107,9 @@ public class ListaDuplaTests
     [TestMethod]
     public void TestaListagemParaFrenteEParaTras()
     {
-        var lista = new ListaDupla<PalavraEDicaMock>();
-        var p1 = new PalavraEDicaMock("Banana", "Fruta amarela");
-        var p2 = new PalavraEDicaMock("Caju", "Fruta do nordeste");
+        var lista = new ListaDupla<ListaDuplaTestItem>();
+        var p1 = new ListaDuplaTestItem("Banana", "Fruta amarela");
+        var p2 = new ListaDuplaTestItem("Caju", "Fruta do nordeste");
         lista.InserirAposFim(p1);
         lista.InserirAposFim(p2);
 
