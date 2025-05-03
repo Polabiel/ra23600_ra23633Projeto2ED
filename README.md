@@ -55,6 +55,7 @@ MoverProximo()
 MoverAnterior()
 ListarTodos()
 SalvarEmArquivo(string caminho)
+```
 🧼 Regras para Submissão
 📦 Enviar apenas arquivos essenciais (.cs, .sln, .resx etc.)
 
