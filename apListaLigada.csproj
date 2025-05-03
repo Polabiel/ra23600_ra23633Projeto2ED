@@ -52,9 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C:/Users/atacc/OneDrive/Documentos/apForca/Tests/\ListaDuplaTests.cs">
-      <Link>ListaDuplaTests.cs</Link>
-    </Compile>
+    <Compile Include="Tests\ListaDuplaTests.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
