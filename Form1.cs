@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
+// ra23600 ra23305
+// Gabriel - Andrew
 namespace apListaLigada
 {
   /// <summary>
