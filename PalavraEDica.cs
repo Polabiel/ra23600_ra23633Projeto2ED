@@ -1,7 +1,6 @@
-﻿using System;
-// ...existing code...
-// Nenhuma modificação necessária
-// ...existing code...
+// ra23600 ra23305
+// Gabriel - Andrew
+using System;
 namespace apListaLigada
 {
     internal class PalavraEDica : IComparable<PalavraEDica>, IRegistro
