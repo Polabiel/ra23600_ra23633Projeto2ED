@@ -122,5 +122,62 @@ namespace apListaLigada
             }
             return lista;
         }
+
+        // Pesquisa binária: retorna índice se existir, -1 se não existir
+        public int Existe(string palavra)
+        {
+            int ini = 0, fim = qtosDados - 1;
+            while (ini <= fim)
+            {
+                int meio = (ini + fim) / 2;
+                int cmp = string.Compare(dados[meio].Palavra, palavra, StringComparison.CurrentCultureIgnoreCase);
+                if (cmp == 0)
+                    return meio;
+                if (cmp < 0)
+                    ini = meio + 1;
+                else
+                    fim = meio - 1;
+            }
+            return -1;
+        }
+
+        // Insere em ordem alfabética pelo campo Palavra
+        public int InserirEmOrdem(Dicionario novo)
+        {
+            int i = 0;
+            while (i < qtosDados && string.Compare(dados[i].Palavra, novo.Palavra, StringComparison.CurrentCultureIgnoreCase) < 0)
+                i++;
+
+            if (qtosDados < dados.Length)
+            {
+                for (int j = qtosDados; j > i; j--)
+                    dados[j] = dados[j - 1];
+
+                dados[i] = novo;
+                qtosDados++;
+                return i;
+            }
+            return -1;
+        }
+
+        // Add the missing GetAtual method to the VetorDicionario class.  
+        public (string palavra, string dica) GetAtual()
+        {
+            if (posicaoAtual < 0 || posicaoAtual >= qtosDados)
+                throw new InvalidOperationException("Posição atual inválida.");
+
+            var dicionarioAtual = dados[posicaoAtual];
+            return (dicionarioAtual.Palavra, dicionarioAtual.Dica);
+        }
+
+        internal void ExcluirNaPosicao(int posicaoAtual)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void AlterarDica(int posicaoAtual, string dica)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

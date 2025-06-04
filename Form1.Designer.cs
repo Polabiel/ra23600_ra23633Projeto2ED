@@ -50,6 +50,10 @@
             this.btnSair = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpCadastro = new System.Windows.Forms.TabPage();
+            this.tableData = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Palavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.tpListagem = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -59,17 +63,13 @@
             this.tpForca = new System.Windows.Forms.TabPage();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tableData = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Palavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpCadastro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableData)).BeginInit();
             this.tpListagem.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableData)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -273,6 +273,36 @@
             this.tpCadastro.Text = "Cadastro";
             this.tpCadastro.UseVisualStyleBackColor = true;
             // 
+            // tableData
+            // 
+            this.tableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Palavra,
+            this.Dica});
+            this.tableData.Location = new System.Drawing.Point(15, 78);
+            this.tableData.Name = "tableData";
+            this.tableData.Size = new System.Drawing.Size(588, 193);
+            this.tableData.TabIndex = 6;
+            // 
+            // ID
+            // 
+            this.ID.Frozen = true;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Palavra
+            // 
+            this.Palavra.Frozen = true;
+            this.Palavra.HeaderText = "Palavra";
+            this.Palavra.Name = "Palavra";
+            // 
+            // Dica
+            // 
+            this.Dica.HeaderText = "Dica";
+            this.Dica.Name = "Dica";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -286,10 +316,10 @@
             // 
             this.tpListagem.Controls.Add(this.groupBox1);
             this.tpListagem.Controls.Add(this.lsbDados);
-            this.tpListagem.Location = new System.Drawing.Point(4, 22);
+            this.tpListagem.Location = new System.Drawing.Point(4, 26);
             this.tpListagem.Name = "tpListagem";
             this.tpListagem.Padding = new System.Windows.Forms.Padding(3);
-            this.tpListagem.Size = new System.Drawing.Size(609, 300);
+            this.tpListagem.Size = new System.Drawing.Size(609, 296);
             this.tpListagem.TabIndex = 1;
             this.tpListagem.Text = "Listagem";
             this.tpListagem.UseVisualStyleBackColor = true;
@@ -340,10 +370,10 @@
             // 
             // tpForca
             // 
-            this.tpForca.Location = new System.Drawing.Point(4, 22);
+            this.tpForca.Location = new System.Drawing.Point(4, 26);
             this.tpForca.Name = "tpForca";
             this.tpForca.Padding = new System.Windows.Forms.Padding(3);
-            this.tpForca.Size = new System.Drawing.Size(609, 300);
+            this.tpForca.Size = new System.Drawing.Size(609, 296);
             this.tpForca.TabIndex = 2;
             this.tpForca.Text = "Forca";
             this.tpForca.UseVisualStyleBackColor = true;
@@ -364,36 +394,6 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
             this.toolStripStatusLabel1.Text = "Mensagem:";
             // 
-            // tableData
-            // 
-            this.tableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Palavra,
-            this.Dica});
-            this.tableData.Location = new System.Drawing.Point(15, 78);
-            this.tableData.Name = "tableData";
-            this.tableData.Size = new System.Drawing.Size(588, 193);
-            this.tableData.TabIndex = 6;
-            // 
-            // ID
-            // 
-            this.ID.Frozen = true;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Palavra
-            // 
-            this.Palavra.Frozen = true;
-            this.Palavra.HeaderText = "Palavra";
-            this.Palavra.Name = "Palavra";
-            // 
-            // Dica
-            // 
-            this.Dica.HeaderText = "Dica";
-            this.Dica.Name = "Dica";
-            // 
             // FrmAlunos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -411,16 +411,23 @@
             this.tabControl1.ResumeLayout(false);
             this.tpCadastro.ResumeLayout(false);
             this.tpCadastro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableData)).EndInit();
             this.tpListagem.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
     }
+
+        // Adding the missing event handler method for btnSair_Click to resolve CS1061.
+        private void btnSair_Click(object sender, System.EventArgs e)
+        {
+            // Close the form when the "Sair" button is clicked.
+            this.Close();
+        }
 
     #endregion
     private System.Windows.Forms.Label label2;

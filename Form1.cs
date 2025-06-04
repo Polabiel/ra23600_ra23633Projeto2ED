@@ -16,14 +16,15 @@ namespace apListaLigada
     private string caminhoArquivoSelecionado = null; // Stores the selected file path
     private VetorDicionario vetorDicionario = new VetorDicionario(); // Field for VetorDicionario
 
-        // ...existing code...
+    private enum Modo { Navegacao, Inclusao, Edicao }
+    private Modo modoAtual = Modo.Navegacao;
 
-        public FrmAlunos()
-        {
-            InitializeComponent();
-            // Adiciona o evento para seleção de linha na tabela
-            tableData.CellClick += tableData_CellClick;
-        }
+    public FrmAlunos()
+    {
+        InitializeComponent();
+        tableData.CellClick += tableData_CellClick;
+        txtRA.Leave += txtRA_Leave;
+    }
 
     /// <summary>
     /// Handles the click event for the "Read File" button.
@@ -81,26 +82,12 @@ namespace apListaLigada
     /// </summary>
     private void btnIncluir_Click(object sender, EventArgs e)
     {
-      string palavra = txtRA.Text.Trim();
-      string dica = txtNome.Text.Trim();
-      if (string.IsNullOrEmpty(palavra) || palavra.Length > 30)
-      {
-        MessageBox.Show("Enter a word (up to 30 characters).");
-        return;
-      }
-
-      // Check if the word already exists before adding
-      var duplicado = new PalavraEDica(palavra, "");
-      if (lista1.Existe(duplicado))
-      {
-        MessageBox.Show("Cannot include. The word already exists!");
-        return;
-      }
-
-      var registro = new PalavraEDica(palavra, dica);
-      lista1.InserirEmOrdem(registro);
-      ExibirDados(lista1, lsbDados, Direcao.paraFrente);
-      ExibirRegistroAtual();
+      modoAtual = Modo.Inclusao;
+      txtRA.Text = "";
+      txtNome.Text = "";
+      txtRA.Enabled = true;
+      txtNome.Enabled = false;  // Será habilitado após verificar que a palavra não existe
+      txtRA.Focus();
     }
 
     /// <summary>
@@ -131,16 +118,16 @@ namespace apListaLigada
     /// </summary>
     private void btnExcluir_Click(object sender, EventArgs e)
     {
-      if (lista1.EstaVazia)
-        return;
-
-      var atual = lista1.Atual.Info;
-      var resp = MessageBox.Show($"Do you want to delete '{atual.Palavra}'?", "Confirmation", MessageBoxButtons.YesNo);
+      if (vetorDicionario.QtosDados == 0) return;
+    
+      var (palavra, _) = vetorDicionario.GetAtual();
+      var resp = MessageBox.Show($"Deseja realmente excluir a palavra '{palavra}'?", 
+                                 "Confirmação", MessageBoxButtons.YesNo);
       if (resp == DialogResult.Yes)
       {
-        lista1.Remover(atual);
-        ExibirDados(lista1, lsbDados, Direcao.paraFrente);
-        ExibirRegistroAtual();
+          vetorDicionario.ExcluirNaPosicao(vetorDicionario.PosicaoAtual);
+          ExibirVetorDicionarioNaTabela();
+          ExibirRegistroAtual();
       }
     }
 
@@ -152,10 +139,14 @@ namespace apListaLigada
     {
       if (string.IsNullOrEmpty(caminhoArquivoSelecionado))
         return;
-      using (var sw = new StreamWriter(caminhoArquivoSelecionado, false))
+    
+      try
       {
-        foreach (var registro in lista1.Listagem(Direcao.paraFrente))
-          sw.WriteLine(registro.ParaArquivo());
+          vetorDicionario.SalvarArquivo(caminhoArquivoSelecionado);
+      }
+      catch (Exception ex)
+      {
+          MessageBox.Show($"Erro ao salvar o arquivo: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
       }
     }
 
@@ -232,26 +223,74 @@ namespace apListaLigada
 
     private void btnInicio_Click(object sender, EventArgs e)
     {
-      lista1.PosicionarNoInicio();
+      if (vetorDicionario.QtosDados == 0) return;
+    
+      modoAtual = Modo.Navegacao;
+      vetorDicionario.PosicaoAtual = 0;
       ExibirRegistroAtual();
+    
+      // Seleciona a linha correspondente na tabela
+      if (tableData.Rows.Count > 0)
+      {
+          tableData.ClearSelection();
+          tableData.Rows[0].Selected = true;
+          tableData.FirstDisplayedScrollingRowIndex = 0;
+      }
     }
 
     private void btnAnterior_Click(object sender, EventArgs e)
     {
-      lista1.Retroceder();
+      if (vetorDicionario.QtosDados == 0) return;
+    
+      modoAtual = Modo.Navegacao;
+      if (vetorDicionario.PosicaoAtual > 0)
+          vetorDicionario.PosicaoAtual--;
+    
       ExibirRegistroAtual();
+    
+      // Seleciona a linha correspondente na tabela
+      if (tableData.Rows.Count > 0)
+      {
+          tableData.ClearSelection();
+          tableData.Rows[vetorDicionario.PosicaoAtual].Selected = true;
+          tableData.FirstDisplayedScrollingRowIndex = vetorDicionario.PosicaoAtual;
+      }
     }
 
     private void btnProximo_Click(object sender, EventArgs e)
     {
-      lista1.Avancar();
+      if (vetorDicionario.QtosDados == 0) return;
+    
+      modoAtual = Modo.Navegacao;
+      if (vetorDicionario.PosicaoAtual < vetorDicionario.QtosDados - 1)
+          vetorDicionario.PosicaoAtual++;
+    
       ExibirRegistroAtual();
+    
+      // Seleciona a linha correspondente na tabela
+      if (tableData.Rows.Count > 0)
+      {
+          tableData.ClearSelection();
+          tableData.Rows[vetorDicionario.PosicaoAtual].Selected = true;
+          tableData.FirstDisplayedScrollingRowIndex = vetorDicionario.PosicaoAtual;
+      }
     }
 
     private void btnFim_Click(object sender, EventArgs e)
     {
-      lista1.PosicionarNoFinal();
+      if (vetorDicionario.QtosDados == 0) return;
+    
+      modoAtual = Modo.Navegacao;
+      vetorDicionario.PosicaoAtual = vetorDicionario.QtosDados - 1;
       ExibirRegistroAtual();
+    
+      // Seleciona a linha correspondente na tabela
+      if (tableData.Rows.Count > 0)
+      {
+          tableData.ClearSelection();
+          tableData.Rows[vetorDicionario.PosicaoAtual].Selected = true;
+          tableData.FirstDisplayedScrollingRowIndex = vetorDicionario.PosicaoAtual;
+      }
     }
 
     /// <summary>
@@ -259,41 +298,83 @@ namespace apListaLigada
     /// </summary>
     private void ExibirRegistroAtual()
     {
-      if (lista1.EstaVazia || lista1.Atual == null)
+      // Se estamos em modo de inclusão ou edição, não atualiza os campos
+      if (modoAtual == Modo.Inclusao || modoAtual == Modo.Edicao)
+          return;
+      
+      if (vetorDicionario.QtosDados == 0)
       {
-        txtRA.Text = "";
-        txtNome.Text = "";
-        toolStripStatusLabel1.Text = "0/0";
-        return;
+          txtRA.Text = "";
+          txtNome.Text = "";
+          toolStripStatusLabel1.Text = "0/0";
+          return;
       }
-      var atual = lista1.Atual.Info;
-      txtRA.Text = atual.Palavra;
-      txtNome.Text = atual.Dica;
-      toolStripStatusLabel1.Text = $"Record: {lista1.NumeroDoNoAtual + 1}/{lista1.QuantosNos}";
+      
+      var (palavra, dica) = vetorDicionario.GetAtual();
+      txtRA.Text = palavra;
+      txtNome.Text = dica;
+      toolStripStatusLabel1.Text = $"Registro: {vetorDicionario.PosicaoAtual + 1}/{vetorDicionario.QtosDados}";
     }
 
     private void btnEditar_Click(object sender, EventArgs e)
     {
-      if (lista1.EstaVazia || lista1.Atual == null)
-        return;
-
-      var atual = lista1.Atual.Info;
-      var resp = MessageBox.Show($"Deseja realmente editar '{atual.Palavra}'?", "Confirmação", MessageBoxButtons.YesNo);
-      if (resp == DialogResult.Yes)
-      {
-        lista1.Atual.Info.Dica = txtNome.Text.Trim();
-        ExibirDados(lista1, lsbDados, Direcao.paraFrente);
-        ExibirRegistroAtual();
-      }
+      if (vetorDicionario.QtosDados == 0) return;
+    
+      modoAtual = Modo.Edicao;
+      txtRA.Enabled = false;  // Não permite alterar a palavra, apenas a dica
+      txtNome.Enabled = true;
+      txtNome.Focus();
     }
 
-    private void btnSair_Click(object sender, EventArgs e)
+    private void btnSalvar_Click(object sender, EventArgs e)
     {
-      Close();
+      if (modoAtual == Modo.Inclusao)
+      {
+          string palavra = txtRA.Text.Trim();
+          string dica = txtNome.Text.Trim();
+          
+          if (string.IsNullOrEmpty(palavra))
+          {
+              MessageBox.Show("Por favor, informe a palavra.");
+              txtRA.Focus();
+              return;
+          }
+          
+          // Verifica novamente se a palavra já existe
+          if (vetorDicionario.Existe(palavra) >= 0)
+          {
+              MessageBox.Show("Esta palavra já existe no dicionário!");
+              return;
+          }
+          
+          Dicionario novo = new Dicionario();
+          novo.Palavra = palavra;
+          novo.Dica = dica;
+          
+          int novaPosicao = vetorDicionario.InserirEmOrdem(novo);
+          if (novaPosicao >= 0)
+              vetorDicionario.PosicaoAtual = novaPosicao;
+          
+          ExibirVetorDicionarioNaTabela();
+      }
+      else if (modoAtual == Modo.Edicao)
+      {
+          string dica = txtNome.Text.Trim();
+          vetorDicionario.AlterarDica(vetorDicionario.PosicaoAtual, dica);
+          ExibirVetorDicionarioNaTabela();
+      }
+      
+      modoAtual = Modo.Navegacao;
+      txtRA.Enabled = true; // Restaura o estado normal dos campos
+      txtNome.Enabled = true;
+      ExibirRegistroAtual();
     }
 
     private void btnCancelar_Click(object sender, EventArgs e)
     {
+      modoAtual = Modo.Navegacao;
+      txtRA.Enabled = true;
+      txtNome.Enabled = true;
       ExibirRegistroAtual();
     }
 
@@ -326,20 +407,34 @@ namespace apListaLigada
       ExibirVetorDicionarioNaTabela();
     }
 
-        // ...existing code...
+    private void txtRA_Leave(object sender, EventArgs e)
+    {
+      if (modoAtual != Modo.Inclusao) return;
+      
+      string palavra = txtRA.Text.Trim();
+      if (string.IsNullOrEmpty(palavra)) return;
+      
+      int posicao = vetorDicionario.Existe(palavra);
+      if (posicao >= 0)
+      {
+          MessageBox.Show("Esta palavra já existe no dicionário!");
+          modoAtual = Modo.Navegacao;
+          ExibirRegistroAtual();
+          return;
+      }
+      
+      txtNome.Enabled = true;
+      txtNome.Focus();
+    }
 
-        // Evento para exibir palavra e dica ao clicar em uma linha da tabela
-        private void tableData_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.RowIndex < vetorDicionario.QtosDados)
-            {
-                var dicionario = vetorDicionario[e.RowIndex];
-                if (dicionario != null)
-                {
-                    txtRA.Text = dicionario.Palavra;
-                    txtNome.Text = dicionario.Dica;
-                }
-            }
-        }
+    private void tableData_CellClick(object sender, DataGridViewCellEventArgs e)
+    {
+      if (e.RowIndex >= 0 && e.RowIndex < vetorDicionario.QtosDados)
+      {
+          modoAtual = Modo.Navegacao;
+          vetorDicionario.PosicaoAtual = e.RowIndex;
+          ExibirRegistroAtual();
+      }
+    }
   }
 }
