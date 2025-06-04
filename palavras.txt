@@ -1,8 +1,30 @@
-Palavra com 30 caractere      Dica até o final da linha
-Francisco da Fonseca RodriguesO humilde professor
-Arroz                         Alimento muito usado na Ásia
-Cachorro                      Melhor amigo das pessoas
-Fentanil                      Pesadelo do Trump
-Processador                   Aquele que processa
-Truco                         Jogo de cartas
-
+IPTU           Imposto sobre imóveis urbanos
+BALEIA         Cetáceo
+SHAKESPEARE    Escritor inglês
+FERRAMENTA     Dispositivo que fornece vantagem mecânica
+ELEFANTE       Maior mamífero terrestre
+COMPUTADOR     Máquina de processamento de dados
+ASTRONAUTA     Pessoa que viaja pelo espaço
+VOLTAGEM       Medida de diferença de potencial elétrico
+PIRÂMIDE       Monumento egípcio
+OCEANO         Grande massa de água salgada
+MICROONDAS     Aparelho para aquecer alimentos
+BIBLIOTECA     Lugar com acervo de livros
+CARBOIDRATO    Nutriente energético
+AMAZÔNIA       Maior floresta tropical do mundo
+DINOSSAURO     Réptil extinto de grande porte
+RELÂMPAGO      Descarga elétrica na atmosfera
+TERMÔMETRO     Mede a temperatura
+MONTANHA       Elevação natural do terreno
+PNEUMONIA      Infecção pulmonar
+BÚSSOLA        Instrumento de orientação
+ESPERANÇA      Sentimento de expectativa positiva
+MATEMÁTICA     Estudo dos números e formas
+GIRASSOL       Planta que segue o sol
+CORAÇÃO        Órgão que bombeia o sangue
+CERVEJA        Bebida alcoólica fermentada
+CENOURA        Legume alaranjado
+JORNALISTA     Profissional da informação
+FOTOGRAFIA     Registro visual de imagens
+MÚSICA         Arte dos sons
+ESTETOSCÓPIO   Instrumento usado por médicos

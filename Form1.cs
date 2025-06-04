@@ -14,14 +14,16 @@ namespace apListaLigada
   {
     ListaDupla<PalavraEDica> lista1 = new ListaDupla<PalavraEDica>();
     private string caminhoArquivoSelecionado = null; // Stores the selected file path
+    private VetorDicionario vetorDicionario = new VetorDicionario(); // Field for VetorDicionario
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="FrmAlunos"/> class.
-    /// </summary>
-    public FrmAlunos()
-    {
-      InitializeComponent();
-    }
+        // ...existing code...
+
+        public FrmAlunos()
+        {
+            InitializeComponent();
+            // Adiciona o evento para seleção de linha na tabela
+            tableData.CellClick += tableData_CellClick;
+        }
 
     /// <summary>
     /// Handles the click event for the "Read File" button.
@@ -35,7 +37,7 @@ namespace apListaLigada
     }
 
     /// <summary>
-    /// Reads data from a file and populates the provided list.
+    /// Reads data from a file and populates the provided list and VetorDicionario.
     /// </summary>
     /// <param name="qualLista">The list to populate with data.</param>
     private void FazerLeitura(ref ListaDupla<PalavraEDica> qualLista)
@@ -46,6 +48,8 @@ namespace apListaLigada
         return;
 
       qualLista = new ListaDupla<PalavraEDica>();
+      vetorDicionario.Limpar(); // Limpa o vetor antes de popular
+
       using (StreamReader sr = new StreamReader(ofd.FileName))
       {
         string linha;
@@ -53,12 +57,22 @@ namespace apListaLigada
         {
           if (linha.Length < 30)
             continue; // Ignore invalid lines
+
+          // Para lista1 (ListaDupla)
           string palavra = linha.Substring(0, 30).Trim();
           string dica = linha.Substring(30).Trim();
           var registro = new PalavraEDica(palavra, dica);
           qualLista.InserirEmOrdem(registro);
+
+          // Para VetorDicionario
+          Dicionario dic = new Dicionario();
+          dic.LerLinha(linha);
+          vetorDicionario.Adicionar(dic);
         }
       }
+
+      // Atualiza a tabela após leitura
+      ExibirVetorDicionarioNaTabela();
     }
 
     /// <summary>
@@ -190,6 +204,8 @@ namespace apListaLigada
       }
       caminhoArquivoSelecionado = ofd.FileName;
       lista1 = new ListaDupla<PalavraEDica>();
+      vetorDicionario.Limpar();
+
       using (var sr = new StreamReader(caminhoArquivoSelecionado))
       {
         string linha;
@@ -201,11 +217,17 @@ namespace apListaLigada
           string dica = linha.Substring(30).Trim();
           var registro = new PalavraEDica(palavra, dica);
           lista1.InserirAposFim(registro);
+
+          // Também adiciona ao VetorDicionario
+          Dicionario dic = new Dicionario();
+          dic.LerLinha(linha);
+          vetorDicionario.Adicionar(dic);
         }
       }
       lista1.PosicionarNoInicio();
       ExibirRegistroAtual();
       ExibirDados(lista1, lsbDados, Direcao.paraFrente);
+      ExibirVetorDicionarioNaTabela();
     }
 
     private void btnInicio_Click(object sender, EventArgs e)
@@ -274,5 +296,50 @@ namespace apListaLigada
     {
       ExibirRegistroAtual();
     }
+
+    /// <summary>
+    /// Displays the data from VetorDicionario in the DataGridView tableData.
+    /// </summary>
+    private void ExibirVetorDicionarioNaTabela()
+    {
+      tableData.Rows.Clear();
+      var dados = vetorDicionario.ListarDados();
+      foreach (var item in dados)
+      {
+        // Add row: position, word, hint
+        tableData.Rows.Add(item.posicao, item.palavra, item.dica);
+      }
+      // Select the row of the current position, if there are data
+      if (vetorDicionario.QtosDados > 0 && vetorDicionario.PosicaoAtual >= 0)
+      {
+        tableData.ClearSelection();
+        if (vetorDicionario.PosicaoAtual < tableData.Rows.Count)
+          tableData.Rows[vetorDicionario.PosicaoAtual].Selected = true;
+      }
+    }
+
+    /// <summary>
+    /// Event triggered when the tpCadastro tab is selected.
+    /// </summary>
+    private void tpCadastro_Enter(object sender, EventArgs e)
+    {
+      ExibirVetorDicionarioNaTabela();
+    }
+
+        // ...existing code...
+
+        // Evento para exibir palavra e dica ao clicar em uma linha da tabela
+        private void tableData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < vetorDicionario.QtosDados)
+            {
+                var dicionario = vetorDicionario[e.RowIndex];
+                if (dicionario != null)
+                {
+                    txtRA.Text = dicionario.Palavra;
+                    txtNome.Text = dicionario.Dica;
+                }
+            }
+        }
   }
 }

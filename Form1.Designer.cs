@@ -59,12 +59,17 @@
             this.tpForca = new System.Windows.Forms.TabPage();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tableData = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Palavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpCadastro.SuspendLayout();
             this.tpListagem.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableData)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -255,6 +260,7 @@
             // 
             // tpCadastro
             // 
+            this.tpCadastro.Controls.Add(this.tableData);
             this.tpCadastro.Controls.Add(this.label1);
             this.tpCadastro.Controls.Add(this.label2);
             this.tpCadastro.Controls.Add(this.txtRA);
@@ -358,6 +364,36 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
             this.toolStripStatusLabel1.Text = "Mensagem:";
             // 
+            // tableData
+            // 
+            this.tableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Palavra,
+            this.Dica});
+            this.tableData.Location = new System.Drawing.Point(15, 78);
+            this.tableData.Name = "tableData";
+            this.tableData.Size = new System.Drawing.Size(588, 193);
+            this.tableData.TabIndex = 6;
+            // 
+            // ID
+            // 
+            this.ID.Frozen = true;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Palavra
+            // 
+            this.Palavra.Frozen = true;
+            this.Palavra.HeaderText = "Palavra";
+            this.Palavra.Name = "Palavra";
+            // 
+            // Dica
+            // 
+            this.Dica.HeaderText = "Dica";
+            this.Dica.Name = "Dica";
+            // 
             // FrmAlunos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -380,6 +416,7 @@
             this.groupBox1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,6 +453,10 @@
     private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.TabPage tpForca;
-  }
+        private System.Windows.Forms.DataGridView tableData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Palavra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dica;
+    }
 }
 
