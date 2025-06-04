@@ -55,11 +55,6 @@
             this.Palavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.tpListagem = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbTras = new System.Windows.Forms.RadioButton();
-            this.rbFrente = new System.Windows.Forms.RadioButton();
-            this.lsbDados = new System.Windows.Forms.ListBox();
             this.tpForca = new System.Windows.Forms.TabPage();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -67,8 +62,6 @@
             this.tabControl1.SuspendLayout();
             this.tpCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableData)).BeginInit();
-            this.tpListagem.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -249,7 +242,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tpCadastro);
-            this.tabControl1.Controls.Add(this.tpListagem);
             this.tabControl1.Controls.Add(this.tpForca);
             this.tabControl1.Location = new System.Drawing.Point(12, 55);
             this.tabControl1.Name = "tabControl1";
@@ -312,68 +304,12 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Palavra:";
             // 
-            // tpListagem
-            // 
-            this.tpListagem.Controls.Add(this.groupBox1);
-            this.tpListagem.Controls.Add(this.lsbDados);
-            this.tpListagem.Location = new System.Drawing.Point(4, 26);
-            this.tpListagem.Name = "tpListagem";
-            this.tpListagem.Padding = new System.Windows.Forms.Padding(3);
-            this.tpListagem.Size = new System.Drawing.Size(609, 296);
-            this.tpListagem.TabIndex = 1;
-            this.tpListagem.Text = "Listagem";
-            this.tpListagem.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbTras);
-            this.groupBox1.Controls.Add(this.rbFrente);
-            this.groupBox1.Location = new System.Drawing.Point(7, 7);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(248, 49);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ordem";
-            // 
-            // rbTras
-            // 
-            this.rbTras.AutoSize = true;
-            this.rbTras.Location = new System.Drawing.Point(121, 22);
-            this.rbTras.Name = "rbTras";
-            this.rbTras.Size = new System.Drawing.Size(110, 21);
-            this.rbTras.TabIndex = 1;
-            this.rbTras.Text = "Decrescente";
-            this.rbTras.UseVisualStyleBackColor = true;
-            this.rbTras.Click += new System.EventHandler(this.rbTras_Click);
-            // 
-            // rbFrente
-            // 
-            this.rbFrente.AutoSize = true;
-            this.rbFrente.Checked = true;
-            this.rbFrente.Location = new System.Drawing.Point(6, 22);
-            this.rbFrente.Name = "rbFrente";
-            this.rbFrente.Size = new System.Drawing.Size(94, 21);
-            this.rbFrente.TabIndex = 0;
-            this.rbFrente.TabStop = true;
-            this.rbFrente.Text = "Crescente";
-            this.rbFrente.UseVisualStyleBackColor = true;
-            this.rbFrente.Click += new System.EventHandler(this.rbFrente_Click);
-            // 
-            // lsbDados
-            // 
-            this.lsbDados.FormattingEnabled = true;
-            this.lsbDados.ItemHeight = 17;
-            this.lsbDados.Location = new System.Drawing.Point(7, 62);
-            this.lsbDados.Name = "lsbDados";
-            this.lsbDados.Size = new System.Drawing.Size(596, 225);
-            this.lsbDados.TabIndex = 0;
-            // 
             // tpForca
             // 
-            this.tpForca.Location = new System.Drawing.Point(4, 26);
+            this.tpForca.Location = new System.Drawing.Point(4, 22);
             this.tpForca.Name = "tpForca";
             this.tpForca.Padding = new System.Windows.Forms.Padding(3);
-            this.tpForca.Size = new System.Drawing.Size(609, 296);
+            this.tpForca.Size = new System.Drawing.Size(609, 300);
             this.tpForca.TabIndex = 2;
             this.tpForca.Text = "Forca";
             this.tpForca.UseVisualStyleBackColor = true;
@@ -412,9 +348,6 @@
             this.tpCadastro.ResumeLayout(false);
             this.tpCadastro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableData)).EndInit();
-            this.tpListagem.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -449,13 +382,8 @@
     private System.Windows.Forms.ToolStripButton btnSair;
     private System.Windows.Forms.TabControl tabControl1;
     private System.Windows.Forms.TabPage tpCadastro;
-    private System.Windows.Forms.TabPage tpListagem;
     private System.Windows.Forms.ToolStripButton btnBuscar;
     private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-    private System.Windows.Forms.GroupBox groupBox1;
-    private System.Windows.Forms.RadioButton rbTras;
-    private System.Windows.Forms.RadioButton rbFrente;
-    private System.Windows.Forms.ListBox lsbDados;
     private System.Windows.Forms.StatusStrip statusStrip1;
     private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     private System.Windows.Forms.Label label1;

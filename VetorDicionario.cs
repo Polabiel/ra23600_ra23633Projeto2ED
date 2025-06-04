@@ -170,9 +170,14 @@ namespace apListaLigada
             return (dicionarioAtual.Palavra, dicionarioAtual.Dica);
         }
 
+        /// <summary>
+        /// Exclui um Dicionario na posição informada (alias para o método Remover)
+        /// </summary>
+        /// <param name="posicaoAtual">A posição do item a ser excluído</param>
         internal void ExcluirNaPosicao(int posicaoAtual)
         {
-            throw new NotImplementedException();
+            // Chama o método Remover já existente
+            Remover(posicaoAtual);
         }
 
         internal void AlterarDica(int posicaoAtual, string dica)
