@@ -23,6 +23,56 @@ namespace apListaLigada
             InitializeComponent();
             tableData.CellClick += tableData_CellClick;
             txtRA.Leave += txtRA_Leave;
+            AdicionarBotoesLetras(); // Add this line
+        }
+
+        /// <summary>
+        /// Adiciona botões de A-Z ao painel de letras.
+        /// </summary>
+        private void AdicionarBotoesLetras()
+        {
+            panelLetras.Controls.Clear();
+            for (char c = 'A'; c <= 'Z'; c++)
+            {
+                var btn = new Button();
+                btn.Text = c.ToString();
+                btn.Width = 30;
+                btn.Height = 30;
+                btn.Margin = new Padding(2);
+                btn.Tag = c;
+                btn.Click += BotaoLetra_Click;
+                panelLetras.Controls.Add(btn);
+            }
+        }
+
+        /// <summary>
+        /// Evento de clique para os botões de letras. Filtra a tabela para mostrar apenas palavras que começam com a letra selecionada.
+        /// </summary>
+        private void BotaoLetra_Click(object sender, EventArgs e)
+        {
+            if (!(sender is Button btn) || btn.Tag == null)
+                return;
+
+            char letra = (char)btn.Tag;
+            // Filtra os dados do VetorDicionario e exibe apenas os que começam com a letra selecionada
+            var dados = vetorDicionario.ListarDados();
+            tableData.Rows.Clear();
+            foreach (var (posicao, palavra, dica) in dados)
+            {
+                if (!string.IsNullOrEmpty(palavra) && char.ToUpper(palavra[0]) == letra)
+                    tableData.Rows.Add(posicao, palavra, dica);
+            }
+            // Limpa seleção e status
+            if (tableData.Rows.Count > 0)
+            {
+                tableData.ClearSelection();
+                tableData.Rows[0].Selected = true;
+                tableData.FirstDisplayedScrollingRowIndex = 0;
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = $"Nenhuma palavra com '{letra}'";
+            }
         }
 
         /// <summary>
