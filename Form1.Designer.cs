@@ -56,6 +56,9 @@
             this.Dica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.tpForca = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnX = new System.Windows.Forms.Button();
+            this.btnK = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnR = new System.Windows.Forms.Button();
             this.btnS = new System.Windows.Forms.Button();
@@ -78,9 +81,12 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnK = new System.Windows.Forms.Button();
-            this.btnX = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.ToolStripButton();
+            this.btnM = new System.Windows.Forms.Button();
+            this.btnU = new System.Windows.Forms.Button();
+            this.btnV = new System.Windows.Forms.Button();
+            this.btnW = new System.Windows.Forms.Button();
+            this.btnY = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpCadastro.SuspendLayout();
@@ -136,6 +142,7 @@
             this.btnNovo,
             this.btnEditar,
             this.btnCancelar,
+            this.btnSalvar,
             this.btnExcluir,
             this.toolStripSeparator2,
             this.btnSair});
@@ -330,6 +337,11 @@
             // 
             // tpForca
             // 
+            this.tpForca.Controls.Add(this.btnY);
+            this.tpForca.Controls.Add(this.btnW);
+            this.tpForca.Controls.Add(this.btnV);
+            this.tpForca.Controls.Add(this.btnU);
+            this.tpForca.Controls.Add(this.btnM);
             this.tpForca.Controls.Add(this.button2);
             this.tpForca.Controls.Add(this.btnX);
             this.tpForca.Controls.Add(this.btnK);
@@ -361,9 +373,36 @@
             this.tpForca.Text = "Forca";
             this.tpForca.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(525, 104);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 23);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "X";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnX
+            // 
+            this.btnX.Location = new System.Drawing.Point(277, 133);
+            this.btnX.Name = "btnX";
+            this.btnX.Size = new System.Drawing.Size(25, 23);
+            this.btnX.TabIndex = 21;
+            this.btnX.Text = "X";
+            this.btnX.UseVisualStyleBackColor = true;
+            // 
+            // btnK
+            // 
+            this.btnK.Location = new System.Drawing.Point(525, 75);
+            this.btnK.Name = "btnK";
+            this.btnK.Size = new System.Drawing.Size(25, 23);
+            this.btnK.TabIndex = 20;
+            this.btnK.Text = "K";
+            this.btnK.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(432, 104);
+            this.button1.Location = new System.Drawing.Point(339, 133);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 23);
             this.button1.TabIndex = 19;
@@ -381,7 +420,7 @@
             // 
             // btnS
             // 
-            this.btnS.Location = new System.Drawing.Point(370, 104);
+            this.btnS.Location = new System.Drawing.Point(432, 104);
             this.btnS.Name = "btnS";
             this.btnS.Size = new System.Drawing.Size(25, 23);
             this.btnS.TabIndex = 17;
@@ -390,7 +429,7 @@
             // 
             // btnQ
             // 
-            this.btnQ.Location = new System.Drawing.Point(339, 104);
+            this.btnQ.Location = new System.Drawing.Point(370, 104);
             this.btnQ.Name = "btnQ";
             this.btnQ.Size = new System.Drawing.Size(25, 23);
             this.btnQ.TabIndex = 16;
@@ -399,7 +438,7 @@
             // 
             // btnT
             // 
-            this.btnT.Location = new System.Drawing.Point(308, 104);
+            this.btnT.Location = new System.Drawing.Point(463, 104);
             this.btnT.Name = "btnT";
             this.btnT.Size = new System.Drawing.Size(25, 23);
             this.btnT.TabIndex = 15;
@@ -408,7 +447,7 @@
             // 
             // btnP
             // 
-            this.btnP.Location = new System.Drawing.Point(277, 104);
+            this.btnP.Location = new System.Drawing.Point(339, 104);
             this.btnP.Name = "btnP";
             this.btnP.Size = new System.Drawing.Size(25, 23);
             this.btnP.TabIndex = 14;
@@ -417,7 +456,7 @@
             // 
             // btnO
             // 
-            this.btnO.Location = new System.Drawing.Point(246, 104);
+            this.btnO.Location = new System.Drawing.Point(308, 104);
             this.btnO.Name = "btnO";
             this.btnO.Size = new System.Drawing.Size(25, 23);
             this.btnO.TabIndex = 13;
@@ -426,7 +465,7 @@
             // 
             // btnN
             // 
-            this.btnN.Location = new System.Drawing.Point(215, 104);
+            this.btnN.Location = new System.Drawing.Point(277, 104);
             this.btnN.Name = "btnN";
             this.btnN.Size = new System.Drawing.Size(25, 23);
             this.btnN.TabIndex = 12;
@@ -435,7 +474,7 @@
             // 
             // btnL
             // 
-            this.btnL.Location = new System.Drawing.Point(525, 75);
+            this.btnL.Location = new System.Drawing.Point(215, 104);
             this.btnL.Name = "btnL";
             this.btnL.Size = new System.Drawing.Size(25, 23);
             this.btnL.TabIndex = 11;
@@ -537,7 +576,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(200, 63);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(381, 185);
+            this.listView1.Size = new System.Drawing.Size(381, 108);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -557,32 +596,59 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
             this.toolStripStatusLabel1.Text = "Mensagem:";
             // 
-            // btnK
+            // btnSalvar
             // 
-            this.btnK.Location = new System.Drawing.Point(463, 104);
-            this.btnK.Name = "btnK";
-            this.btnK.Size = new System.Drawing.Size(25, 23);
-            this.btnK.TabIndex = 20;
-            this.btnK.Text = "K";
-            this.btnK.UseVisualStyleBackColor = true;
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(42, 35);
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // btnX
+            // btnM
             // 
-            this.btnX.Location = new System.Drawing.Point(494, 104);
-            this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(25, 23);
-            this.btnX.TabIndex = 21;
-            this.btnX.Text = "X";
-            this.btnX.UseVisualStyleBackColor = true;
+            this.btnM.Location = new System.Drawing.Point(246, 104);
+            this.btnM.Name = "btnM";
+            this.btnM.Size = new System.Drawing.Size(25, 23);
+            this.btnM.TabIndex = 23;
+            this.btnM.Text = "M";
+            this.btnM.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnU
             // 
-            this.button2.Location = new System.Drawing.Point(525, 104);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnU.Location = new System.Drawing.Point(494, 104);
+            this.btnU.Name = "btnU";
+            this.btnU.Size = new System.Drawing.Size(25, 23);
+            this.btnU.TabIndex = 24;
+            this.btnU.Text = "U";
+            this.btnU.UseVisualStyleBackColor = true;
+            // 
+            // btnV
+            // 
+            this.btnV.Location = new System.Drawing.Point(215, 133);
+            this.btnV.Name = "btnV";
+            this.btnV.Size = new System.Drawing.Size(25, 23);
+            this.btnV.TabIndex = 25;
+            this.btnV.Text = "V";
+            this.btnV.UseVisualStyleBackColor = true;
+            // 
+            // btnW
+            // 
+            this.btnW.Location = new System.Drawing.Point(246, 133);
+            this.btnW.Name = "btnW";
+            this.btnW.Size = new System.Drawing.Size(25, 23);
+            this.btnW.TabIndex = 26;
+            this.btnW.Text = "W";
+            this.btnW.UseVisualStyleBackColor = true;
+            // 
+            // btnY
+            // 
+            this.btnY.Location = new System.Drawing.Point(308, 133);
+            this.btnY.Name = "btnY";
+            this.btnY.Size = new System.Drawing.Size(25, 23);
+            this.btnY.TabIndex = 27;
+            this.btnY.Text = "Y";
+            this.btnY.UseVisualStyleBackColor = true;
             // 
             // FrmAlunos
             // 
@@ -593,7 +659,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FrmAlunos";
-            this.Text = "Manutenção de Alunos";
+            this.Text = "jogo da forca";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAlunos_FormClosing);
             this.Load += new System.EventHandler(this.FrmAlunos_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -670,7 +736,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Button btnK;
-        private System.Windows.Forms.FlowLayoutPanel panelLetras;
+        private System.Windows.Forms.ToolStripButton btnSalvar;
+        private System.Windows.Forms.Button btnY;
+        private System.Windows.Forms.Button btnW;
+        private System.Windows.Forms.Button btnV;
+        private System.Windows.Forms.Button btnU;
+        private System.Windows.Forms.Button btnM;
     }
 }
 

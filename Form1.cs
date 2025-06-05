@@ -23,26 +23,6 @@ namespace apListaLigada
             InitializeComponent();
             tableData.CellClick += tableData_CellClick;
             txtRA.Leave += txtRA_Leave;
-            AdicionarBotoesLetras(); // Add this line
-        }
-
-        /// <summary>
-        /// Adiciona botões de A-Z ao painel de letras.
-        /// </summary>
-        private void AdicionarBotoesLetras()
-        {
-            panelLetras.Controls.Clear();
-            for (char c = 'A'; c <= 'Z'; c++)
-            {
-                var btn = new Button();
-                btn.Text = c.ToString();
-                btn.Width = 30;
-                btn.Height = 30;
-                btn.Margin = new Padding(2);
-                btn.Tag = c;
-                btn.Click += BotaoLetra_Click;
-                panelLetras.Controls.Add(btn);
-            }
         }
 
         /// <summary>
