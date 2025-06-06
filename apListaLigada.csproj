@@ -81,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="C:/Users/atacc/OneDrive/Documentos/apForca/.github/workflows/\dotnet.yml">
       <Link>dotnet.yml</Link>
@@ -101,6 +102,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages\Forca__01.gif" />
+    <None Include="packages\Forca__02.gif" />
+    <None Include="packages\Forca__03.gif" />
+    <None Include="packages\Forca__05.gif" />
+    <None Include="packages\Forca__08.gif" />
+    <None Include="packages\Forca__09.gif" />
+    <None Include="packages\Forca__13.gif" />
+    <None Include="packages\Forca_1_05.gif" />
+    <None Include="packages\Forca_2_03.gif" />
+    <None Include="packages\Forca_2_04.gif" />
+    <None Include="packages\Forca_2_07.gif" />
+    <None Include="packages\Forca_05.gif" />
+    <None Include="packages\Forca_07.gif" />
+    <None Include="packages\Forca_08.gif" />
+    <None Include="packages\Forca_09.gif" />
+    <None Include="packages\Forca_10.gif" />
+    <None Include="packages\Forca_14.gif" />
+    <None Include="packages\Forca_16.gif" />
+    <None Include="packages\Forca_17.gif" />
     <Content Include="palavras.txt" />
   </ItemGroup>
   <ItemGroup>

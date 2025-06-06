@@ -28,7 +28,9 @@
     /// </summary>
     private void InitializeComponent()
     {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAlunos));
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.label2 = new System.Windows.Forms.Label();
             this.txtRA = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -45,6 +47,7 @@
             this.btnNovo = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnSalvar = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSair = new System.Windows.Forms.ToolStripButton();
@@ -56,6 +59,12 @@
             this.Dica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.tpForca = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnY = new System.Windows.Forms.Button();
+            this.btnW = new System.Windows.Forms.Button();
+            this.btnV = new System.Windows.Forms.Button();
+            this.btnU = new System.Windows.Forms.Button();
+            this.btnM = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
             this.btnK = new System.Windows.Forms.Button();
@@ -81,18 +90,26 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnSalvar = new System.Windows.Forms.ToolStripButton();
-            this.btnM = new System.Windows.Forms.Button();
-            this.btnU = new System.Windows.Forms.Button();
-            this.btnV = new System.Windows.Forms.Button();
-            this.btnW = new System.Windows.Forms.Button();
-            this.btnY = new System.Windows.Forms.Button();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableData)).BeginInit();
             this.tpForca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -242,6 +259,15 @@
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(42, 35);
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // btnExcluir
             // 
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
@@ -277,7 +303,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 55);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(617, 326);
+            this.tabControl1.Size = new System.Drawing.Size(617, 488);
             this.tabControl1.TabIndex = 22;
             this.tabControl1.Enter += new System.EventHandler(this.tabControl1_Enter);
             // 
@@ -337,6 +363,13 @@
             // 
             // tpForca
             // 
+            this.tpForca.Controls.Add(this.pictureBox7);
+            this.tpForca.Controls.Add(this.pictureBox6);
+            this.tpForca.Controls.Add(this.pictureBox5);
+            this.tpForca.Controls.Add(this.pictureBox4);
+            this.tpForca.Controls.Add(this.pictureBox3);
+            this.tpForca.Controls.Add(this.pictureBox2);
+            this.tpForca.Controls.Add(this.pictureBox1);
             this.tpForca.Controls.Add(this.btnY);
             this.tpForca.Controls.Add(this.btnW);
             this.tpForca.Controls.Add(this.btnV);
@@ -368,14 +401,68 @@
             this.tpForca.Location = new System.Drawing.Point(4, 26);
             this.tpForca.Name = "tpForca";
             this.tpForca.Padding = new System.Windows.Forms.Padding(3);
-            this.tpForca.Size = new System.Drawing.Size(609, 296);
+            this.tpForca.Size = new System.Drawing.Size(609, 458);
             this.tpForca.TabIndex = 2;
             this.tpForca.Text = "Forca";
             this.tpForca.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::apListaLigada.Properties.Resources.Forca__01;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnY
+            // 
+            this.btnY.Location = new System.Drawing.Point(330, 76);
+            this.btnY.Name = "btnY";
+            this.btnY.Size = new System.Drawing.Size(25, 23);
+            this.btnY.TabIndex = 27;
+            this.btnY.Text = "Y";
+            this.btnY.UseVisualStyleBackColor = true;
+            // 
+            // btnW
+            // 
+            this.btnW.Location = new System.Drawing.Point(268, 76);
+            this.btnW.Name = "btnW";
+            this.btnW.Size = new System.Drawing.Size(25, 23);
+            this.btnW.TabIndex = 26;
+            this.btnW.Text = "W";
+            this.btnW.UseVisualStyleBackColor = true;
+            // 
+            // btnV
+            // 
+            this.btnV.Location = new System.Drawing.Point(237, 76);
+            this.btnV.Name = "btnV";
+            this.btnV.Size = new System.Drawing.Size(25, 23);
+            this.btnV.TabIndex = 25;
+            this.btnV.Text = "V";
+            this.btnV.UseVisualStyleBackColor = true;
+            // 
+            // btnU
+            // 
+            this.btnU.Location = new System.Drawing.Point(516, 47);
+            this.btnU.Name = "btnU";
+            this.btnU.Size = new System.Drawing.Size(25, 23);
+            this.btnU.TabIndex = 24;
+            this.btnU.Text = "U";
+            this.btnU.UseVisualStyleBackColor = true;
+            // 
+            // btnM
+            // 
+            this.btnM.Location = new System.Drawing.Point(268, 47);
+            this.btnM.Name = "btnM";
+            this.btnM.Size = new System.Drawing.Size(25, 23);
+            this.btnM.TabIndex = 23;
+            this.btnM.Text = "M";
+            this.btnM.UseVisualStyleBackColor = true;
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(525, 104);
+            this.button2.Location = new System.Drawing.Point(547, 47);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(25, 23);
             this.button2.TabIndex = 22;
@@ -384,7 +471,7 @@
             // 
             // btnX
             // 
-            this.btnX.Location = new System.Drawing.Point(277, 133);
+            this.btnX.Location = new System.Drawing.Point(299, 76);
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(25, 23);
             this.btnX.TabIndex = 21;
@@ -393,7 +480,7 @@
             // 
             // btnK
             // 
-            this.btnK.Location = new System.Drawing.Point(525, 75);
+            this.btnK.Location = new System.Drawing.Point(547, 18);
             this.btnK.Name = "btnK";
             this.btnK.Size = new System.Drawing.Size(25, 23);
             this.btnK.TabIndex = 20;
@@ -402,7 +489,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(339, 133);
+            this.button1.Location = new System.Drawing.Point(361, 76);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 23);
             this.button1.TabIndex = 19;
@@ -411,7 +498,7 @@
             // 
             // btnR
             // 
-            this.btnR.Location = new System.Drawing.Point(401, 104);
+            this.btnR.Location = new System.Drawing.Point(423, 47);
             this.btnR.Name = "btnR";
             this.btnR.Size = new System.Drawing.Size(25, 23);
             this.btnR.TabIndex = 18;
@@ -420,7 +507,7 @@
             // 
             // btnS
             // 
-            this.btnS.Location = new System.Drawing.Point(432, 104);
+            this.btnS.Location = new System.Drawing.Point(454, 47);
             this.btnS.Name = "btnS";
             this.btnS.Size = new System.Drawing.Size(25, 23);
             this.btnS.TabIndex = 17;
@@ -429,7 +516,7 @@
             // 
             // btnQ
             // 
-            this.btnQ.Location = new System.Drawing.Point(370, 104);
+            this.btnQ.Location = new System.Drawing.Point(392, 47);
             this.btnQ.Name = "btnQ";
             this.btnQ.Size = new System.Drawing.Size(25, 23);
             this.btnQ.TabIndex = 16;
@@ -438,7 +525,7 @@
             // 
             // btnT
             // 
-            this.btnT.Location = new System.Drawing.Point(463, 104);
+            this.btnT.Location = new System.Drawing.Point(485, 47);
             this.btnT.Name = "btnT";
             this.btnT.Size = new System.Drawing.Size(25, 23);
             this.btnT.TabIndex = 15;
@@ -447,7 +534,7 @@
             // 
             // btnP
             // 
-            this.btnP.Location = new System.Drawing.Point(339, 104);
+            this.btnP.Location = new System.Drawing.Point(361, 47);
             this.btnP.Name = "btnP";
             this.btnP.Size = new System.Drawing.Size(25, 23);
             this.btnP.TabIndex = 14;
@@ -456,7 +543,7 @@
             // 
             // btnO
             // 
-            this.btnO.Location = new System.Drawing.Point(308, 104);
+            this.btnO.Location = new System.Drawing.Point(330, 47);
             this.btnO.Name = "btnO";
             this.btnO.Size = new System.Drawing.Size(25, 23);
             this.btnO.TabIndex = 13;
@@ -465,7 +552,7 @@
             // 
             // btnN
             // 
-            this.btnN.Location = new System.Drawing.Point(277, 104);
+            this.btnN.Location = new System.Drawing.Point(299, 47);
             this.btnN.Name = "btnN";
             this.btnN.Size = new System.Drawing.Size(25, 23);
             this.btnN.TabIndex = 12;
@@ -474,7 +561,7 @@
             // 
             // btnL
             // 
-            this.btnL.Location = new System.Drawing.Point(215, 104);
+            this.btnL.Location = new System.Drawing.Point(237, 47);
             this.btnL.Name = "btnL";
             this.btnL.Size = new System.Drawing.Size(25, 23);
             this.btnL.TabIndex = 11;
@@ -483,7 +570,7 @@
             // 
             // btnJ
             // 
-            this.btnJ.Location = new System.Drawing.Point(494, 75);
+            this.btnJ.Location = new System.Drawing.Point(516, 18);
             this.btnJ.Name = "btnJ";
             this.btnJ.Size = new System.Drawing.Size(25, 23);
             this.btnJ.TabIndex = 10;
@@ -492,7 +579,7 @@
             // 
             // btnI
             // 
-            this.btnI.Location = new System.Drawing.Point(463, 75);
+            this.btnI.Location = new System.Drawing.Point(485, 18);
             this.btnI.Name = "btnI";
             this.btnI.Size = new System.Drawing.Size(25, 23);
             this.btnI.TabIndex = 9;
@@ -501,7 +588,7 @@
             // 
             // btnH
             // 
-            this.btnH.Location = new System.Drawing.Point(432, 75);
+            this.btnH.Location = new System.Drawing.Point(454, 18);
             this.btnH.Name = "btnH";
             this.btnH.Size = new System.Drawing.Size(25, 23);
             this.btnH.TabIndex = 8;
@@ -510,7 +597,7 @@
             // 
             // btnG
             // 
-            this.btnG.Location = new System.Drawing.Point(401, 75);
+            this.btnG.Location = new System.Drawing.Point(423, 18);
             this.btnG.Name = "btnG";
             this.btnG.Size = new System.Drawing.Size(25, 23);
             this.btnG.TabIndex = 7;
@@ -519,7 +606,7 @@
             // 
             // btnF
             // 
-            this.btnF.Location = new System.Drawing.Point(370, 75);
+            this.btnF.Location = new System.Drawing.Point(392, 18);
             this.btnF.Name = "btnF";
             this.btnF.Size = new System.Drawing.Size(25, 23);
             this.btnF.TabIndex = 6;
@@ -528,7 +615,7 @@
             // 
             // btnE
             // 
-            this.btnE.Location = new System.Drawing.Point(339, 75);
+            this.btnE.Location = new System.Drawing.Point(361, 18);
             this.btnE.Name = "btnE";
             this.btnE.Size = new System.Drawing.Size(25, 23);
             this.btnE.TabIndex = 5;
@@ -537,7 +624,7 @@
             // 
             // btnD
             // 
-            this.btnD.Location = new System.Drawing.Point(308, 75);
+            this.btnD.Location = new System.Drawing.Point(330, 18);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(25, 23);
             this.btnD.TabIndex = 4;
@@ -546,7 +633,7 @@
             // 
             // btnC
             // 
-            this.btnC.Location = new System.Drawing.Point(277, 75);
+            this.btnC.Location = new System.Drawing.Point(299, 18);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(25, 23);
             this.btnC.TabIndex = 3;
@@ -555,7 +642,7 @@
             // 
             // btnB
             // 
-            this.btnB.Location = new System.Drawing.Point(246, 75);
+            this.btnB.Location = new System.Drawing.Point(268, 18);
             this.btnB.Name = "btnB";
             this.btnB.Size = new System.Drawing.Size(25, 23);
             this.btnB.TabIndex = 2;
@@ -564,7 +651,7 @@
             // 
             // btnA
             // 
-            this.btnA.Location = new System.Drawing.Point(215, 75);
+            this.btnA.Location = new System.Drawing.Point(237, 18);
             this.btnA.Name = "btnA";
             this.btnA.Size = new System.Drawing.Size(25, 23);
             this.btnA.TabIndex = 1;
@@ -574,7 +661,9 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(200, 63);
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.listView1.Location = new System.Drawing.Point(222, 6);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(381, 108);
             this.listView1.TabIndex = 0;
@@ -584,7 +673,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 387);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 549);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(634, 22);
             this.statusStrip1.TabIndex = 23;
@@ -596,64 +685,89 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
             this.toolStripStatusLabel1.Text = "Mensagem:";
             // 
-            // btnSalvar
+            // imageList2
             // 
-            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(42, 35);
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "Enforcado.gif");
+            this.imageList2.Images.SetKeyName(1, "Forca__01.gif");
+            this.imageList2.Images.SetKeyName(2, "Forca__02.gif");
+            this.imageList2.Images.SetKeyName(3, "Forca__03.gif");
+            this.imageList2.Images.SetKeyName(4, "Forca__05.gif");
+            this.imageList2.Images.SetKeyName(5, "Forca__08.gif");
+            this.imageList2.Images.SetKeyName(6, "Forca__09.gif");
+            this.imageList2.Images.SetKeyName(7, "Forca__13.gif");
+            this.imageList2.Images.SetKeyName(8, "Forca_1_05.gif");
+            this.imageList2.Images.SetKeyName(9, "Forca_2_03.gif");
+            this.imageList2.Images.SetKeyName(10, "Forca_2_04.gif");
+            this.imageList2.Images.SetKeyName(11, "Forca_2_07.gif");
+            this.imageList2.Images.SetKeyName(12, "Forca_05.gif");
+            this.imageList2.Images.SetKeyName(13, "Forca_07.gif");
+            this.imageList2.Images.SetKeyName(14, "Forca_08.gif");
+            this.imageList2.Images.SetKeyName(15, "Forca_09.gif");
+            this.imageList2.Images.SetKeyName(16, "Forca_10.gif");
+            this.imageList2.Images.SetKeyName(17, "Forca_14.gif");
+            this.imageList2.Images.SetKeyName(18, "Forca_16.gif");
+            this.imageList2.Images.SetKeyName(19, "Forca_17.gif");
             // 
-            // btnM
+            // pictureBox2
             // 
-            this.btnM.Location = new System.Drawing.Point(246, 104);
-            this.btnM.Name = "btnM";
-            this.btnM.Size = new System.Drawing.Size(25, 23);
-            this.btnM.TabIndex = 23;
-            this.btnM.Text = "M";
-            this.btnM.UseVisualStyleBackColor = true;
+            this.pictureBox2.Image = global::apListaLigada.Properties.Resources.Forca__03;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 47);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 194);
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
             // 
-            // btnU
+            // pictureBox3
             // 
-            this.btnU.Location = new System.Drawing.Point(494, 104);
-            this.btnU.Name = "btnU";
-            this.btnU.Size = new System.Drawing.Size(25, 23);
-            this.btnU.TabIndex = 24;
-            this.btnU.Text = "U";
-            this.btnU.UseVisualStyleBackColor = true;
+            this.pictureBox3.Image = global::apListaLigada.Properties.Resources.Forca__02;
+            this.pictureBox3.Location = new System.Drawing.Point(99, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(98, 56);
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
             // 
-            // btnV
+            // pictureBox4
             // 
-            this.btnV.Location = new System.Drawing.Point(215, 133);
-            this.btnV.Name = "btnV";
-            this.btnV.Size = new System.Drawing.Size(25, 23);
-            this.btnV.TabIndex = 25;
-            this.btnV.Text = "V";
-            this.btnV.UseVisualStyleBackColor = true;
+            this.pictureBox4.Image = global::apListaLigada.Properties.Resources.Forca__05;
+            this.pictureBox4.Location = new System.Drawing.Point(89, 52);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(98, 95);
+            this.pictureBox4.TabIndex = 31;
+            this.pictureBox4.TabStop = false;
             // 
-            // btnW
+            // pictureBox5
             // 
-            this.btnW.Location = new System.Drawing.Point(246, 133);
-            this.btnW.Name = "btnW";
-            this.btnW.Size = new System.Drawing.Size(25, 23);
-            this.btnW.TabIndex = 26;
-            this.btnW.Text = "W";
-            this.btnW.UseVisualStyleBackColor = true;
+            this.pictureBox5.Image = global::apListaLigada.Properties.Resources.Forca__08;
+            this.pictureBox5.Location = new System.Drawing.Point(99, 146);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(98, 18);
+            this.pictureBox5.TabIndex = 32;
+            this.pictureBox5.TabStop = false;
             // 
-            // btnY
+            // pictureBox6
             // 
-            this.btnY.Location = new System.Drawing.Point(308, 133);
-            this.btnY.Name = "btnY";
-            this.btnY.Size = new System.Drawing.Size(25, 23);
-            this.btnY.TabIndex = 27;
-            this.btnY.Text = "Y";
-            this.btnY.UseVisualStyleBackColor = true;
+            this.pictureBox6.Image = global::apListaLigada.Properties.Resources.Forca__09;
+            this.pictureBox6.Location = new System.Drawing.Point(98, 161);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(98, 19);
+            this.pictureBox6.TabIndex = 33;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::apListaLigada.Properties.Resources.Forca__13;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 239);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(98, 162);
+            this.pictureBox7.TabIndex = 34;
+            this.pictureBox7.TabStop = false;
             // 
             // FrmAlunos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(634, 409);
+            this.ClientSize = new System.Drawing.Size(634, 571);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
@@ -669,8 +783,15 @@
             this.tpCadastro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableData)).EndInit();
             this.tpForca.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -742,6 +863,14 @@
         private System.Windows.Forms.Button btnV;
         private System.Windows.Forms.Button btnU;
         private System.Windows.Forms.Button btnM;
+        private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
