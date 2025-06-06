@@ -14,6 +14,13 @@ namespace apListaLigada
     {
         private string caminhoArquivoSelecionado = null; // Stores the selected file path
         private VetorDicionario vetorDicionario = new VetorDicionario(); // Field for VetorDicionario
+        private bool jogoEmAndamento = false;
+        private Random random = new Random();
+
+        private string palavraAtual = string.Empty;
+        private int contadorErros = 0;
+        private int pontosAtuais = 0;
+        private const int MAX_ERROS = 6;
 
         private enum Modo { Navegacao, Inclusao, Edicao }
         private Modo modoAtual = Modo.Navegacao;
@@ -23,6 +30,11 @@ namespace apListaLigada
             InitializeComponent();
             tableData.CellClick += tableData_CellClick;
             txtRA.Leave += txtRA_Leave;
+            btnIniciarJogo.Click += btnIniciarJogo_Click;
+            checkBoxDica.CheckedChanged += checkBoxDica_CheckedChanged;
+
+            // Registrar eventos para os botões de letras
+            RegistrarEventosDosBotoes();
         }
 
         /// <summary>
@@ -485,6 +497,256 @@ namespace apListaLigada
                 modoAtual = Modo.Navegacao;
                 vetorDicionario.PosicaoAtual = e.RowIndex;
                 ExibirRegistroAtual();
+            }
+        }
+
+        /// <summary>
+        /// Handles the click event for the "Start Game" button.
+        /// Initiates the game by selecting a random word and hint.
+        /// </summary>
+        private void btnIniciarJogo_Click(object sender, EventArgs e)
+        {
+            if (vetorDicionario.QtosDados == 0)
+            {
+                MessageBox.Show("Não há palavras cadastradas para iniciar o jogo.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Reinicia os contadores e variáveis do jogo
+            contadorErros = 0;
+            pontosAtuais = 0;
+            labelPontosValor.Text = "0";
+            label6.Text = "0";
+
+            // Reset das imagens da forca
+            img_ERRO1.Visible = false;
+            img_ERRO2.Visible = false;
+            // Redefina outros componentes visuais da forca conforme necessário
+
+            // Sorteia uma posição aleatória no vetor
+            int posicaoSorteada = random.Next(vetorDicionario.QtosDados);
+
+            // Define a posição atual como a sorteada
+            vetorDicionario.PosicaoAtual = posicaoSorteada;
+
+            // Obtém a palavra e a dica sorteadas
+            var (palavra, dica) = vetorDicionario.GetAtual();
+
+            // Converte a palavra para maiúsculo e remove espaços em branco à direita
+            palavraAtual = palavra.ToUpper().TrimEnd();
+
+            // Oculta a guia de cadastro para evitar trapaças
+            tpCadastro.Parent = null;
+            jogoEmAndamento = true;
+
+            // Preparar a interface do jogo
+            labelDicaValor.Text = checkBoxDica.Checked ? dica : "_______________";
+
+            // Configurar o tableForca
+            tableForca.Rows.Clear();
+            tableForca.Columns.Clear();
+            
+            // Define o número de colunas baseado no comprimento da palavra processada
+            for (int i = 0; i < palavraAtual.Length; i++)
+            {
+                DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
+                col.Width = 30; // Define uma largura fixa para cada coluna
+                col.HeaderText = (i + 1).ToString();
+                tableForca.Columns.Add(col);
+            }
+
+            // Adiciona uma linha para mostrar as letras
+            tableForca.Rows.Add();
+            
+            // Inicializa as células com espaços em branco ou outro caractere visual para representar letras ocultas
+            for (int i = 0; i < palavraAtual.Length; i++)
+            {
+                tableForca.Rows[0].Cells[i].Value = "_";
+            }
+
+            // Ajustar a altura da linha
+            tableForca.RowTemplate.Height = 30;
+            tableForca.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            
+            // Centralizar o conteúdo das células
+            tableForca.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            tableForca.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 14, System.Drawing.FontStyle.Bold);
+
+            // Habilita todos os botões de letras
+            foreach (Control ctrl in flowLayoutPanel6.Controls)
+            {
+                if (ctrl is Button button)
+                    button.Enabled = true;
+            }
+
+            // Exibe uma mensagem informativa
+            toolStripStatusLabel1.Text = "Jogo iniciado! Adivinhe a palavra.";
+        }
+
+        /// <summary>
+        /// Ends the game and restores the interface.
+        /// </summary>
+        public void FinalizarJogo()
+        {
+            if (jogoEmAndamento)
+            {
+                // Restaura a guia de cadastro
+                tpCadastro.Parent = tabControl1;
+                jogoEmAndamento = false;
+            }
+        }
+
+        /// <summary>
+        /// Handles the CheckedChanged event for the checkBoxDica.
+        /// Updates the displayed hint based on the checkbox state.
+        /// </summary>
+        private void checkBoxDica_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!jogoEmAndamento)
+                return;
+
+            var (_, dica) = vetorDicionario.GetAtual();
+            labelDicaValor.Text = checkBoxDica.Checked ? dica : "_______________";
+        }
+
+        /// <summary>
+        /// Handles the click event for the letter buttons.
+        /// </summary>
+        private void LetraButton_Click(object sender, EventArgs e)
+        {
+            if (!jogoEmAndamento)
+                return;
+            
+            Button btn = sender as Button;
+            if (btn == null) 
+                return;
+            
+            // Obtém a letra do botão pressionado
+            char letra = btn.Text[0];
+            
+            // Desabilita o botão para que não possa ser clicado novamente
+            btn.Enabled = false;
+            
+            // Obtém o objeto Dicionario atual
+            Dicionario dicionarioAtual = vetorDicionario[vetorDicionario.PosicaoAtual];
+            
+            // Verifica se a letra existe na palavra
+            bool acertou = dicionarioAtual.TentarLetra(letra);
+            
+            if (acertou)
+            {
+                // Atualiza a exibição das letras na tabela
+                AtualizarExibicaoPalavra(dicionarioAtual);
+                
+                // Incrementa pontos
+                pontosAtuais += 10;
+                labelPontosValor.Text = pontosAtuais.ToString();
+                
+                // Verifica se o jogo foi concluído com sucesso
+                VerificarFimDeJogo(dicionarioAtual);
+            }
+            else
+            {
+                // Incrementa contador de erros
+                contadorErros++;
+                label6.Text = contadorErros.ToString(); // Atualiza o contador de erros na interface
+                
+                // Atualiza a representação visual do boneco da forca
+                AtualizarImagemForca();
+                
+                // Verifica se o jogo acabou por excesso de erros
+                if (contadorErros >= MAX_ERROS)
+                {
+                    MessageBox.Show($"Fim de jogo! A palavra era: {palavraAtual}", "Derrota", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FinalizarJogo();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Updates the display of the word in the DataGridView based on guessed letters.
+        /// </summary>
+        private void AtualizarExibicaoPalavra(Dicionario dicionario)
+        {
+            if (dicionario == null) return;
+            
+            bool[] acertos = dicionario.GetAcertou();
+            string palavra = dicionario.Palavra.ToUpper().TrimEnd();
+            
+            // Atualiza o grid com as letras descobertas
+            for (int i = 0; i < palavra.Length && i < tableForca.Columns.Count; i++)
+            {
+                if (acertos[i])
+                    tableForca.Rows[0].Cells[i].Value = palavra[i].ToString();
+            }
+        }
+
+        /// <summary>
+        /// Checks if the game has been won by checking if all letters have been guessed.
+        /// </summary>
+        private void VerificarFimDeJogo(Dicionario dicionario)
+        {
+            if (dicionario == null) return;
+            
+            bool[] acertos = dicionario.GetAcertou();
+            string palavra = dicionario.Palavra.ToUpper().TrimEnd();
+            bool ganhou = true;
+            
+            // Verifica se todas as letras da palavra foram descobertas
+            for (int i = 0; i < palavra.Length; i++)
+            {
+                if (!acertos[i])
+                {
+                    ganhou = false;
+                    break;
+                }
+            }
+            
+            if (ganhou)
+            {
+                // Adiciona pontuação bônus por finalizar a palavra
+                pontosAtuais += 50;
+                labelPontosValor.Text = pontosAtuais.ToString();
+                
+                MessageBox.Show($"Parabéns! Você acertou a palavra: {palavra}\nPontuação: {pontosAtuais}", 
+                    "Vitória", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                // Finaliza o jogo
+                FinalizarJogo();
+            }
+        }
+
+        /// <summary>
+        /// Updates the visualization of the hangman based on the number of errors.
+        /// </summary>
+        private void AtualizarImagemForca()
+        {
+            switch (contadorErros)
+            {
+                case 1:
+                    img_ERRO1.Visible = true;
+                    break;
+                case 2:
+                    img_ERRO2.Visible = true;
+                    break;
+                // Adicione mais casos conforme necessário para os outros componentes da forca
+            }
+        }
+
+        /// <summary>
+        /// Registers the click events for letter buttons.
+        /// </summary>
+        public void RegistrarEventosDosBotoes()
+        {
+            // Registre o evento Click de todos os botões no flowLayoutPanel6
+            foreach (Control ctrl in flowLayoutPanel6.Controls)
+            {
+                if (ctrl is Button button)
+                {
+                    button.Click += LetraButton_Click;
+                }
             }
         }
     }

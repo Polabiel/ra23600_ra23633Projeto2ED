@@ -58,66 +58,42 @@
             this.Dica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.tpForca = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelDica = new System.Windows.Forms.Label();
-            this.labelDicaValor = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelPontos = new System.Windows.Forms.Label();
-            this.labelPontosValor = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnY = new System.Windows.Forms.Button();
-            this.btnW = new System.Windows.Forms.Button();
-            this.btnV = new System.Windows.Forms.Button();
-            this.btnU = new System.Windows.Forms.Button();
-            this.btnM = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnX = new System.Windows.Forms.Button();
-            this.btnK = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnR = new System.Windows.Forms.Button();
-            this.btnS = new System.Windows.Forms.Button();
-            this.btnQ = new System.Windows.Forms.Button();
-            this.btnT = new System.Windows.Forms.Button();
-            this.btnP = new System.Windows.Forms.Button();
-            this.btnO = new System.Windows.Forms.Button();
-            this.btnN = new System.Windows.Forms.Button();
-            this.btnL = new System.Windows.Forms.Button();
-            this.btnJ = new System.Windows.Forms.Button();
-            this.btnI = new System.Windows.Forms.Button();
-            this.btnH = new System.Windows.Forms.Button();
-            this.btnG = new System.Windows.Forms.Button();
-            this.btnF = new System.Windows.Forms.Button();
-            this.btnE = new System.Windows.Forms.Button();
-            this.btnD = new System.Windows.Forms.Button();
-            this.btnC = new System.Windows.Forms.Button();
-            this.btnB = new System.Windows.Forms.Button();
-            this.btnA = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.checkBoxDica = new System.Windows.Forms.CheckBox();
-            this.btnIniciarJogo = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableForca = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textName = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.checkBoxArduino = new System.Windows.Forms.CheckBox();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelPort = new System.Windows.Forms.Label();
-            this.labelPortValor = new System.Windows.Forms.Label();
+            this.btnA = new System.Windows.Forms.Button();
+            this.btnB = new System.Windows.Forms.Button();
+            this.btnC = new System.Windows.Forms.Button();
+            this.btnD = new System.Windows.Forms.Button();
+            this.btnE = new System.Windows.Forms.Button();
+            this.btnF = new System.Windows.Forms.Button();
+            this.btnG = new System.Windows.Forms.Button();
+            this.btnH = new System.Windows.Forms.Button();
+            this.btnI = new System.Windows.Forms.Button();
+            this.btnJ = new System.Windows.Forms.Button();
+            this.btnL = new System.Windows.Forms.Button();
+            this.btnN = new System.Windows.Forms.Button();
+            this.btnO = new System.Windows.Forms.Button();
+            this.btnP = new System.Windows.Forms.Button();
+            this.btnT = new System.Windows.Forms.Button();
+            this.btnQ = new System.Windows.Forms.Button();
+            this.btnS = new System.Windows.Forms.Button();
+            this.btnR = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnK = new System.Windows.Forms.Button();
+            this.btnX = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnM = new System.Windows.Forms.Button();
+            this.btnU = new System.Windows.Forms.Button();
+            this.btnV = new System.Windows.Forms.Button();
+            this.btnW = new System.Windows.Forms.Button();
+            this.btnY = new System.Windows.Forms.Button();
             this.btnCC = new System.Windows.Forms.Button();
             this.btnAA = new System.Windows.Forms.Button();
             this.btnAAA = new System.Windows.Forms.Button();
@@ -131,31 +107,61 @@
             this.btnUU = new System.Windows.Forms.Button();
             this.btnHIFEN = new System.Windows.Forms.Button();
             this.btnSpace = new System.Windows.Forms.Button();
-            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelDica = new System.Windows.Forms.Label();
+            this.labelDicaValor = new System.Windows.Forms.Label();
+            this.checkBoxDica = new System.Windows.Forms.CheckBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelPontos = new System.Windows.Forms.Label();
+            this.labelPontosValor = new System.Windows.Forms.Label();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.checkBoxArduino = new System.Windows.Forms.CheckBox();
+            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelPort = new System.Windows.Forms.Label();
+            this.labelPortValor = new System.Windows.Forms.Label();
+            this.btnIniciarJogo = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableData)).BeginInit();
             this.tpForca.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.img_ERRO2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.flowLayoutPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableForca)).BeginInit();
+            this.flowLayoutPanel9.SuspendLayout();
+            this.flowLayoutPanel6.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.flowLayoutPanel7.SuspendLayout();
+            this.flowLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
-            this.flowLayoutPanel7.SuspendLayout();
-            this.flowLayoutPanel8.SuspendLayout();
-            this.flowLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -409,15 +415,15 @@
             // 
             // tpForca
             // 
+            this.tpForca.Controls.Add(this.img_ERRO2);
+            this.tpForca.Controls.Add(this.flowLayoutPanel10);
             this.tpForca.Controls.Add(this.flowLayoutPanel9);
             this.tpForca.Controls.Add(this.flowLayoutPanel6);
             this.tpForca.Controls.Add(this.flowLayoutPanel5);
             this.tpForca.Controls.Add(this.label5);
             this.tpForca.Controls.Add(this.label4);
             this.tpForca.Controls.Add(this.pictureBox7);
-            this.tpForca.Controls.Add(this.pictureBox6);
-            this.tpForca.Controls.Add(this.pictureBox5);
-            this.tpForca.Controls.Add(this.pictureBox4);
+            this.tpForca.Controls.Add(this.img_ERRO1);
             this.tpForca.Controls.Add(this.pictureBox3);
             this.tpForca.Controls.Add(this.pictureBox2);
             this.tpForca.Controls.Add(this.pictureBox1);
@@ -429,542 +435,81 @@
             this.tpForca.Text = "Forca";
             this.tpForca.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel1
+            // img_ERRO2
             // 
-            this.flowLayoutPanel1.Controls.Add(this.labelDica);
-            this.flowLayoutPanel1.Controls.Add(this.labelDicaValor);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(466, 29);
-            this.flowLayoutPanel1.TabIndex = 42;
-            // 
-            // labelDica
-            // 
-            this.labelDica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelDica.AutoSize = true;
-            this.labelDica.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelDica.Location = new System.Drawing.Point(3, 0);
-            this.labelDica.Name = "labelDica";
-            this.labelDica.Size = new System.Drawing.Size(61, 24);
-            this.labelDica.TabIndex = 39;
-            this.labelDica.Text = "Dica:";
-            // 
-            // labelDicaValor
-            // 
-            this.labelDicaValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelDicaValor.AutoSize = true;
-            this.labelDicaValor.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDicaValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelDicaValor.Location = new System.Drawing.Point(70, 2);
-            this.labelDicaValor.Name = "labelDicaValor";
-            this.labelDicaValor.Size = new System.Drawing.Size(360, 19);
-            this.labelDicaValor.TabIndex = 40;
-            this.labelDicaValor.Text = "_______________________________________";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(3, 2);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(139, 19);
-            this.label9.TabIndex = 41;
-            this.label9.Text = "Tempo Restante:";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(3, 2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 19);
-            this.label7.TabIndex = 41;
-            this.label7.Text = "Erros:";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(148, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 24);
-            this.label8.TabIndex = 40;
-            this.label8.Text = "___";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(66, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 24);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "___";
-            // 
-            // labelPontos
-            // 
-            this.labelPontos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPontos.AutoSize = true;
-            this.labelPontos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPontos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.labelPontos.Location = new System.Drawing.Point(3, 2);
-            this.labelPontos.Name = "labelPontos";
-            this.labelPontos.Size = new System.Drawing.Size(70, 19);
-            this.labelPontos.TabIndex = 41;
-            this.labelPontos.Text = "Pontos:";
-            // 
-            // labelPontosValor
-            // 
-            this.labelPontosValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPontosValor.AutoSize = true;
-            this.labelPontosValor.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPontosValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.labelPontosValor.Location = new System.Drawing.Point(79, 0);
-            this.labelPontosValor.Name = "labelPontosValor";
-            this.labelPontosValor.Size = new System.Drawing.Size(46, 24);
-            this.labelPontosValor.TabIndex = 40;
-            this.labelPontosValor.Text = "___";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Curlz MT", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(596, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 85);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Forca!";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label4.Location = new System.Drawing.Point(569, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(242, 36);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Adivinha a Letra";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::apListaLigada.Properties.Resources.Forca__13;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 239);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(98, 162);
-            this.pictureBox7.TabIndex = 34;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::apListaLigada.Properties.Resources.Forca__09;
-            this.pictureBox6.Location = new System.Drawing.Point(98, 161);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(98, 19);
-            this.pictureBox6.TabIndex = 33;
-            this.pictureBox6.TabStop = false;
+            this.img_ERRO2.Controls.Add(this.pictureBox5);
+            this.img_ERRO2.Controls.Add(this.pictureBox6);
+            this.img_ERRO2.Location = new System.Drawing.Point(98, 145);
+            this.img_ERRO2.Margin = new System.Windows.Forms.Padding(0);
+            this.img_ERRO2.Name = "img_ERRO2";
+            this.img_ERRO2.Size = new System.Drawing.Size(107, 52);
+            this.img_ERRO2.TabIndex = 51;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::apListaLigada.Properties.Resources.Forca__08;
-            this.pictureBox5.Location = new System.Drawing.Point(99, 146);
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(98, 18);
             this.pictureBox5.TabIndex = 32;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::apListaLigada.Properties.Resources.Forca__05;
-            this.pictureBox4.Location = new System.Drawing.Point(89, 52);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(98, 95);
-            this.pictureBox4.TabIndex = 31;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::apListaLigada.Properties.Resources.Forca__02;
-            this.pictureBox3.Location = new System.Drawing.Point(99, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(98, 56);
-            this.pictureBox3.TabIndex = 30;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::apListaLigada.Properties.Resources.Forca__03;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 47);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 194);
-            this.pictureBox2.TabIndex = 29;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::apListaLigada.Properties.Resources.Forca__01;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnY
-            // 
-            this.btnY.Location = new System.Drawing.Point(3, 61);
-            this.btnY.Name = "btnY";
-            this.btnY.Size = new System.Drawing.Size(25, 23);
-            this.btnY.TabIndex = 27;
-            this.btnY.Text = "Y";
-            this.btnY.UseVisualStyleBackColor = true;
-            // 
-            // btnW
-            // 
-            this.btnW.Location = new System.Drawing.Point(375, 32);
-            this.btnW.Name = "btnW";
-            this.btnW.Size = new System.Drawing.Size(25, 23);
-            this.btnW.TabIndex = 26;
-            this.btnW.Text = "W";
-            this.btnW.UseVisualStyleBackColor = true;
-            // 
-            // btnV
-            // 
-            this.btnV.Location = new System.Drawing.Point(344, 32);
-            this.btnV.Name = "btnV";
-            this.btnV.Size = new System.Drawing.Size(25, 23);
-            this.btnV.TabIndex = 25;
-            this.btnV.Text = "V";
-            this.btnV.UseVisualStyleBackColor = true;
-            // 
-            // btnU
-            // 
-            this.btnU.Location = new System.Drawing.Point(313, 32);
-            this.btnU.Name = "btnU";
-            this.btnU.Size = new System.Drawing.Size(25, 23);
-            this.btnU.TabIndex = 24;
-            this.btnU.Text = "U";
-            this.btnU.UseVisualStyleBackColor = true;
-            // 
-            // btnM
-            // 
-            this.btnM.Location = new System.Drawing.Point(282, 32);
-            this.btnM.Name = "btnM";
-            this.btnM.Size = new System.Drawing.Size(25, 23);
-            this.btnM.TabIndex = 23;
-            this.btnM.Text = "M";
-            this.btnM.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(251, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnX
-            // 
-            this.btnX.Location = new System.Drawing.Point(220, 32);
-            this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(25, 23);
-            this.btnX.TabIndex = 21;
-            this.btnX.Text = "X";
-            this.btnX.UseVisualStyleBackColor = true;
-            // 
-            // btnK
-            // 
-            this.btnK.Location = new System.Drawing.Point(189, 32);
-            this.btnK.Name = "btnK";
-            this.btnK.Size = new System.Drawing.Size(25, 23);
-            this.btnK.TabIndex = 20;
-            this.btnK.Text = "K";
-            this.btnK.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(158, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Z";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnR
-            // 
-            this.btnR.Location = new System.Drawing.Point(127, 32);
-            this.btnR.Name = "btnR";
-            this.btnR.Size = new System.Drawing.Size(25, 23);
-            this.btnR.TabIndex = 18;
-            this.btnR.Text = "R";
-            this.btnR.UseVisualStyleBackColor = true;
-            // 
-            // btnS
-            // 
-            this.btnS.Location = new System.Drawing.Point(96, 32);
-            this.btnS.Name = "btnS";
-            this.btnS.Size = new System.Drawing.Size(25, 23);
-            this.btnS.TabIndex = 17;
-            this.btnS.Text = "S";
-            this.btnS.UseVisualStyleBackColor = true;
-            // 
-            // btnQ
-            // 
-            this.btnQ.Location = new System.Drawing.Point(65, 32);
-            this.btnQ.Name = "btnQ";
-            this.btnQ.Size = new System.Drawing.Size(25, 23);
-            this.btnQ.TabIndex = 16;
-            this.btnQ.Text = "Q";
-            this.btnQ.UseVisualStyleBackColor = true;
-            // 
-            // btnT
-            // 
-            this.btnT.Location = new System.Drawing.Point(34, 32);
-            this.btnT.Name = "btnT";
-            this.btnT.Size = new System.Drawing.Size(25, 23);
-            this.btnT.TabIndex = 15;
-            this.btnT.Text = "T";
-            this.btnT.UseVisualStyleBackColor = true;
-            // 
-            // btnP
-            // 
-            this.btnP.Location = new System.Drawing.Point(3, 32);
-            this.btnP.Name = "btnP";
-            this.btnP.Size = new System.Drawing.Size(25, 23);
-            this.btnP.TabIndex = 14;
-            this.btnP.Text = "P";
-            this.btnP.UseVisualStyleBackColor = true;
-            // 
-            // btnO
-            // 
-            this.btnO.Location = new System.Drawing.Point(375, 3);
-            this.btnO.Name = "btnO";
-            this.btnO.Size = new System.Drawing.Size(25, 23);
-            this.btnO.TabIndex = 13;
-            this.btnO.Text = "O";
-            this.btnO.UseVisualStyleBackColor = true;
-            // 
-            // btnN
-            // 
-            this.btnN.Location = new System.Drawing.Point(344, 3);
-            this.btnN.Name = "btnN";
-            this.btnN.Size = new System.Drawing.Size(25, 23);
-            this.btnN.TabIndex = 12;
-            this.btnN.Text = "N";
-            this.btnN.UseVisualStyleBackColor = true;
-            // 
-            // btnL
-            // 
-            this.btnL.Location = new System.Drawing.Point(313, 3);
-            this.btnL.Name = "btnL";
-            this.btnL.Size = new System.Drawing.Size(25, 23);
-            this.btnL.TabIndex = 11;
-            this.btnL.Text = "L";
-            this.btnL.UseVisualStyleBackColor = true;
-            // 
-            // btnJ
-            // 
-            this.btnJ.Location = new System.Drawing.Point(282, 3);
-            this.btnJ.Name = "btnJ";
-            this.btnJ.Size = new System.Drawing.Size(25, 23);
-            this.btnJ.TabIndex = 10;
-            this.btnJ.Text = "J";
-            this.btnJ.UseVisualStyleBackColor = true;
-            // 
-            // btnI
-            // 
-            this.btnI.Location = new System.Drawing.Point(251, 3);
-            this.btnI.Name = "btnI";
-            this.btnI.Size = new System.Drawing.Size(25, 23);
-            this.btnI.TabIndex = 9;
-            this.btnI.Text = "I";
-            this.btnI.UseVisualStyleBackColor = true;
-            // 
-            // btnH
-            // 
-            this.btnH.Location = new System.Drawing.Point(220, 3);
-            this.btnH.Name = "btnH";
-            this.btnH.Size = new System.Drawing.Size(25, 23);
-            this.btnH.TabIndex = 8;
-            this.btnH.Text = "H";
-            this.btnH.UseVisualStyleBackColor = true;
-            // 
-            // btnG
-            // 
-            this.btnG.Location = new System.Drawing.Point(189, 3);
-            this.btnG.Name = "btnG";
-            this.btnG.Size = new System.Drawing.Size(25, 23);
-            this.btnG.TabIndex = 7;
-            this.btnG.Text = "G";
-            this.btnG.UseVisualStyleBackColor = true;
-            // 
-            // btnF
-            // 
-            this.btnF.Location = new System.Drawing.Point(158, 3);
-            this.btnF.Name = "btnF";
-            this.btnF.Size = new System.Drawing.Size(25, 23);
-            this.btnF.TabIndex = 6;
-            this.btnF.Text = "F";
-            this.btnF.UseVisualStyleBackColor = true;
-            // 
-            // btnE
-            // 
-            this.btnE.Location = new System.Drawing.Point(127, 3);
-            this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(25, 23);
-            this.btnE.TabIndex = 5;
-            this.btnE.Text = "E";
-            this.btnE.UseVisualStyleBackColor = true;
-            // 
-            // btnD
-            // 
-            this.btnD.Location = new System.Drawing.Point(96, 3);
-            this.btnD.Name = "btnD";
-            this.btnD.Size = new System.Drawing.Size(25, 23);
-            this.btnD.TabIndex = 4;
-            this.btnD.Text = "D";
-            this.btnD.UseVisualStyleBackColor = true;
-            // 
-            // btnC
-            // 
-            this.btnC.Location = new System.Drawing.Point(65, 3);
-            this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(25, 23);
-            this.btnC.TabIndex = 3;
-            this.btnC.Text = "C";
-            this.btnC.UseVisualStyleBackColor = true;
-            // 
-            // btnB
-            // 
-            this.btnB.Location = new System.Drawing.Point(34, 3);
-            this.btnB.Name = "btnB";
-            this.btnB.Size = new System.Drawing.Size(25, 23);
-            this.btnB.TabIndex = 2;
-            this.btnB.Text = "B";
-            this.btnB.UseVisualStyleBackColor = true;
-            // 
-            // btnA
-            // 
-            this.btnA.Location = new System.Drawing.Point(3, 3);
-            this.btnA.Name = "btnA";
-            this.btnA.Size = new System.Drawing.Size(25, 23);
-            this.btnA.TabIndex = 1;
-            this.btnA.Text = "A";
-            this.btnA.UseVisualStyleBackColor = true;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 579);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(981, 22);
-            this.statusStrip1.TabIndex = 23;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
-            this.toolStripStatusLabel1.Text = "Mensagem:";
-            // 
-            // imageList2
-            // 
-            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "Enforcado.gif");
-            this.imageList2.Images.SetKeyName(1, "Forca__01.gif");
-            this.imageList2.Images.SetKeyName(2, "Forca__02.gif");
-            this.imageList2.Images.SetKeyName(3, "Forca__03.gif");
-            this.imageList2.Images.SetKeyName(4, "Forca__05.gif");
-            this.imageList2.Images.SetKeyName(5, "Forca__08.gif");
-            this.imageList2.Images.SetKeyName(6, "Forca__09.gif");
-            this.imageList2.Images.SetKeyName(7, "Forca__13.gif");
-            this.imageList2.Images.SetKeyName(8, "Forca_1_05.gif");
-            this.imageList2.Images.SetKeyName(9, "Forca_2_03.gif");
-            this.imageList2.Images.SetKeyName(10, "Forca_2_04.gif");
-            this.imageList2.Images.SetKeyName(11, "Forca_2_07.gif");
-            this.imageList2.Images.SetKeyName(12, "Forca_05.gif");
-            this.imageList2.Images.SetKeyName(13, "Forca_07.gif");
-            this.imageList2.Images.SetKeyName(14, "Forca_08.gif");
-            this.imageList2.Images.SetKeyName(15, "Forca_09.gif");
-            this.imageList2.Images.SetKeyName(16, "Forca_10.gif");
-            this.imageList2.Images.SetKeyName(17, "Forca_14.gif");
-            this.imageList2.Images.SetKeyName(18, "Forca_16.gif");
-            this.imageList2.Images.SetKeyName(19, "Forca_17.gif");
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.labelPontos);
-            this.flowLayoutPanel2.Controls.Add(this.labelPontosValor);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 38);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(267, 24);
-            this.flowLayoutPanel2.TabIndex = 43;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.label7);
-            this.flowLayoutPanel3.Controls.Add(this.label6);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(276, 38);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(291, 24);
-            this.flowLayoutPanel3.TabIndex = 44;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Controls.Add(this.label9);
-            this.flowLayoutPanel4.Controls.Add(this.label8);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 68);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(536, 23);
-            this.flowLayoutPanel4.TabIndex = 45;
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel1);
-            this.flowLayoutPanel5.Controls.Add(this.checkBoxDica);
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel2);
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel3);
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel4);
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel7);
-            this.flowLayoutPanel5.Controls.Add(this.btnIniciarJogo);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(358, 347);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(592, 135);
-            this.flowLayoutPanel5.TabIndex = 46;
-            // 
-            // checkBoxDica
-            // 
-            this.checkBoxDica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBoxDica.AutoSize = true;
-            this.checkBoxDica.Location = new System.Drawing.Point(475, 7);
-            this.checkBoxDica.Name = "checkBoxDica";
-            this.checkBoxDica.Size = new System.Drawing.Size(93, 21);
-            this.checkBoxDica.TabIndex = 42;
-            this.checkBoxDica.Text = "Com Dica";
-            this.checkBoxDica.UseVisualStyleBackColor = true;
-            // 
-            // btnIniciarJogo
-            // 
-            this.btnIniciarJogo.Location = new System.Drawing.Point(455, 97);
-            this.btnIniciarJogo.Name = "btnIniciarJogo";
-            this.btnIniciarJogo.Size = new System.Drawing.Size(121, 36);
-            this.btnIniciarJogo.TabIndex = 47;
-            this.btnIniciarJogo.Text = "Iniciar Jogo";
-            this.btnIniciarJogo.UseVisualStyleBackColor = true;
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::apListaLigada.Properties.Resources.Forca__09;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 18);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(98, 20);
+            this.pictureBox6.TabIndex = 33;
+            this.pictureBox6.TabStop = false;
+            // 
+            // flowLayoutPanel10
+            // 
+            this.flowLayoutPanel10.Controls.Add(this.tableForca);
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(364, 256);
+            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(586, 79);
+            this.flowLayoutPanel10.TabIndex = 50;
+            // 
+            // tableForca
+            // 
+            this.tableForca.AllowUserToAddRows = false;
+            this.tableForca.AllowUserToDeleteRows = false;
+            this.tableForca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableForca.Location = new System.Drawing.Point(3, 3);
+            this.tableForca.Name = "tableForca";
+            this.tableForca.ReadOnly = true;
+            this.tableForca.Size = new System.Drawing.Size(573, 77);
+            this.tableForca.TabIndex = 0;
+            // 
+            // flowLayoutPanel9
+            // 
+            this.flowLayoutPanel9.Controls.Add(this.label3);
+            this.flowLayoutPanel9.Controls.Add(this.textName);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(364, 127);
+            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(586, 33);
+            this.flowLayoutPanel9.TabIndex = 49;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Seu Nome:";
+            // 
+            // textName
+            // 
+            this.textName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textName.Location = new System.Drawing.Point(90, 3);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(472, 24);
+            this.textName.TabIndex = 38;
             // 
             // flowLayoutPanel6
             // 
@@ -1008,10 +553,539 @@
             this.flowLayoutPanel6.Controls.Add(this.btnUU);
             this.flowLayoutPanel6.Controls.Add(this.btnHIFEN);
             this.flowLayoutPanel6.Controls.Add(this.btnSpace);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(482, 166);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(364, 166);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(404, 122);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(586, 90);
             this.flowLayoutPanel6.TabIndex = 48;
+            // 
+            // btnA
+            // 
+            this.btnA.Location = new System.Drawing.Point(3, 3);
+            this.btnA.Name = "btnA";
+            this.btnA.Size = new System.Drawing.Size(25, 23);
+            this.btnA.TabIndex = 1;
+            this.btnA.Text = "A";
+            this.btnA.UseVisualStyleBackColor = true;
+            // 
+            // btnB
+            // 
+            this.btnB.Location = new System.Drawing.Point(34, 3);
+            this.btnB.Name = "btnB";
+            this.btnB.Size = new System.Drawing.Size(25, 23);
+            this.btnB.TabIndex = 2;
+            this.btnB.Text = "B";
+            this.btnB.UseVisualStyleBackColor = true;
+            // 
+            // btnC
+            // 
+            this.btnC.Location = new System.Drawing.Point(65, 3);
+            this.btnC.Name = "btnC";
+            this.btnC.Size = new System.Drawing.Size(25, 23);
+            this.btnC.TabIndex = 3;
+            this.btnC.Text = "C";
+            this.btnC.UseVisualStyleBackColor = true;
+            // 
+            // btnD
+            // 
+            this.btnD.Location = new System.Drawing.Point(96, 3);
+            this.btnD.Name = "btnD";
+            this.btnD.Size = new System.Drawing.Size(25, 23);
+            this.btnD.TabIndex = 4;
+            this.btnD.Text = "D";
+            this.btnD.UseVisualStyleBackColor = true;
+            // 
+            // btnE
+            // 
+            this.btnE.Location = new System.Drawing.Point(127, 3);
+            this.btnE.Name = "btnE";
+            this.btnE.Size = new System.Drawing.Size(25, 23);
+            this.btnE.TabIndex = 5;
+            this.btnE.Text = "E";
+            this.btnE.UseVisualStyleBackColor = true;
+            // 
+            // btnF
+            // 
+            this.btnF.Location = new System.Drawing.Point(158, 3);
+            this.btnF.Name = "btnF";
+            this.btnF.Size = new System.Drawing.Size(25, 23);
+            this.btnF.TabIndex = 6;
+            this.btnF.Text = "F";
+            this.btnF.UseVisualStyleBackColor = true;
+            // 
+            // btnG
+            // 
+            this.btnG.Location = new System.Drawing.Point(189, 3);
+            this.btnG.Name = "btnG";
+            this.btnG.Size = new System.Drawing.Size(25, 23);
+            this.btnG.TabIndex = 7;
+            this.btnG.Text = "G";
+            this.btnG.UseVisualStyleBackColor = true;
+            // 
+            // btnH
+            // 
+            this.btnH.Location = new System.Drawing.Point(220, 3);
+            this.btnH.Name = "btnH";
+            this.btnH.Size = new System.Drawing.Size(25, 23);
+            this.btnH.TabIndex = 8;
+            this.btnH.Text = "H";
+            this.btnH.UseVisualStyleBackColor = true;
+            // 
+            // btnI
+            // 
+            this.btnI.Location = new System.Drawing.Point(251, 3);
+            this.btnI.Name = "btnI";
+            this.btnI.Size = new System.Drawing.Size(25, 23);
+            this.btnI.TabIndex = 9;
+            this.btnI.Text = "I";
+            this.btnI.UseVisualStyleBackColor = true;
+            // 
+            // btnJ
+            // 
+            this.btnJ.Location = new System.Drawing.Point(282, 3);
+            this.btnJ.Name = "btnJ";
+            this.btnJ.Size = new System.Drawing.Size(25, 23);
+            this.btnJ.TabIndex = 10;
+            this.btnJ.Text = "J";
+            this.btnJ.UseVisualStyleBackColor = true;
+            // 
+            // btnL
+            // 
+            this.btnL.Location = new System.Drawing.Point(313, 3);
+            this.btnL.Name = "btnL";
+            this.btnL.Size = new System.Drawing.Size(25, 23);
+            this.btnL.TabIndex = 11;
+            this.btnL.Text = "L";
+            this.btnL.UseVisualStyleBackColor = true;
+            // 
+            // btnN
+            // 
+            this.btnN.Location = new System.Drawing.Point(344, 3);
+            this.btnN.Name = "btnN";
+            this.btnN.Size = new System.Drawing.Size(25, 23);
+            this.btnN.TabIndex = 12;
+            this.btnN.Text = "N";
+            this.btnN.UseVisualStyleBackColor = true;
+            // 
+            // btnO
+            // 
+            this.btnO.Location = new System.Drawing.Point(375, 3);
+            this.btnO.Name = "btnO";
+            this.btnO.Size = new System.Drawing.Size(25, 23);
+            this.btnO.TabIndex = 13;
+            this.btnO.Text = "O";
+            this.btnO.UseVisualStyleBackColor = true;
+            // 
+            // btnP
+            // 
+            this.btnP.Location = new System.Drawing.Point(406, 3);
+            this.btnP.Name = "btnP";
+            this.btnP.Size = new System.Drawing.Size(25, 23);
+            this.btnP.TabIndex = 14;
+            this.btnP.Text = "P";
+            this.btnP.UseVisualStyleBackColor = true;
+            // 
+            // btnT
+            // 
+            this.btnT.Location = new System.Drawing.Point(437, 3);
+            this.btnT.Name = "btnT";
+            this.btnT.Size = new System.Drawing.Size(25, 23);
+            this.btnT.TabIndex = 15;
+            this.btnT.Text = "T";
+            this.btnT.UseVisualStyleBackColor = true;
+            // 
+            // btnQ
+            // 
+            this.btnQ.Location = new System.Drawing.Point(468, 3);
+            this.btnQ.Name = "btnQ";
+            this.btnQ.Size = new System.Drawing.Size(25, 23);
+            this.btnQ.TabIndex = 16;
+            this.btnQ.Text = "Q";
+            this.btnQ.UseVisualStyleBackColor = true;
+            // 
+            // btnS
+            // 
+            this.btnS.Location = new System.Drawing.Point(499, 3);
+            this.btnS.Name = "btnS";
+            this.btnS.Size = new System.Drawing.Size(25, 23);
+            this.btnS.TabIndex = 17;
+            this.btnS.Text = "S";
+            this.btnS.UseVisualStyleBackColor = true;
+            // 
+            // btnR
+            // 
+            this.btnR.Location = new System.Drawing.Point(530, 3);
+            this.btnR.Name = "btnR";
+            this.btnR.Size = new System.Drawing.Size(25, 23);
+            this.btnR.TabIndex = 18;
+            this.btnR.Text = "R";
+            this.btnR.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Z";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnK
+            // 
+            this.btnK.Location = new System.Drawing.Point(34, 32);
+            this.btnK.Name = "btnK";
+            this.btnK.Size = new System.Drawing.Size(25, 23);
+            this.btnK.TabIndex = 20;
+            this.btnK.Text = "K";
+            this.btnK.UseVisualStyleBackColor = true;
+            // 
+            // btnX
+            // 
+            this.btnX.Location = new System.Drawing.Point(65, 32);
+            this.btnX.Name = "btnX";
+            this.btnX.Size = new System.Drawing.Size(25, 23);
+            this.btnX.TabIndex = 21;
+            this.btnX.Text = "X";
+            this.btnX.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(96, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 23);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "X";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnM
+            // 
+            this.btnM.Location = new System.Drawing.Point(127, 32);
+            this.btnM.Name = "btnM";
+            this.btnM.Size = new System.Drawing.Size(25, 23);
+            this.btnM.TabIndex = 23;
+            this.btnM.Text = "M";
+            this.btnM.UseVisualStyleBackColor = true;
+            // 
+            // btnU
+            // 
+            this.btnU.Location = new System.Drawing.Point(158, 32);
+            this.btnU.Name = "btnU";
+            this.btnU.Size = new System.Drawing.Size(25, 23);
+            this.btnU.TabIndex = 24;
+            this.btnU.Text = "U";
+            this.btnU.UseVisualStyleBackColor = true;
+            // 
+            // btnV
+            // 
+            this.btnV.Location = new System.Drawing.Point(189, 32);
+            this.btnV.Name = "btnV";
+            this.btnV.Size = new System.Drawing.Size(25, 23);
+            this.btnV.TabIndex = 25;
+            this.btnV.Text = "V";
+            this.btnV.UseVisualStyleBackColor = true;
+            // 
+            // btnW
+            // 
+            this.btnW.Location = new System.Drawing.Point(220, 32);
+            this.btnW.Name = "btnW";
+            this.btnW.Size = new System.Drawing.Size(25, 23);
+            this.btnW.TabIndex = 26;
+            this.btnW.Text = "W";
+            this.btnW.UseVisualStyleBackColor = true;
+            // 
+            // btnY
+            // 
+            this.btnY.Location = new System.Drawing.Point(251, 32);
+            this.btnY.Name = "btnY";
+            this.btnY.Size = new System.Drawing.Size(25, 23);
+            this.btnY.TabIndex = 27;
+            this.btnY.Text = "Y";
+            this.btnY.UseVisualStyleBackColor = true;
+            // 
+            // btnCC
+            // 
+            this.btnCC.Location = new System.Drawing.Point(282, 32);
+            this.btnCC.Name = "btnCC";
+            this.btnCC.Size = new System.Drawing.Size(25, 23);
+            this.btnCC.TabIndex = 28;
+            this.btnCC.Text = "Ç";
+            this.btnCC.UseVisualStyleBackColor = true;
+            // 
+            // btnAA
+            // 
+            this.btnAA.Location = new System.Drawing.Point(313, 32);
+            this.btnAA.Name = "btnAA";
+            this.btnAA.Size = new System.Drawing.Size(25, 23);
+            this.btnAA.TabIndex = 29;
+            this.btnAA.Text = "Á";
+            this.btnAA.UseVisualStyleBackColor = true;
+            // 
+            // btnAAA
+            // 
+            this.btnAAA.Location = new System.Drawing.Point(344, 32);
+            this.btnAAA.Name = "btnAAA";
+            this.btnAAA.Size = new System.Drawing.Size(25, 23);
+            this.btnAAA.TabIndex = 30;
+            this.btnAAA.Text = "Â";
+            this.btnAAA.UseVisualStyleBackColor = true;
+            // 
+            // btnAAAA
+            // 
+            this.btnAAAA.Location = new System.Drawing.Point(375, 32);
+            this.btnAAAA.Name = "btnAAAA";
+            this.btnAAAA.Size = new System.Drawing.Size(25, 23);
+            this.btnAAAA.TabIndex = 31;
+            this.btnAAAA.Text = "Ã";
+            this.btnAAAA.UseVisualStyleBackColor = true;
+            // 
+            // btnEE
+            // 
+            this.btnEE.Location = new System.Drawing.Point(406, 32);
+            this.btnEE.Name = "btnEE";
+            this.btnEE.Size = new System.Drawing.Size(25, 23);
+            this.btnEE.TabIndex = 32;
+            this.btnEE.Text = "É";
+            this.btnEE.UseVisualStyleBackColor = true;
+            // 
+            // btnEEE
+            // 
+            this.btnEEE.Location = new System.Drawing.Point(437, 32);
+            this.btnEEE.Name = "btnEEE";
+            this.btnEEE.Size = new System.Drawing.Size(25, 23);
+            this.btnEEE.TabIndex = 33;
+            this.btnEEE.Text = "Ê";
+            this.btnEEE.UseVisualStyleBackColor = true;
+            // 
+            // btnII
+            // 
+            this.btnII.Location = new System.Drawing.Point(468, 32);
+            this.btnII.Name = "btnII";
+            this.btnII.Size = new System.Drawing.Size(25, 23);
+            this.btnII.TabIndex = 34;
+            this.btnII.Text = "Í";
+            this.btnII.UseVisualStyleBackColor = true;
+            // 
+            // btnOO
+            // 
+            this.btnOO.Location = new System.Drawing.Point(499, 32);
+            this.btnOO.Name = "btnOO";
+            this.btnOO.Size = new System.Drawing.Size(25, 23);
+            this.btnOO.TabIndex = 35;
+            this.btnOO.Text = "Ó";
+            this.btnOO.UseVisualStyleBackColor = true;
+            // 
+            // btnOOO
+            // 
+            this.btnOOO.Location = new System.Drawing.Point(530, 32);
+            this.btnOOO.Name = "btnOOO";
+            this.btnOOO.Size = new System.Drawing.Size(25, 23);
+            this.btnOOO.TabIndex = 36;
+            this.btnOOO.Text = "Ô";
+            this.btnOOO.UseVisualStyleBackColor = true;
+            // 
+            // btnOOOO
+            // 
+            this.btnOOOO.Location = new System.Drawing.Point(3, 61);
+            this.btnOOOO.Name = "btnOOOO";
+            this.btnOOOO.Size = new System.Drawing.Size(25, 23);
+            this.btnOOOO.TabIndex = 37;
+            this.btnOOOO.Text = "Õ";
+            this.btnOOOO.UseVisualStyleBackColor = true;
+            // 
+            // btnUU
+            // 
+            this.btnUU.Location = new System.Drawing.Point(34, 61);
+            this.btnUU.Name = "btnUU";
+            this.btnUU.Size = new System.Drawing.Size(25, 23);
+            this.btnUU.TabIndex = 38;
+            this.btnUU.Text = "Ú";
+            this.btnUU.UseVisualStyleBackColor = true;
+            // 
+            // btnHIFEN
+            // 
+            this.btnHIFEN.Location = new System.Drawing.Point(65, 61);
+            this.btnHIFEN.Name = "btnHIFEN";
+            this.btnHIFEN.Size = new System.Drawing.Size(25, 23);
+            this.btnHIFEN.TabIndex = 39;
+            this.btnHIFEN.Text = "-";
+            this.btnHIFEN.UseVisualStyleBackColor = true;
+            // 
+            // btnSpace
+            // 
+            this.btnSpace.Location = new System.Drawing.Point(96, 61);
+            this.btnSpace.Name = "btnSpace";
+            this.btnSpace.Size = new System.Drawing.Size(25, 23);
+            this.btnSpace.TabIndex = 40;
+            this.btnSpace.Text = " ";
+            this.btnSpace.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel1);
+            this.flowLayoutPanel5.Controls.Add(this.checkBoxDica);
+            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel2);
+            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel3);
+            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel4);
+            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel7);
+            this.flowLayoutPanel5.Controls.Add(this.btnIniciarJogo);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(364, 339);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(586, 135);
+            this.flowLayoutPanel5.TabIndex = 46;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.labelDica);
+            this.flowLayoutPanel1.Controls.Add(this.labelDicaValor);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(466, 29);
+            this.flowLayoutPanel1.TabIndex = 42;
+            // 
+            // labelDica
+            // 
+            this.labelDica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDica.AutoSize = true;
+            this.labelDica.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.labelDica.Location = new System.Drawing.Point(3, 0);
+            this.labelDica.Name = "labelDica";
+            this.labelDica.Size = new System.Drawing.Size(61, 24);
+            this.labelDica.TabIndex = 39;
+            this.labelDica.Text = "Dica:";
+            // 
+            // labelDicaValor
+            // 
+            this.labelDicaValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDicaValor.AutoSize = true;
+            this.labelDicaValor.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDicaValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.labelDicaValor.Location = new System.Drawing.Point(70, 2);
+            this.labelDicaValor.Name = "labelDicaValor";
+            this.labelDicaValor.Size = new System.Drawing.Size(360, 19);
+            this.labelDicaValor.TabIndex = 40;
+            this.labelDicaValor.Text = "_______________________________________";
+            // 
+            // checkBoxDica
+            // 
+            this.checkBoxDica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxDica.AutoSize = true;
+            this.checkBoxDica.Location = new System.Drawing.Point(475, 7);
+            this.checkBoxDica.Name = "checkBoxDica";
+            this.checkBoxDica.Size = new System.Drawing.Size(93, 21);
+            this.checkBoxDica.TabIndex = 42;
+            this.checkBoxDica.Text = "Com Dica";
+            this.checkBoxDica.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.labelPontos);
+            this.flowLayoutPanel2.Controls.Add(this.labelPontosValor);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 38);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(267, 24);
+            this.flowLayoutPanel2.TabIndex = 43;
+            // 
+            // labelPontos
+            // 
+            this.labelPontos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPontos.AutoSize = true;
+            this.labelPontos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPontos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.labelPontos.Location = new System.Drawing.Point(3, 2);
+            this.labelPontos.Name = "labelPontos";
+            this.labelPontos.Size = new System.Drawing.Size(70, 19);
+            this.labelPontos.TabIndex = 41;
+            this.labelPontos.Text = "Pontos:";
+            // 
+            // labelPontosValor
+            // 
+            this.labelPontosValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPontosValor.AutoSize = true;
+            this.labelPontosValor.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPontosValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.labelPontosValor.Location = new System.Drawing.Point(79, 0);
+            this.labelPontosValor.Name = "labelPontosValor";
+            this.labelPontosValor.Size = new System.Drawing.Size(46, 24);
+            this.labelPontosValor.TabIndex = 40;
+            this.labelPontosValor.Text = "___";
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.label7);
+            this.flowLayoutPanel3.Controls.Add(this.label6);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(276, 38);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(291, 24);
+            this.flowLayoutPanel3.TabIndex = 44;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(3, 2);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 19);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "Erros:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(66, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 24);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "___";
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.label9);
+            this.flowLayoutPanel4.Controls.Add(this.label8);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 68);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(536, 23);
+            this.flowLayoutPanel4.TabIndex = 45;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(3, 2);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(139, 19);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Tempo Restante:";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(148, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 24);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "___";
+            // 
+            // flowLayoutPanel7
+            // 
+            this.flowLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel7.Controls.Add(this.checkBoxArduino);
+            this.flowLayoutPanel7.Controls.Add(this.flowLayoutPanel8);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 97);
+            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(446, 36);
+            this.flowLayoutPanel7.TabIndex = 49;
             // 
             // checkBoxArduino
             // 
@@ -1024,16 +1098,6 @@
             this.checkBoxArduino.TabIndex = 49;
             this.checkBoxArduino.Text = "Arduino";
             this.checkBoxArduino.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel7
-            // 
-            this.flowLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel7.Controls.Add(this.checkBoxArduino);
-            this.flowLayoutPanel7.Controls.Add(this.flowLayoutPanel8);
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 97);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(446, 36);
-            this.flowLayoutPanel7.TabIndex = 49;
             // 
             // flowLayoutPanel8
             // 
@@ -1069,149 +1133,122 @@
             this.labelPortValor.TabIndex = 40;
             this.labelPortValor.Text = "_______";
             // 
-            // btnCC
+            // btnIniciarJogo
             // 
-            this.btnCC.Location = new System.Drawing.Point(34, 61);
-            this.btnCC.Name = "btnCC";
-            this.btnCC.Size = new System.Drawing.Size(25, 23);
-            this.btnCC.TabIndex = 28;
-            this.btnCC.Text = "Ç";
-            this.btnCC.UseVisualStyleBackColor = true;
+            this.btnIniciarJogo.Location = new System.Drawing.Point(455, 97);
+            this.btnIniciarJogo.Name = "btnIniciarJogo";
+            this.btnIniciarJogo.Size = new System.Drawing.Size(121, 36);
+            this.btnIniciarJogo.TabIndex = 47;
+            this.btnIniciarJogo.Text = "Iniciar Jogo";
+            this.btnIniciarJogo.UseVisualStyleBackColor = true;
             // 
-            // btnAA
+            // label5
             // 
-            this.btnAA.Location = new System.Drawing.Point(65, 61);
-            this.btnAA.Name = "btnAA";
-            this.btnAA.Size = new System.Drawing.Size(25, 23);
-            this.btnAA.TabIndex = 29;
-            this.btnAA.Text = "Á";
-            this.btnAA.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Curlz MT", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label5.Location = new System.Drawing.Point(596, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(184, 85);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Forca!";
             // 
-            // btnAAA
+            // label4
             // 
-            this.btnAAA.Location = new System.Drawing.Point(96, 61);
-            this.btnAAA.Name = "btnAAA";
-            this.btnAAA.Size = new System.Drawing.Size(25, 23);
-            this.btnAAA.TabIndex = 30;
-            this.btnAAA.Text = "Â";
-            this.btnAAA.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label4.Location = new System.Drawing.Point(569, 88);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(242, 36);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Adivinha a Letra";
             // 
-            // btnAAAA
+            // pictureBox7
             // 
-            this.btnAAAA.Location = new System.Drawing.Point(127, 61);
-            this.btnAAAA.Name = "btnAAAA";
-            this.btnAAAA.Size = new System.Drawing.Size(25, 23);
-            this.btnAAAA.TabIndex = 31;
-            this.btnAAAA.Text = "Ã";
-            this.btnAAAA.UseVisualStyleBackColor = true;
+            this.pictureBox7.Image = global::apListaLigada.Properties.Resources.Forca__13;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 239);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(98, 162);
+            this.pictureBox7.TabIndex = 34;
+            this.pictureBox7.TabStop = false;
             // 
-            // btnEE
+            // img_ERRO1
             // 
-            this.btnEE.Location = new System.Drawing.Point(158, 61);
-            this.btnEE.Name = "btnEE";
-            this.btnEE.Size = new System.Drawing.Size(25, 23);
-            this.btnEE.TabIndex = 32;
-            this.btnEE.Text = "É";
-            this.btnEE.UseVisualStyleBackColor = true;
+            this.img_ERRO1.Image = global::apListaLigada.Properties.Resources.Forca__05;
+            this.img_ERRO1.Location = new System.Drawing.Point(89, 52);
+            this.img_ERRO1.Name = "img_ERRO1";
+            this.img_ERRO1.Size = new System.Drawing.Size(98, 95);
+            this.img_ERRO1.TabIndex = 31;
+            this.img_ERRO1.TabStop = false;
             // 
-            // btnEEE
+            // pictureBox3
             // 
-            this.btnEEE.Location = new System.Drawing.Point(189, 61);
-            this.btnEEE.Name = "btnEEE";
-            this.btnEEE.Size = new System.Drawing.Size(25, 23);
-            this.btnEEE.TabIndex = 33;
-            this.btnEEE.Text = "Ê";
-            this.btnEEE.UseVisualStyleBackColor = true;
+            this.pictureBox3.Image = global::apListaLigada.Properties.Resources.Forca__02;
+            this.pictureBox3.Location = new System.Drawing.Point(99, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(98, 56);
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
             // 
-            // btnII
+            // pictureBox2
             // 
-            this.btnII.Location = new System.Drawing.Point(220, 61);
-            this.btnII.Name = "btnII";
-            this.btnII.Size = new System.Drawing.Size(25, 23);
-            this.btnII.TabIndex = 34;
-            this.btnII.Text = "Í";
-            this.btnII.UseVisualStyleBackColor = true;
+            this.pictureBox2.Image = global::apListaLigada.Properties.Resources.Forca__03;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 47);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 194);
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
             // 
-            // btnOO
+            // pictureBox1
             // 
-            this.btnOO.Location = new System.Drawing.Point(251, 61);
-            this.btnOO.Name = "btnOO";
-            this.btnOO.Size = new System.Drawing.Size(25, 23);
-            this.btnOO.TabIndex = 35;
-            this.btnOO.Text = "Ó";
-            this.btnOO.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::apListaLigada.Properties.Resources.Forca__01;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnOOO
+            // statusStrip1
             // 
-            this.btnOOO.Location = new System.Drawing.Point(282, 61);
-            this.btnOOO.Name = "btnOOO";
-            this.btnOOO.Size = new System.Drawing.Size(25, 23);
-            this.btnOOO.TabIndex = 36;
-            this.btnOOO.Text = "Ô";
-            this.btnOOO.UseVisualStyleBackColor = true;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 579);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(981, 22);
+            this.statusStrip1.TabIndex = 23;
+            this.statusStrip1.Text = "statusStrip1";
             // 
-            // btnOOOO
+            // toolStripStatusLabel1
             // 
-            this.btnOOOO.Location = new System.Drawing.Point(313, 61);
-            this.btnOOOO.Name = "btnOOOO";
-            this.btnOOOO.Size = new System.Drawing.Size(25, 23);
-            this.btnOOOO.TabIndex = 37;
-            this.btnOOOO.Text = "Õ";
-            this.btnOOOO.UseVisualStyleBackColor = true;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
+            this.toolStripStatusLabel1.Text = "Mensagem:";
             // 
-            // btnUU
+            // imageList2
             // 
-            this.btnUU.Location = new System.Drawing.Point(344, 61);
-            this.btnUU.Name = "btnUU";
-            this.btnUU.Size = new System.Drawing.Size(25, 23);
-            this.btnUU.TabIndex = 38;
-            this.btnUU.Text = "Ú";
-            this.btnUU.UseVisualStyleBackColor = true;
-            // 
-            // btnHIFEN
-            // 
-            this.btnHIFEN.Location = new System.Drawing.Point(375, 61);
-            this.btnHIFEN.Name = "btnHIFEN";
-            this.btnHIFEN.Size = new System.Drawing.Size(25, 23);
-            this.btnHIFEN.TabIndex = 39;
-            this.btnHIFEN.Text = "-";
-            this.btnHIFEN.UseVisualStyleBackColor = true;
-            // 
-            // btnSpace
-            // 
-            this.btnSpace.Location = new System.Drawing.Point(3, 90);
-            this.btnSpace.Name = "btnSpace";
-            this.btnSpace.Size = new System.Drawing.Size(25, 23);
-            this.btnSpace.TabIndex = 40;
-            this.btnSpace.Text = " ";
-            this.btnSpace.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel9
-            // 
-            this.flowLayoutPanel9.Controls.Add(this.label3);
-            this.flowLayoutPanel9.Controls.Add(this.textName);
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(505, 127);
-            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(361, 33);
-            this.flowLayoutPanel9.TabIndex = 49;
-            // 
-            // textName
-            // 
-            this.textName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textName.Location = new System.Drawing.Point(90, 3);
-            this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(265, 24);
-            this.textName.TabIndex = 38;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 17);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Seu Nome:";
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "Enforcado.gif");
+            this.imageList2.Images.SetKeyName(1, "Forca__01.gif");
+            this.imageList2.Images.SetKeyName(2, "Forca__02.gif");
+            this.imageList2.Images.SetKeyName(3, "Forca__03.gif");
+            this.imageList2.Images.SetKeyName(4, "Forca__05.gif");
+            this.imageList2.Images.SetKeyName(5, "Forca__08.gif");
+            this.imageList2.Images.SetKeyName(6, "Forca__09.gif");
+            this.imageList2.Images.SetKeyName(7, "Forca__13.gif");
+            this.imageList2.Images.SetKeyName(8, "Forca_1_05.gif");
+            this.imageList2.Images.SetKeyName(9, "Forca_2_03.gif");
+            this.imageList2.Images.SetKeyName(10, "Forca_2_04.gif");
+            this.imageList2.Images.SetKeyName(11, "Forca_2_07.gif");
+            this.imageList2.Images.SetKeyName(12, "Forca_05.gif");
+            this.imageList2.Images.SetKeyName(13, "Forca_07.gif");
+            this.imageList2.Images.SetKeyName(14, "Forca_08.gif");
+            this.imageList2.Images.SetKeyName(15, "Forca_09.gif");
+            this.imageList2.Images.SetKeyName(16, "Forca_10.gif");
+            this.imageList2.Images.SetKeyName(17, "Forca_14.gif");
+            this.imageList2.Images.SetKeyName(18, "Forca_16.gif");
+            this.imageList2.Images.SetKeyName(19, "Forca_17.gif");
             // 
             // FrmAlunos
             // 
@@ -1233,32 +1270,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableData)).EndInit();
             this.tpForca.ResumeLayout(false);
             this.tpForca.PerformLayout();
+            this.img_ERRO2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.flowLayoutPanel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tableForca)).EndInit();
+            this.flowLayoutPanel9.ResumeLayout(false);
+            this.flowLayoutPanel9.PerformLayout();
+            this.flowLayoutPanel6.ResumeLayout(false);
+            this.flowLayoutPanel5.ResumeLayout(false);
+            this.flowLayoutPanel5.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel7.PerformLayout();
             this.flowLayoutPanel8.ResumeLayout(false);
             this.flowLayoutPanel8.PerformLayout();
-            this.flowLayoutPanel9.ResumeLayout(false);
-            this.flowLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1334,7 +1374,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox img_ERRO1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
@@ -1376,6 +1416,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textName;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
+        private System.Windows.Forms.FlowLayoutPanel img_ERRO2;
+        private System.Windows.Forms.DataGridView tableForca;
     }
 }
 
