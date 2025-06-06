@@ -69,8 +69,6 @@
             this.labelPontosValor = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -133,6 +131,9 @@
             this.btnUU = new System.Windows.Forms.Button();
             this.btnHIFEN = new System.Windows.Forms.Button();
             this.btnSpace = new System.Windows.Forms.Button();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpCadastro.SuspendLayout();
@@ -154,6 +155,7 @@
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel8.SuspendLayout();
+            this.flowLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -260,12 +262,12 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(23, 35);
+            this.btnBuscar.Size = new System.Drawing.Size(46, 35);
             this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // toolStripSeparator3
@@ -375,7 +377,7 @@
             this.Dica});
             this.tableData.Location = new System.Drawing.Point(15, 78);
             this.tableData.Name = "tableData";
-            this.tableData.Size = new System.Drawing.Size(588, 193);
+            this.tableData.Size = new System.Drawing.Size(588, 389);
             this.tableData.TabIndex = 6;
             // 
             // ID
@@ -407,12 +409,11 @@
             // 
             // tpForca
             // 
+            this.tpForca.Controls.Add(this.flowLayoutPanel9);
             this.tpForca.Controls.Add(this.flowLayoutPanel6);
             this.tpForca.Controls.Add(this.flowLayoutPanel5);
             this.tpForca.Controls.Add(this.label5);
             this.tpForca.Controls.Add(this.label4);
-            this.tpForca.Controls.Add(this.textName);
-            this.tpForca.Controls.Add(this.label3);
             this.tpForca.Controls.Add(this.pictureBox7);
             this.tpForca.Controls.Add(this.pictureBox6);
             this.tpForca.Controls.Add(this.pictureBox5);
@@ -538,7 +539,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Curlz MT", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(585, 17);
+            this.label5.Location = new System.Drawing.Point(596, 3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(184, 85);
             this.label5.TabIndex = 37;
@@ -549,27 +550,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label4.Location = new System.Drawing.Point(558, 102);
+            this.label4.Location = new System.Drawing.Point(569, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(242, 36);
             this.label4.TabIndex = 37;
             this.label4.Text = "Adivinha a Letra";
-            // 
-            // textName
-            // 
-            this.textName.Location = new System.Drawing.Point(582, 147);
-            this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(265, 24);
-            this.textName.TabIndex = 36;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(494, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 17);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Seu Nome:";
             // 
             // pictureBox7
             // 
@@ -956,9 +941,9 @@
             this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel5.Controls.Add(this.btnIniciarJogo);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(347, 329);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(358, 347);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(592, 142);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(592, 135);
             this.flowLayoutPanel5.TabIndex = 46;
             // 
             // checkBoxDica
@@ -1023,7 +1008,7 @@
             this.flowLayoutPanel6.Controls.Add(this.btnUU);
             this.flowLayoutPanel6.Controls.Add(this.btnHIFEN);
             this.flowLayoutPanel6.Controls.Add(this.btnSpace);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(497, 182);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(482, 166);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(404, 122);
             this.flowLayoutPanel6.TabIndex = 48;
@@ -1201,6 +1186,33 @@
             this.btnSpace.Text = " ";
             this.btnSpace.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel9
+            // 
+            this.flowLayoutPanel9.Controls.Add(this.label3);
+            this.flowLayoutPanel9.Controls.Add(this.textName);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(505, 127);
+            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(361, 33);
+            this.flowLayoutPanel9.TabIndex = 49;
+            // 
+            // textName
+            // 
+            this.textName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textName.Location = new System.Drawing.Point(90, 3);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(265, 24);
+            this.textName.TabIndex = 38;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Seu Nome:";
+            // 
             // FrmAlunos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1245,6 +1257,8 @@
             this.flowLayoutPanel7.PerformLayout();
             this.flowLayoutPanel8.ResumeLayout(false);
             this.flowLayoutPanel8.PerformLayout();
+            this.flowLayoutPanel9.ResumeLayout(false);
+            this.flowLayoutPanel9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1323,10 +1337,8 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.Label labelDica;
         private System.Windows.Forms.Label labelDicaValor;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -1361,6 +1373,9 @@
         private System.Windows.Forms.Button btnUU;
         private System.Windows.Forms.Button btnHIFEN;
         private System.Windows.Forms.Button btnSpace;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textName;
     }
 }
 
