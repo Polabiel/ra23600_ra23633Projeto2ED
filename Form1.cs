@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using System.Timers;
 using System.IO.Ports; // Adicione se não existir, mas usaremos System.Windows.Forms.Timer
 
-// ra23600 ra23305
+// ra23600 ra23633
 // Gabriel - Julio
 namespace apListaLigada
 {
