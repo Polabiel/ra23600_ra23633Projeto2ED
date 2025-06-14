@@ -28,6 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAlunos));
             this.label2 = new System.Windows.Forms.Label();
             this.txtRA = new System.Windows.Forms.TextBox();
@@ -45,25 +46,145 @@
             this.btnNovo = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnSalvar = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSair = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpCadastro = new System.Windows.Forms.TabPage();
+            this.tableData = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Palavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.tpListagem = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbTras = new System.Windows.Forms.RadioButton();
-            this.rbFrente = new System.Windows.Forms.RadioButton();
-            this.lsbDados = new System.Windows.Forms.ListBox();
             this.tpForca = new System.Windows.Forms.TabPage();
+            this.enforcado = new System.Windows.Forms.PictureBox();
+            this.img_ERRO8 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO_0_7 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO_1_7 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO5 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO6 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cabeca_normal = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableForca = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textName = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnA = new System.Windows.Forms.Button();
+            this.btnB = new System.Windows.Forms.Button();
+            this.btnC = new System.Windows.Forms.Button();
+            this.btnD = new System.Windows.Forms.Button();
+            this.btnE = new System.Windows.Forms.Button();
+            this.btnF = new System.Windows.Forms.Button();
+            this.btnG = new System.Windows.Forms.Button();
+            this.btnH = new System.Windows.Forms.Button();
+            this.btnI = new System.Windows.Forms.Button();
+            this.btnJ = new System.Windows.Forms.Button();
+            this.btnL = new System.Windows.Forms.Button();
+            this.btnN = new System.Windows.Forms.Button();
+            this.btnO = new System.Windows.Forms.Button();
+            this.btnP = new System.Windows.Forms.Button();
+            this.btnT = new System.Windows.Forms.Button();
+            this.btnQ = new System.Windows.Forms.Button();
+            this.btnS = new System.Windows.Forms.Button();
+            this.btnR = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnK = new System.Windows.Forms.Button();
+            this.btnX = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnM = new System.Windows.Forms.Button();
+            this.btnU = new System.Windows.Forms.Button();
+            this.btnV = new System.Windows.Forms.Button();
+            this.btnW = new System.Windows.Forms.Button();
+            this.btnY = new System.Windows.Forms.Button();
+            this.btnCC = new System.Windows.Forms.Button();
+            this.btnAA = new System.Windows.Forms.Button();
+            this.btnAAA = new System.Windows.Forms.Button();
+            this.btnAAAA = new System.Windows.Forms.Button();
+            this.btnEE = new System.Windows.Forms.Button();
+            this.btnEEE = new System.Windows.Forms.Button();
+            this.btnII = new System.Windows.Forms.Button();
+            this.btnOO = new System.Windows.Forms.Button();
+            this.btnOOO = new System.Windows.Forms.Button();
+            this.btnOOOO = new System.Windows.Forms.Button();
+            this.btnUU = new System.Windows.Forms.Button();
+            this.btnHIFEN = new System.Windows.Forms.Button();
+            this.btnSpace = new System.Windows.Forms.Button();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelDica = new System.Windows.Forms.Label();
+            this.labelDicaValor = new System.Windows.Forms.Label();
+            this.checkBoxDica = new System.Windows.Forms.CheckBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelPontos = new System.Windows.Forms.Label();
+            this.labelPontosValor = new System.Windows.Forms.Label();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.labelTempoRestante = new System.Windows.Forms.Label();
+            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.checkBoxArduino = new System.Windows.Forms.CheckBox();
+            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelPort = new System.Windows.Forms.Label();
+            this.labelPortValor = new System.Windows.Forms.Label();
+            this.btnIniciarJogo = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpCadastro.SuspendLayout();
-            this.tpListagem.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableData)).BeginInit();
+            this.tpForca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enforcado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO_0_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO_1_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO6)).BeginInit();
+            this.img_ERRO4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.img_ERRO3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cabeca_normal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.img_ERRO2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.flowLayoutPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableForca)).BeginInit();
+            this.flowLayoutPanel9.SuspendLayout();
+            this.flowLayoutPanel6.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.flowLayoutPanel7.SuspendLayout();
+            this.flowLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,12 +235,13 @@
             this.btnNovo,
             this.btnEditar,
             this.btnCancelar,
+            this.btnSalvar,
             this.btnExcluir,
             this.toolStripSeparator2,
             this.btnSair});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(634, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(981, 38);
             this.toolStrip1.TabIndex = 21;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -170,12 +292,12 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(23, 35);
+            this.btnBuscar.Size = new System.Drawing.Size(46, 35);
             this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // toolStripSeparator3
@@ -213,6 +335,16 @@
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(42, 35);
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // btnExcluir
             // 
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
@@ -244,17 +376,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tpCadastro);
-            this.tabControl1.Controls.Add(this.tpListagem);
             this.tabControl1.Controls.Add(this.tpForca);
             this.tabControl1.Location = new System.Drawing.Point(12, 55);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(617, 326);
+            this.tabControl1.Size = new System.Drawing.Size(964, 518);
             this.tabControl1.TabIndex = 22;
             this.tabControl1.Enter += new System.EventHandler(this.tabControl1_Enter);
             // 
             // tpCadastro
             // 
+            this.tpCadastro.Controls.Add(this.tableData);
             this.tpCadastro.Controls.Add(this.label1);
             this.tpCadastro.Controls.Add(this.label2);
             this.tpCadastro.Controls.Add(this.txtRA);
@@ -262,10 +394,40 @@
             this.tpCadastro.Location = new System.Drawing.Point(4, 26);
             this.tpCadastro.Name = "tpCadastro";
             this.tpCadastro.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCadastro.Size = new System.Drawing.Size(609, 296);
+            this.tpCadastro.Size = new System.Drawing.Size(956, 488);
             this.tpCadastro.TabIndex = 0;
             this.tpCadastro.Text = "Cadastro";
             this.tpCadastro.UseVisualStyleBackColor = true;
+            // 
+            // tableData
+            // 
+            this.tableData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Palavra,
+            this.Dica});
+            this.tableData.Location = new System.Drawing.Point(15, 78);
+            this.tableData.Name = "tableData";
+            this.tableData.Size = new System.Drawing.Size(588, 389);
+            this.tableData.TabIndex = 6;
+            // 
+            // ID
+            // 
+            this.ID.Frozen = true;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Palavra
+            // 
+            this.Palavra.Frozen = true;
+            this.Palavra.HeaderText = "Palavra";
+            this.Palavra.Name = "Palavra";
+            // 
+            // Dica
+            // 
+            this.Dica.HeaderText = "Dica";
+            this.Dica.Name = "Dica";
             // 
             // label1
             // 
@@ -276,79 +438,933 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Palavra:";
             // 
-            // tpListagem
-            // 
-            this.tpListagem.Controls.Add(this.groupBox1);
-            this.tpListagem.Controls.Add(this.lsbDados);
-            this.tpListagem.Location = new System.Drawing.Point(4, 22);
-            this.tpListagem.Name = "tpListagem";
-            this.tpListagem.Padding = new System.Windows.Forms.Padding(3);
-            this.tpListagem.Size = new System.Drawing.Size(609, 300);
-            this.tpListagem.TabIndex = 1;
-            this.tpListagem.Text = "Listagem";
-            this.tpListagem.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbTras);
-            this.groupBox1.Controls.Add(this.rbFrente);
-            this.groupBox1.Location = new System.Drawing.Point(7, 7);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(248, 49);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ordem";
-            // 
-            // rbTras
-            // 
-            this.rbTras.AutoSize = true;
-            this.rbTras.Location = new System.Drawing.Point(121, 22);
-            this.rbTras.Name = "rbTras";
-            this.rbTras.Size = new System.Drawing.Size(110, 21);
-            this.rbTras.TabIndex = 1;
-            this.rbTras.Text = "Decrescente";
-            this.rbTras.UseVisualStyleBackColor = true;
-            this.rbTras.Click += new System.EventHandler(this.rbTras_Click);
-            // 
-            // rbFrente
-            // 
-            this.rbFrente.AutoSize = true;
-            this.rbFrente.Checked = true;
-            this.rbFrente.Location = new System.Drawing.Point(6, 22);
-            this.rbFrente.Name = "rbFrente";
-            this.rbFrente.Size = new System.Drawing.Size(94, 21);
-            this.rbFrente.TabIndex = 0;
-            this.rbFrente.TabStop = true;
-            this.rbFrente.Text = "Crescente";
-            this.rbFrente.UseVisualStyleBackColor = true;
-            this.rbFrente.Click += new System.EventHandler(this.rbFrente_Click);
-            // 
-            // lsbDados
-            // 
-            this.lsbDados.FormattingEnabled = true;
-            this.lsbDados.ItemHeight = 17;
-            this.lsbDados.Location = new System.Drawing.Point(7, 62);
-            this.lsbDados.Name = "lsbDados";
-            this.lsbDados.Size = new System.Drawing.Size(596, 225);
-            this.lsbDados.TabIndex = 0;
-            // 
             // tpForca
             // 
-            this.tpForca.Location = new System.Drawing.Point(4, 22);
+            this.tpForca.Controls.Add(this.enforcado);
+            this.tpForca.Controls.Add(this.img_ERRO8);
+            this.tpForca.Controls.Add(this.img_ERRO_0_7);
+            this.tpForca.Controls.Add(this.img_ERRO_1_7);
+            this.tpForca.Controls.Add(this.img_ERRO5);
+            this.tpForca.Controls.Add(this.img_ERRO6);
+            this.tpForca.Controls.Add(this.img_ERRO4);
+            this.tpForca.Controls.Add(this.img_ERRO3);
+            this.tpForca.Controls.Add(this.img_ERRO2);
+            this.tpForca.Controls.Add(this.flowLayoutPanel10);
+            this.tpForca.Controls.Add(this.flowLayoutPanel9);
+            this.tpForca.Controls.Add(this.flowLayoutPanel6);
+            this.tpForca.Controls.Add(this.flowLayoutPanel5);
+            this.tpForca.Controls.Add(this.label5);
+            this.tpForca.Controls.Add(this.label4);
+            this.tpForca.Controls.Add(this.pictureBox7);
+            this.tpForca.Controls.Add(this.img_ERRO1);
+            this.tpForca.Controls.Add(this.pictureBox3);
+            this.tpForca.Controls.Add(this.pictureBox2);
+            this.tpForca.Controls.Add(this.pictureBox1);
+            this.tpForca.Location = new System.Drawing.Point(4, 26);
             this.tpForca.Name = "tpForca";
             this.tpForca.Padding = new System.Windows.Forms.Padding(3);
-            this.tpForca.Size = new System.Drawing.Size(609, 300);
+            this.tpForca.Size = new System.Drawing.Size(956, 488);
             this.tpForca.TabIndex = 2;
             this.tpForca.Text = "Forca";
             this.tpForca.UseVisualStyleBackColor = true;
+            // 
+            // enforcado
+            // 
+            this.enforcado.Image = global::apListaLigada.Properties.Resources.Enforcado;
+            this.enforcado.Location = new System.Drawing.Point(211, 25);
+            this.enforcado.Name = "enforcado";
+            this.enforcado.Size = new System.Drawing.Size(153, 340);
+            this.enforcado.TabIndex = 61;
+            this.enforcado.TabStop = false;
+            this.enforcado.Visible = false;
+            // 
+            // img_ERRO8
+            // 
+            this.img_ERRO8.Image = global::apListaLigada.Properties.Resources.Forca_17;
+            this.img_ERRO8.Location = new System.Drawing.Point(133, 333);
+            this.img_ERRO8.Name = "img_ERRO8";
+            this.img_ERRO8.Size = new System.Drawing.Size(100, 92);
+            this.img_ERRO8.TabIndex = 60;
+            this.img_ERRO8.TabStop = false;
+            // 
+            // img_ERRO_0_7
+            // 
+            this.img_ERRO_0_7.Image = global::apListaLigada.Properties.Resources.Forca_14;
+            this.img_ERRO_0_7.Location = new System.Drawing.Point(99, 285);
+            this.img_ERRO_0_7.Name = "img_ERRO_0_7";
+            this.img_ERRO_0_7.Size = new System.Drawing.Size(100, 50);
+            this.img_ERRO_0_7.TabIndex = 59;
+            this.img_ERRO_0_7.TabStop = false;
+            // 
+            // img_ERRO_1_7
+            // 
+            this.img_ERRO_1_7.Image = global::apListaLigada.Properties.Resources.Forca_16;
+            this.img_ERRO_1_7.Location = new System.Drawing.Point(64, 332);
+            this.img_ERRO_1_7.Name = "img_ERRO_1_7";
+            this.img_ERRO_1_7.Size = new System.Drawing.Size(67, 83);
+            this.img_ERRO_1_7.TabIndex = 58;
+            this.img_ERRO_1_7.TabStop = false;
+            // 
+            // img_ERRO5
+            // 
+            this.img_ERRO5.Image = global::apListaLigada.Properties.Resources.Forca_10;
+            this.img_ERRO5.Location = new System.Drawing.Point(162, 189);
+            this.img_ERRO5.Name = "img_ERRO5";
+            this.img_ERRO5.Size = new System.Drawing.Size(72, 56);
+            this.img_ERRO5.TabIndex = 57;
+            this.img_ERRO5.TabStop = false;
+            // 
+            // img_ERRO6
+            // 
+            this.img_ERRO6.Image = global::apListaLigada.Properties.Resources.Forca_07;
+            this.img_ERRO6.Location = new System.Drawing.Point(43, 174);
+            this.img_ERRO6.Name = "img_ERRO6";
+            this.img_ERRO6.Size = new System.Drawing.Size(58, 41);
+            this.img_ERRO6.TabIndex = 56;
+            this.img_ERRO6.TabStop = false;
+            // 
+            // img_ERRO4
+            // 
+            this.img_ERRO4.Controls.Add(this.pictureBox8);
+            this.img_ERRO4.Controls.Add(this.pictureBox9);
+            this.img_ERRO4.Location = new System.Drawing.Point(98, 189);
+            this.img_ERRO4.Margin = new System.Windows.Forms.Padding(0);
+            this.img_ERRO4.Name = "img_ERRO4";
+            this.img_ERRO4.Size = new System.Drawing.Size(65, 100);
+            this.img_ERRO4.TabIndex = 55;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::apListaLigada.Properties.Resources.Forca_09;
+            this.pictureBox8.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(64, 82);
+            this.pictureBox8.TabIndex = 52;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::apListaLigada.Properties.Resources.Forca_14;
+            this.pictureBox9.Location = new System.Drawing.Point(0, 82);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(64, 17);
+            this.pictureBox9.TabIndex = 53;
+            this.pictureBox9.TabStop = false;
+            // 
+            // img_ERRO3
+            // 
+            this.img_ERRO3.Controls.Add(this.cabeca_normal);
+            this.img_ERRO3.Controls.Add(this.pictureBox4);
+            this.img_ERRO3.Location = new System.Drawing.Point(89, 82);
+            this.img_ERRO3.Margin = new System.Windows.Forms.Padding(0);
+            this.img_ERRO3.Name = "img_ERRO3";
+            this.img_ERRO3.Size = new System.Drawing.Size(107, 115);
+            this.img_ERRO3.TabIndex = 54;
+            // 
+            // cabeca_normal
+            // 
+            this.cabeca_normal.Image = global::apListaLigada.Properties.Resources.Forca_05;
+            this.cabeca_normal.Location = new System.Drawing.Point(0, 0);
+            this.cabeca_normal.Margin = new System.Windows.Forms.Padding(0);
+            this.cabeca_normal.Name = "cabeca_normal";
+            this.cabeca_normal.Size = new System.Drawing.Size(106, 94);
+            this.cabeca_normal.TabIndex = 70;
+            this.cabeca_normal.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::apListaLigada.Properties.Resources.Forca_08;
+            this.pictureBox4.Location = new System.Drawing.Point(10, 94);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(96, 17);
+            this.pictureBox4.TabIndex = 53;
+            this.pictureBox4.TabStop = false;
+            // 
+            // img_ERRO2
+            // 
+            this.img_ERRO2.Controls.Add(this.pictureBox5);
+            this.img_ERRO2.Controls.Add(this.pictureBox6);
+            this.img_ERRO2.Location = new System.Drawing.Point(98, 145);
+            this.img_ERRO2.Margin = new System.Windows.Forms.Padding(0);
+            this.img_ERRO2.Name = "img_ERRO2";
+            this.img_ERRO2.Size = new System.Drawing.Size(107, 52);
+            this.img_ERRO2.TabIndex = 51;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::apListaLigada.Properties.Resources.Forca__08;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(98, 18);
+            this.pictureBox5.TabIndex = 32;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::apListaLigada.Properties.Resources.Forca__09;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 18);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(98, 20);
+            this.pictureBox6.TabIndex = 33;
+            this.pictureBox6.TabStop = false;
+            // 
+            // flowLayoutPanel10
+            // 
+            this.flowLayoutPanel10.Controls.Add(this.tableForca);
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(307, 256);
+            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(643, 79);
+            this.flowLayoutPanel10.TabIndex = 50;
+            // 
+            // tableForca
+            // 
+            this.tableForca.AllowUserToAddRows = false;
+            this.tableForca.AllowUserToDeleteRows = false;
+            this.tableForca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableForca.Location = new System.Drawing.Point(3, 3);
+            this.tableForca.Name = "tableForca";
+            this.tableForca.ReadOnly = true;
+            this.tableForca.Size = new System.Drawing.Size(630, 74);
+            this.tableForca.TabIndex = 0;
+            // 
+            // flowLayoutPanel9
+            // 
+            this.flowLayoutPanel9.Controls.Add(this.label3);
+            this.flowLayoutPanel9.Controls.Add(this.textName);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(364, 127);
+            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(586, 33);
+            this.flowLayoutPanel9.TabIndex = 49;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Seu Nome:";
+            // 
+            // textName
+            // 
+            this.textName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textName.Location = new System.Drawing.Point(90, 3);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(472, 24);
+            this.textName.TabIndex = 38;
+            // 
+            // flowLayoutPanel6
+            // 
+            this.flowLayoutPanel6.Controls.Add(this.btnA);
+            this.flowLayoutPanel6.Controls.Add(this.btnB);
+            this.flowLayoutPanel6.Controls.Add(this.btnC);
+            this.flowLayoutPanel6.Controls.Add(this.btnD);
+            this.flowLayoutPanel6.Controls.Add(this.btnE);
+            this.flowLayoutPanel6.Controls.Add(this.btnF);
+            this.flowLayoutPanel6.Controls.Add(this.btnG);
+            this.flowLayoutPanel6.Controls.Add(this.btnH);
+            this.flowLayoutPanel6.Controls.Add(this.btnI);
+            this.flowLayoutPanel6.Controls.Add(this.btnJ);
+            this.flowLayoutPanel6.Controls.Add(this.btnL);
+            this.flowLayoutPanel6.Controls.Add(this.btnN);
+            this.flowLayoutPanel6.Controls.Add(this.btnO);
+            this.flowLayoutPanel6.Controls.Add(this.btnP);
+            this.flowLayoutPanel6.Controls.Add(this.btnT);
+            this.flowLayoutPanel6.Controls.Add(this.btnQ);
+            this.flowLayoutPanel6.Controls.Add(this.btnS);
+            this.flowLayoutPanel6.Controls.Add(this.btnR);
+            this.flowLayoutPanel6.Controls.Add(this.button1);
+            this.flowLayoutPanel6.Controls.Add(this.btnK);
+            this.flowLayoutPanel6.Controls.Add(this.btnX);
+            this.flowLayoutPanel6.Controls.Add(this.button2);
+            this.flowLayoutPanel6.Controls.Add(this.btnM);
+            this.flowLayoutPanel6.Controls.Add(this.btnU);
+            this.flowLayoutPanel6.Controls.Add(this.btnV);
+            this.flowLayoutPanel6.Controls.Add(this.btnW);
+            this.flowLayoutPanel6.Controls.Add(this.btnY);
+            this.flowLayoutPanel6.Controls.Add(this.btnCC);
+            this.flowLayoutPanel6.Controls.Add(this.btnAA);
+            this.flowLayoutPanel6.Controls.Add(this.btnAAA);
+            this.flowLayoutPanel6.Controls.Add(this.btnAAAA);
+            this.flowLayoutPanel6.Controls.Add(this.btnEE);
+            this.flowLayoutPanel6.Controls.Add(this.btnEEE);
+            this.flowLayoutPanel6.Controls.Add(this.btnII);
+            this.flowLayoutPanel6.Controls.Add(this.btnOO);
+            this.flowLayoutPanel6.Controls.Add(this.btnOOO);
+            this.flowLayoutPanel6.Controls.Add(this.btnOOOO);
+            this.flowLayoutPanel6.Controls.Add(this.btnUU);
+            this.flowLayoutPanel6.Controls.Add(this.btnHIFEN);
+            this.flowLayoutPanel6.Controls.Add(this.btnSpace);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(364, 166);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(586, 90);
+            this.flowLayoutPanel6.TabIndex = 48;
+            // 
+            // btnA
+            // 
+            this.btnA.Location = new System.Drawing.Point(3, 3);
+            this.btnA.Name = "btnA";
+            this.btnA.Size = new System.Drawing.Size(25, 23);
+            this.btnA.TabIndex = 1;
+            this.btnA.Text = "A";
+            this.btnA.UseVisualStyleBackColor = true;
+            // 
+            // btnB
+            // 
+            this.btnB.Location = new System.Drawing.Point(34, 3);
+            this.btnB.Name = "btnB";
+            this.btnB.Size = new System.Drawing.Size(25, 23);
+            this.btnB.TabIndex = 2;
+            this.btnB.Text = "B";
+            this.btnB.UseVisualStyleBackColor = true;
+            // 
+            // btnC
+            // 
+            this.btnC.Location = new System.Drawing.Point(65, 3);
+            this.btnC.Name = "btnC";
+            this.btnC.Size = new System.Drawing.Size(25, 23);
+            this.btnC.TabIndex = 3;
+            this.btnC.Text = "C";
+            this.btnC.UseVisualStyleBackColor = true;
+            // 
+            // btnD
+            // 
+            this.btnD.Location = new System.Drawing.Point(96, 3);
+            this.btnD.Name = "btnD";
+            this.btnD.Size = new System.Drawing.Size(25, 23);
+            this.btnD.TabIndex = 4;
+            this.btnD.Text = "D";
+            this.btnD.UseVisualStyleBackColor = true;
+            // 
+            // btnE
+            // 
+            this.btnE.Location = new System.Drawing.Point(127, 3);
+            this.btnE.Name = "btnE";
+            this.btnE.Size = new System.Drawing.Size(25, 23);
+            this.btnE.TabIndex = 5;
+            this.btnE.Text = "E";
+            this.btnE.UseVisualStyleBackColor = true;
+            // 
+            // btnF
+            // 
+            this.btnF.Location = new System.Drawing.Point(158, 3);
+            this.btnF.Name = "btnF";
+            this.btnF.Size = new System.Drawing.Size(25, 23);
+            this.btnF.TabIndex = 6;
+            this.btnF.Text = "F";
+            this.btnF.UseVisualStyleBackColor = true;
+            // 
+            // btnG
+            // 
+            this.btnG.Location = new System.Drawing.Point(189, 3);
+            this.btnG.Name = "btnG";
+            this.btnG.Size = new System.Drawing.Size(25, 23);
+            this.btnG.TabIndex = 7;
+            this.btnG.Text = "G";
+            this.btnG.UseVisualStyleBackColor = true;
+            // 
+            // btnH
+            // 
+            this.btnH.Location = new System.Drawing.Point(220, 3);
+            this.btnH.Name = "btnH";
+            this.btnH.Size = new System.Drawing.Size(25, 23);
+            this.btnH.TabIndex = 8;
+            this.btnH.Text = "H";
+            this.btnH.UseVisualStyleBackColor = true;
+            // 
+            // btnI
+            // 
+            this.btnI.Location = new System.Drawing.Point(251, 3);
+            this.btnI.Name = "btnI";
+            this.btnI.Size = new System.Drawing.Size(25, 23);
+            this.btnI.TabIndex = 9;
+            this.btnI.Text = "I";
+            this.btnI.UseVisualStyleBackColor = true;
+            // 
+            // btnJ
+            // 
+            this.btnJ.Location = new System.Drawing.Point(282, 3);
+            this.btnJ.Name = "btnJ";
+            this.btnJ.Size = new System.Drawing.Size(25, 23);
+            this.btnJ.TabIndex = 10;
+            this.btnJ.Text = "J";
+            this.btnJ.UseVisualStyleBackColor = true;
+            // 
+            // btnL
+            // 
+            this.btnL.Location = new System.Drawing.Point(313, 3);
+            this.btnL.Name = "btnL";
+            this.btnL.Size = new System.Drawing.Size(25, 23);
+            this.btnL.TabIndex = 11;
+            this.btnL.Text = "L";
+            this.btnL.UseVisualStyleBackColor = true;
+            // 
+            // btnN
+            // 
+            this.btnN.Location = new System.Drawing.Point(344, 3);
+            this.btnN.Name = "btnN";
+            this.btnN.Size = new System.Drawing.Size(25, 23);
+            this.btnN.TabIndex = 12;
+            this.btnN.Text = "N";
+            this.btnN.UseVisualStyleBackColor = true;
+            // 
+            // btnO
+            // 
+            this.btnO.Location = new System.Drawing.Point(375, 3);
+            this.btnO.Name = "btnO";
+            this.btnO.Size = new System.Drawing.Size(25, 23);
+            this.btnO.TabIndex = 13;
+            this.btnO.Text = "O";
+            this.btnO.UseVisualStyleBackColor = true;
+            // 
+            // btnP
+            // 
+            this.btnP.Location = new System.Drawing.Point(406, 3);
+            this.btnP.Name = "btnP";
+            this.btnP.Size = new System.Drawing.Size(25, 23);
+            this.btnP.TabIndex = 14;
+            this.btnP.Text = "P";
+            this.btnP.UseVisualStyleBackColor = true;
+            // 
+            // btnT
+            // 
+            this.btnT.Location = new System.Drawing.Point(437, 3);
+            this.btnT.Name = "btnT";
+            this.btnT.Size = new System.Drawing.Size(25, 23);
+            this.btnT.TabIndex = 15;
+            this.btnT.Text = "T";
+            this.btnT.UseVisualStyleBackColor = true;
+            // 
+            // btnQ
+            // 
+            this.btnQ.Location = new System.Drawing.Point(468, 3);
+            this.btnQ.Name = "btnQ";
+            this.btnQ.Size = new System.Drawing.Size(25, 23);
+            this.btnQ.TabIndex = 16;
+            this.btnQ.Text = "Q";
+            this.btnQ.UseVisualStyleBackColor = true;
+            // 
+            // btnS
+            // 
+            this.btnS.Location = new System.Drawing.Point(499, 3);
+            this.btnS.Name = "btnS";
+            this.btnS.Size = new System.Drawing.Size(25, 23);
+            this.btnS.TabIndex = 17;
+            this.btnS.Text = "S";
+            this.btnS.UseVisualStyleBackColor = true;
+            // 
+            // btnR
+            // 
+            this.btnR.Location = new System.Drawing.Point(530, 3);
+            this.btnR.Name = "btnR";
+            this.btnR.Size = new System.Drawing.Size(25, 23);
+            this.btnR.TabIndex = 18;
+            this.btnR.Text = "R";
+            this.btnR.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Z";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnK
+            // 
+            this.btnK.Location = new System.Drawing.Point(34, 32);
+            this.btnK.Name = "btnK";
+            this.btnK.Size = new System.Drawing.Size(25, 23);
+            this.btnK.TabIndex = 20;
+            this.btnK.Text = "K";
+            this.btnK.UseVisualStyleBackColor = true;
+            // 
+            // btnX
+            // 
+            this.btnX.Location = new System.Drawing.Point(65, 32);
+            this.btnX.Name = "btnX";
+            this.btnX.Size = new System.Drawing.Size(25, 23);
+            this.btnX.TabIndex = 21;
+            this.btnX.Text = "X";
+            this.btnX.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(96, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 23);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "X";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnM
+            // 
+            this.btnM.Location = new System.Drawing.Point(127, 32);
+            this.btnM.Name = "btnM";
+            this.btnM.Size = new System.Drawing.Size(25, 23);
+            this.btnM.TabIndex = 23;
+            this.btnM.Text = "M";
+            this.btnM.UseVisualStyleBackColor = true;
+            // 
+            // btnU
+            // 
+            this.btnU.Location = new System.Drawing.Point(158, 32);
+            this.btnU.Name = "btnU";
+            this.btnU.Size = new System.Drawing.Size(25, 23);
+            this.btnU.TabIndex = 24;
+            this.btnU.Text = "U";
+            this.btnU.UseVisualStyleBackColor = true;
+            // 
+            // btnV
+            // 
+            this.btnV.Location = new System.Drawing.Point(189, 32);
+            this.btnV.Name = "btnV";
+            this.btnV.Size = new System.Drawing.Size(25, 23);
+            this.btnV.TabIndex = 25;
+            this.btnV.Text = "V";
+            this.btnV.UseVisualStyleBackColor = true;
+            // 
+            // btnW
+            // 
+            this.btnW.Location = new System.Drawing.Point(220, 32);
+            this.btnW.Name = "btnW";
+            this.btnW.Size = new System.Drawing.Size(25, 23);
+            this.btnW.TabIndex = 26;
+            this.btnW.Text = "W";
+            this.btnW.UseVisualStyleBackColor = true;
+            // 
+            // btnY
+            // 
+            this.btnY.Location = new System.Drawing.Point(251, 32);
+            this.btnY.Name = "btnY";
+            this.btnY.Size = new System.Drawing.Size(25, 23);
+            this.btnY.TabIndex = 27;
+            this.btnY.Text = "Y";
+            this.btnY.UseVisualStyleBackColor = true;
+            // 
+            // btnCC
+            // 
+            this.btnCC.Location = new System.Drawing.Point(282, 32);
+            this.btnCC.Name = "btnCC";
+            this.btnCC.Size = new System.Drawing.Size(25, 23);
+            this.btnCC.TabIndex = 28;
+            this.btnCC.Text = "Ç";
+            this.btnCC.UseVisualStyleBackColor = true;
+            // 
+            // btnAA
+            // 
+            this.btnAA.Location = new System.Drawing.Point(313, 32);
+            this.btnAA.Name = "btnAA";
+            this.btnAA.Size = new System.Drawing.Size(25, 23);
+            this.btnAA.TabIndex = 29;
+            this.btnAA.Text = "Á";
+            this.btnAA.UseVisualStyleBackColor = true;
+            // 
+            // btnAAA
+            // 
+            this.btnAAA.Location = new System.Drawing.Point(344, 32);
+            this.btnAAA.Name = "btnAAA";
+            this.btnAAA.Size = new System.Drawing.Size(25, 23);
+            this.btnAAA.TabIndex = 30;
+            this.btnAAA.Text = "Â";
+            this.btnAAA.UseVisualStyleBackColor = true;
+            // 
+            // btnAAAA
+            // 
+            this.btnAAAA.Location = new System.Drawing.Point(375, 32);
+            this.btnAAAA.Name = "btnAAAA";
+            this.btnAAAA.Size = new System.Drawing.Size(25, 23);
+            this.btnAAAA.TabIndex = 31;
+            this.btnAAAA.Text = "Ã";
+            this.btnAAAA.UseVisualStyleBackColor = true;
+            // 
+            // btnEE
+            // 
+            this.btnEE.Location = new System.Drawing.Point(406, 32);
+            this.btnEE.Name = "btnEE";
+            this.btnEE.Size = new System.Drawing.Size(25, 23);
+            this.btnEE.TabIndex = 32;
+            this.btnEE.Text = "É";
+            this.btnEE.UseVisualStyleBackColor = true;
+            // 
+            // btnEEE
+            // 
+            this.btnEEE.Location = new System.Drawing.Point(437, 32);
+            this.btnEEE.Name = "btnEEE";
+            this.btnEEE.Size = new System.Drawing.Size(25, 23);
+            this.btnEEE.TabIndex = 33;
+            this.btnEEE.Text = "Ê";
+            this.btnEEE.UseVisualStyleBackColor = true;
+            // 
+            // btnII
+            // 
+            this.btnII.Location = new System.Drawing.Point(468, 32);
+            this.btnII.Name = "btnII";
+            this.btnII.Size = new System.Drawing.Size(25, 23);
+            this.btnII.TabIndex = 34;
+            this.btnII.Text = "Í";
+            this.btnII.UseVisualStyleBackColor = true;
+            // 
+            // btnOO
+            // 
+            this.btnOO.Location = new System.Drawing.Point(499, 32);
+            this.btnOO.Name = "btnOO";
+            this.btnOO.Size = new System.Drawing.Size(25, 23);
+            this.btnOO.TabIndex = 35;
+            this.btnOO.Text = "Ó";
+            this.btnOO.UseVisualStyleBackColor = true;
+            // 
+            // btnOOO
+            // 
+            this.btnOOO.Location = new System.Drawing.Point(530, 32);
+            this.btnOOO.Name = "btnOOO";
+            this.btnOOO.Size = new System.Drawing.Size(25, 23);
+            this.btnOOO.TabIndex = 36;
+            this.btnOOO.Text = "Ô";
+            this.btnOOO.UseVisualStyleBackColor = true;
+            // 
+            // btnOOOO
+            // 
+            this.btnOOOO.Location = new System.Drawing.Point(3, 61);
+            this.btnOOOO.Name = "btnOOOO";
+            this.btnOOOO.Size = new System.Drawing.Size(25, 23);
+            this.btnOOOO.TabIndex = 37;
+            this.btnOOOO.Text = "Õ";
+            this.btnOOOO.UseVisualStyleBackColor = true;
+            // 
+            // btnUU
+            // 
+            this.btnUU.Location = new System.Drawing.Point(34, 61);
+            this.btnUU.Name = "btnUU";
+            this.btnUU.Size = new System.Drawing.Size(25, 23);
+            this.btnUU.TabIndex = 38;
+            this.btnUU.Text = "Ú";
+            this.btnUU.UseVisualStyleBackColor = true;
+            // 
+            // btnHIFEN
+            // 
+            this.btnHIFEN.Location = new System.Drawing.Point(65, 61);
+            this.btnHIFEN.Name = "btnHIFEN";
+            this.btnHIFEN.Size = new System.Drawing.Size(25, 23);
+            this.btnHIFEN.TabIndex = 39;
+            this.btnHIFEN.Text = "-";
+            this.btnHIFEN.UseVisualStyleBackColor = true;
+            // 
+            // btnSpace
+            // 
+            this.btnSpace.Location = new System.Drawing.Point(96, 61);
+            this.btnSpace.Name = "btnSpace";
+            this.btnSpace.Size = new System.Drawing.Size(25, 23);
+            this.btnSpace.TabIndex = 40;
+            this.btnSpace.Text = " ";
+            this.btnSpace.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel1);
+            this.flowLayoutPanel5.Controls.Add(this.checkBoxDica);
+            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel2);
+            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel3);
+            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel4);
+            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel7);
+            this.flowLayoutPanel5.Controls.Add(this.btnIniciarJogo);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(367, 333);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(586, 135);
+            this.flowLayoutPanel5.TabIndex = 46;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.labelDica);
+            this.flowLayoutPanel1.Controls.Add(this.labelDicaValor);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(466, 29);
+            this.flowLayoutPanel1.TabIndex = 42;
+            // 
+            // labelDica
+            // 
+            this.labelDica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDica.AutoSize = true;
+            this.labelDica.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.labelDica.Location = new System.Drawing.Point(3, 0);
+            this.labelDica.Name = "labelDica";
+            this.labelDica.Size = new System.Drawing.Size(61, 24);
+            this.labelDica.TabIndex = 39;
+            this.labelDica.Text = "Dica:";
+            // 
+            // labelDicaValor
+            // 
+            this.labelDicaValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDicaValor.AutoSize = true;
+            this.labelDicaValor.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDicaValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.labelDicaValor.Location = new System.Drawing.Point(70, 2);
+            this.labelDicaValor.Name = "labelDicaValor";
+            this.labelDicaValor.Size = new System.Drawing.Size(360, 19);
+            this.labelDicaValor.TabIndex = 40;
+            this.labelDicaValor.Text = "_______________________________________";
+            // 
+            // checkBoxDica
+            // 
+            this.checkBoxDica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxDica.AutoSize = true;
+            this.checkBoxDica.Location = new System.Drawing.Point(475, 7);
+            this.checkBoxDica.Name = "checkBoxDica";
+            this.checkBoxDica.Size = new System.Drawing.Size(93, 21);
+            this.checkBoxDica.TabIndex = 42;
+            this.checkBoxDica.Text = "Com Dica";
+            this.checkBoxDica.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.labelPontos);
+            this.flowLayoutPanel2.Controls.Add(this.labelPontosValor);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 38);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(267, 24);
+            this.flowLayoutPanel2.TabIndex = 43;
+            // 
+            // labelPontos
+            // 
+            this.labelPontos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPontos.AutoSize = true;
+            this.labelPontos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPontos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.labelPontos.Location = new System.Drawing.Point(3, 2);
+            this.labelPontos.Name = "labelPontos";
+            this.labelPontos.Size = new System.Drawing.Size(70, 19);
+            this.labelPontos.TabIndex = 41;
+            this.labelPontos.Text = "Pontos:";
+            // 
+            // labelPontosValor
+            // 
+            this.labelPontosValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPontosValor.AutoSize = true;
+            this.labelPontosValor.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPontosValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.labelPontosValor.Location = new System.Drawing.Point(79, 0);
+            this.labelPontosValor.Name = "labelPontosValor";
+            this.labelPontosValor.Size = new System.Drawing.Size(46, 24);
+            this.labelPontosValor.TabIndex = 40;
+            this.labelPontosValor.Text = "___";
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.label7);
+            this.flowLayoutPanel3.Controls.Add(this.label6);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(276, 38);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(291, 24);
+            this.flowLayoutPanel3.TabIndex = 44;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(3, 2);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 19);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "Erros:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(66, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 24);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "___";
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.label9);
+            this.flowLayoutPanel4.Controls.Add(this.labelTempoRestante);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 68);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(536, 23);
+            this.flowLayoutPanel4.TabIndex = 45;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(3, 2);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(139, 19);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Tempo Restante:";
+            // 
+            // labelTempoRestante
+            // 
+            this.labelTempoRestante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTempoRestante.AutoSize = true;
+            this.labelTempoRestante.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTempoRestante.ForeColor = System.Drawing.Color.Red;
+            this.labelTempoRestante.Location = new System.Drawing.Point(148, 0);
+            this.labelTempoRestante.Name = "labelTempoRestante";
+            this.labelTempoRestante.Size = new System.Drawing.Size(46, 24);
+            this.labelTempoRestante.TabIndex = 40;
+            this.labelTempoRestante.Text = "___";
+            // 
+            // flowLayoutPanel7
+            // 
+            this.flowLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel7.Controls.Add(this.checkBoxArduino);
+            this.flowLayoutPanel7.Controls.Add(this.flowLayoutPanel8);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 97);
+            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(446, 36);
+            this.flowLayoutPanel7.TabIndex = 49;
+            // 
+            // checkBoxArduino
+            // 
+            this.checkBoxArduino.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxArduino.AutoSize = true;
+            this.checkBoxArduino.Location = new System.Drawing.Point(3, 5);
+            this.checkBoxArduino.Name = "checkBoxArduino";
+            this.checkBoxArduino.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBoxArduino.Size = new System.Drawing.Size(76, 21);
+            this.checkBoxArduino.TabIndex = 49;
+            this.checkBoxArduino.Text = "Arduino";
+            this.checkBoxArduino.UseVisualStyleBackColor = true;
+            this.checkBoxArduino.CheckedChanged += new System.EventHandler(this.checkBoxArduino_CheckedChanged);
+            // 
+            // flowLayoutPanel8
+            // 
+            this.flowLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel8.Controls.Add(this.labelPort);
+            this.flowLayoutPanel8.Controls.Add(this.labelPortValor);
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(85, 3);
+            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(278, 25);
+            this.flowLayoutPanel8.TabIndex = 50;
+            // 
+            // labelPort
+            // 
+            this.labelPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPort.AutoSize = true;
+            this.labelPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPort.ForeColor = System.Drawing.Color.Black;
+            this.labelPort.Location = new System.Drawing.Point(3, 0);
+            this.labelPort.Name = "labelPort";
+            this.labelPort.Size = new System.Drawing.Size(190, 20);
+            this.labelPort.TabIndex = 39;
+            this.labelPort.Text = "Portal serial para Arduino:";
+            // 
+            // labelPortValor
+            // 
+            this.labelPortValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPortValor.AutoSize = true;
+            this.labelPortValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPortValor.ForeColor = System.Drawing.Color.Black;
+            this.labelPortValor.Location = new System.Drawing.Point(199, 0);
+            this.labelPortValor.Name = "labelPortValor";
+            this.labelPortValor.Size = new System.Drawing.Size(72, 20);
+            this.labelPortValor.TabIndex = 40;
+            this.labelPortValor.Text = "_______";
+            // 
+            // btnIniciarJogo
+            // 
+            this.btnIniciarJogo.Location = new System.Drawing.Point(455, 97);
+            this.btnIniciarJogo.Name = "btnIniciarJogo";
+            this.btnIniciarJogo.Size = new System.Drawing.Size(121, 36);
+            this.btnIniciarJogo.TabIndex = 47;
+            this.btnIniciarJogo.Text = "Iniciar Jogo";
+            this.btnIniciarJogo.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Curlz MT", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label5.Location = new System.Drawing.Point(596, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(184, 85);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Forca!";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label4.Location = new System.Drawing.Point(569, 88);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(242, 36);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Adivinha a Letra";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::apListaLigada.Properties.Resources.Forca__13;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 239);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(98, 162);
+            this.pictureBox7.TabIndex = 34;
+            this.pictureBox7.TabStop = false;
+            // 
+            // img_ERRO1
+            // 
+            this.img_ERRO1.Image = global::apListaLigada.Properties.Resources.Forca__05;
+            this.img_ERRO1.Location = new System.Drawing.Point(89, 52);
+            this.img_ERRO1.Name = "img_ERRO1";
+            this.img_ERRO1.Size = new System.Drawing.Size(98, 95);
+            this.img_ERRO1.TabIndex = 31;
+            this.img_ERRO1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::apListaLigada.Properties.Resources.Forca__02;
+            this.pictureBox3.Location = new System.Drawing.Point(99, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(98, 56);
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::apListaLigada.Properties.Resources.Forca__03;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 47);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 194);
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::apListaLigada.Properties.Resources.Forca__01;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 387);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 579);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(634, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(981, 22);
             this.statusStrip1.TabIndex = 23;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -358,16 +1374,41 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
             this.toolStripStatusLabel1.Text = "Mensagem:";
             // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "Enforcado.gif");
+            this.imageList2.Images.SetKeyName(1, "Forca__01.gif");
+            this.imageList2.Images.SetKeyName(2, "Forca__02.gif");
+            this.imageList2.Images.SetKeyName(3, "Forca__03.gif");
+            this.imageList2.Images.SetKeyName(4, "Forca__05.gif");
+            this.imageList2.Images.SetKeyName(5, "Forca__08.gif");
+            this.imageList2.Images.SetKeyName(6, "Forca__09.gif");
+            this.imageList2.Images.SetKeyName(7, "Forca__13.gif");
+            this.imageList2.Images.SetKeyName(8, "Forca_1_05.gif");
+            this.imageList2.Images.SetKeyName(9, "Forca_2_03.gif");
+            this.imageList2.Images.SetKeyName(10, "Forca_2_04.gif");
+            this.imageList2.Images.SetKeyName(11, "Forca_2_07.gif");
+            this.imageList2.Images.SetKeyName(12, "Forca_05.gif");
+            this.imageList2.Images.SetKeyName(13, "Forca_07.gif");
+            this.imageList2.Images.SetKeyName(14, "Forca_08.gif");
+            this.imageList2.Images.SetKeyName(15, "Forca_09.gif");
+            this.imageList2.Images.SetKeyName(16, "Forca_10.gif");
+            this.imageList2.Images.SetKeyName(17, "Forca_14.gif");
+            this.imageList2.Images.SetKeyName(18, "Forca_16.gif");
+            this.imageList2.Images.SetKeyName(19, "Forca_17.gif");
+            // 
             // FrmAlunos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(634, 409);
+            this.ClientSize = new System.Drawing.Size(981, 601);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FrmAlunos";
-            this.Text = "Manutenção de Alunos";
+            this.Text = "jogo da forca";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAlunos_FormClosing);
             this.Load += new System.EventHandler(this.FrmAlunos_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -375,15 +1416,60 @@
             this.tabControl1.ResumeLayout(false);
             this.tpCadastro.ResumeLayout(false);
             this.tpCadastro.PerformLayout();
-            this.tpListagem.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableData)).EndInit();
+            this.tpForca.ResumeLayout(false);
+            this.tpForca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enforcado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO_0_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO_1_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO6)).EndInit();
+            this.img_ERRO4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.img_ERRO3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cabeca_normal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.img_ERRO2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.flowLayoutPanel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tableForca)).EndInit();
+            this.flowLayoutPanel9.ResumeLayout(false);
+            this.flowLayoutPanel9.PerformLayout();
+            this.flowLayoutPanel6.ResumeLayout(false);
+            this.flowLayoutPanel5.ResumeLayout(false);
+            this.flowLayoutPanel5.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
+            this.flowLayoutPanel7.ResumeLayout(false);
+            this.flowLayoutPanel7.PerformLayout();
+            this.flowLayoutPanel8.ResumeLayout(false);
+            this.flowLayoutPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
     }
+
+        private void btnSair_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+            conexaoSerial.FecharConexao();
+        }
 
     #endregion
     private System.Windows.Forms.Label label2;
@@ -405,17 +1491,106 @@
     private System.Windows.Forms.ToolStripButton btnSair;
     private System.Windows.Forms.TabControl tabControl1;
     private System.Windows.Forms.TabPage tpCadastro;
-    private System.Windows.Forms.TabPage tpListagem;
     private System.Windows.Forms.ToolStripButton btnBuscar;
     private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-    private System.Windows.Forms.GroupBox groupBox1;
-    private System.Windows.Forms.RadioButton rbTras;
-    private System.Windows.Forms.RadioButton rbFrente;
-    private System.Windows.Forms.ListBox lsbDados;
     private System.Windows.Forms.StatusStrip statusStrip1;
     private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.TabPage tpForca;
-  }
+        private System.Windows.Forms.DataGridView tableData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Palavra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dica;
+        private System.Windows.Forms.Button btnD;
+        private System.Windows.Forms.Button btnC;
+        private System.Windows.Forms.Button btnB;
+        private System.Windows.Forms.Button btnA;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnR;
+        private System.Windows.Forms.Button btnS;
+        private System.Windows.Forms.Button btnQ;
+        private System.Windows.Forms.Button btnT;
+        private System.Windows.Forms.Button btnP;
+        private System.Windows.Forms.Button btnO;
+        private System.Windows.Forms.Button btnN;
+        private System.Windows.Forms.Button btnL;
+        private System.Windows.Forms.Button btnJ;
+        private System.Windows.Forms.Button btnI;
+        private System.Windows.Forms.Button btnH;
+        private System.Windows.Forms.Button btnG;
+        private System.Windows.Forms.Button btnF;
+        private System.Windows.Forms.Button btnE;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnX;
+        private System.Windows.Forms.Button btnK;
+        private System.Windows.Forms.ToolStripButton btnSalvar;
+        private System.Windows.Forms.Button btnY;
+        private System.Windows.Forms.Button btnW;
+        private System.Windows.Forms.Button btnV;
+        private System.Windows.Forms.Button btnU;
+        private System.Windows.Forms.Button btnM;
+        private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox img_ERRO1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        private System.Windows.Forms.Button btnCC;
+        private System.Windows.Forms.Button btnAA;
+        private System.Windows.Forms.Button btnAAA;
+        private System.Windows.Forms.Button btnAAAA;
+        private System.Windows.Forms.Button btnEE;
+        private System.Windows.Forms.Button btnEEE;
+        private System.Windows.Forms.Button btnII;
+        private System.Windows.Forms.Button btnOO;
+        private System.Windows.Forms.Button btnOOO;
+        private System.Windows.Forms.Button btnOOOO;
+        private System.Windows.Forms.Button btnUU;
+        private System.Windows.Forms.Button btnHIFEN;
+        private System.Windows.Forms.Button btnSpace;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textName;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
+        private System.Windows.Forms.FlowLayoutPanel img_ERRO2;
+        private System.Windows.Forms.DataGridView tableForca;
+        private System.Windows.Forms.PictureBox cabeca_normal;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.FlowLayoutPanel img_ERRO4;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.FlowLayoutPanel img_ERRO3;
+        private System.Windows.Forms.PictureBox enforcado;
+        private System.Windows.Forms.PictureBox img_ERRO8;
+        private System.Windows.Forms.PictureBox img_ERRO_0_7;
+        private System.Windows.Forms.PictureBox img_ERRO_1_7;
+        private System.Windows.Forms.PictureBox img_ERRO5;
+        private System.Windows.Forms.PictureBox img_ERRO6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label labelDica;
+        private System.Windows.Forms.Label labelDicaValor;
+        private System.Windows.Forms.CheckBox checkBoxDica;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Label labelPontos;
+        private System.Windows.Forms.Label labelPontosValor;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelTempoRestante;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        private System.Windows.Forms.CheckBox checkBoxArduino;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
+        private System.Windows.Forms.Label labelPort;
+        private System.Windows.Forms.Label labelPortValor;
+        private System.Windows.Forms.Button btnIniciarJogo;
+    }
 }
 
