@@ -1,4 +1,4 @@
-// Definição de pinos
+// DefiniÃ§Ã£o de pinos
 const int LED_VERDE = 13;     
 const int LED_VERMELHO = 12; 
 const int LED_ERRO_1 = 2;
@@ -10,7 +10,7 @@ const int LED_ERRO_6 = 7;
 const int LED_ERRO_7 = 8;
 const int LED_ERRO_8 = 9;
 
-// Variáveis globais
+// VariÃ¡veis globais
 char comando = '\0';
 bool jogoAtivo = false;
 unsigned long tempoAnterior = 0;
@@ -18,10 +18,10 @@ const long intervalo = 500;   // Intervalo de piscada em milissegundos
 int estadoLED = LOW;
 
 void setup() {
-  // Inicializa comunicação serial
+  // Inicializa comunicaÃ§Ã£o serial
   Serial.begin(9600);
   
-  // Configura os pinos como saída
+  // Configura os pinos como saÃ­da
   pinMode(LED_VERDE, OUTPUT);
   pinMode(LED_VERMELHO, OUTPUT);
   pinMode(LED_ERRO_1, OUTPUT);
@@ -38,16 +38,16 @@ void setup() {
 }
 
 void loop() {
-  // Verifica se há dados disponíveis na porta serial
+  // Verifica se hÃ¡ dados disponÃ­veis na porta serial
   if (Serial.available() > 0) {
-    // Lê o caractere recebido
+    // LÃª o caractere recebido
     comando = Serial.read();
     
     // Processa o comando recebido
     processarComando(comando);
   }
   
-  // Verifica se precisa piscar LEDs em caso de vitória ou derrota
+  // Verifica se precisa piscar LEDs em caso de vitÃ³ria ou derrota
   if (comando == 'V' || comando == 'P') {
     unsigned long tempoAtual = millis();
     
@@ -83,41 +83,31 @@ void processarComando(char cmd) {
       
     case '1':  // Erro 1
       if (jogoAtivo) {
-        digitalWrite(LED_ERRO_1, HIGH);
+        acenderLEDErros(1);
       }
       break;
       
     case '2':  // Erro 2
       if (jogoAtivo) {
-        digitalWrite(LED_ERRO_1, HIGH);
-        digitalWrite(LED_ERRO_2, HIGH);
+        acenderLEDErros(2);
       }
       break;
       
     case '3':  // Erro 3
       if (jogoAtivo) {
-        digitalWrite(LED_ERRO_1, HIGH);
-        digitalWrite(LED_ERRO_2, HIGH);
-        digitalWrite(LED_ERRO_3, HIGH);
+        acenderLEDErros(3);
       }
       break;
       
     case '4':  // Erro 4
       if (jogoAtivo) {
-        digitalWrite(LED_ERRO_1, HIGH);
-        digitalWrite(LED_ERRO_2, HIGH);
-        digitalWrite(LED_ERRO_3, HIGH);
-        digitalWrite(LED_ERRO_4, HIGH);
+        acenderLEDErros(4);
       }
       break;
       
     case '5':  // Erro 5
       if (jogoAtivo) {
-        digitalWrite(LED_ERRO_1, HIGH);
-        digitalWrite(LED_ERRO_2, HIGH);
-        digitalWrite(LED_ERRO_3, HIGH);
-        digitalWrite(LED_ERRO_4, HIGH);
-        digitalWrite(LED_ERRO_5, HIGH);
+        acenderLEDErros(5);
       }
       break;
       
@@ -157,7 +147,7 @@ void processarComando(char cmd) {
       }
       break;
       
-    case 'V':  // Vitória
+    case 'V':  // VitÃ³ria
       jogoAtivo = false;
       resetarLEDs();
       tempoAnterior = millis(); // Inicia o temporizador para piscar
