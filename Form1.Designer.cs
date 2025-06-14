@@ -1077,7 +1077,7 @@
             this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel5.Controls.Add(this.btnIniciarJogo);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(367, 339);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(367, 333);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(586, 135);
             this.flowLayoutPanel5.TabIndex = 46;
@@ -1465,11 +1465,10 @@
 
     }
 
-        // Adding the missing event handler method for btnSair_Click to resolve CS1061.
         private void btnSair_Click(object sender, System.EventArgs e)
         {
-            // Close the form when the "Sair" button is clicked.
             this.Close();
+            conexaoSerial.FecharConexao();
         }
 
     #endregion

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
-using System.Timers; // Adicione se não existir, mas usaremos System.Windows.Forms.Timer
+using System.Timers;
+using System.IO.Ports; // Adicione se não existir, mas usaremos System.Windows.Forms.Timer
 
 // ra23600 ra23305
 // Gabriel - Julio
@@ -17,6 +18,7 @@ namespace apListaLigada
         private VetorDicionario vetorDicionario = new VetorDicionario(); // Field for VetorDicionario
         private bool jogoEmAndamento = false;
         private Random random = new Random();
+        private ConexaoSerial conexaoSerial = new ConexaoSerial();
 
         private string palavraAtual = string.Empty;
         private int contadorErros = 0;
@@ -676,6 +678,11 @@ namespace apListaLigada
             // Inicia o timer
             timerJogo.Stop();
             timerJogo.Start();
+
+            if (checkBoxArduino.Checked && conexaoSerial.EstaConectado)
+            {
+                conexaoSerial.EnviarInicioJogo();
+            }
         }
 
         /// <summary>
@@ -749,6 +756,11 @@ namespace apListaLigada
                 // Atualiza a representação visual do boneco da forca
                 AtualizarImagemForca();
 
+                if (checkBoxArduino.Checked && conexaoSerial.EstaConectado)
+                {
+                    conexaoSerial.EnviarErros(contadorErros);
+                }
+
                 // Verifica se o jogo acabou por excesso de erros
                 if (contadorErros >= MAX_ERROS)
                 {
@@ -756,6 +768,12 @@ namespace apListaLigada
 
                     MessageBox.Show($"Fim de jogo! A palavra era: {palavraAtual}", "Derrota",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Add this line to send defeat signal to Arduino
+                    if (checkBoxArduino.Checked && conexaoSerial.EstaConectado)
+                    {
+                        conexaoSerial.EnviarDerrota();
+                    }
 
                     enforcado.Top = enforcadoInitialTop;
                     enforcado.Visible = true;
@@ -812,6 +830,11 @@ namespace apListaLigada
                 // Adiciona pontuação bônus por finalizar a palavra
                 pontosAtuais += 50;
                 labelPontosValor.Text = pontosAtuais.ToString();
+
+                if (checkBoxArduino.Checked && conexaoSerial.EstaConectado)
+                {
+                    conexaoSerial.EnviarVitoria();
+                }
 
                 MessageBox.Show($"Parabéns! Você acertou a palavra: {palavra}\nPontuação: {pontosAtuais}",
                     "Vitória", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -917,17 +940,124 @@ namespace apListaLigada
             }
         }
 
+        // Updated checkBoxArduino_CheckedChanged method
         private void checkBoxArduino_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxArduino.Checked)
             {
                 labelPort.Visible = true;
                 labelPortValor.Visible = true;
-            }
 
-            else {
+                try
+                {
+                    string[] portas = SerialPort.GetPortNames();
+
+                    if (portas.Length == 0)
+                    {
+                        labelPortValor.Text = "N/D";
+                        MessageBox.Show("Nenhuma porta serial disponível.",
+                            "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        checkBoxArduino.Checked = false;
+                        return;
+                    }
+                    else if (portas.Length == 1)
+                    {
+                        if (conexaoSerial.AbrirConexao(portas[0]))
+                        {
+                            labelPortValor.Text = portas[0];
+                            toolStripStatusLabel1.Text = $"Conexão Arduino estabelecida em {portas[0]}";
+                        }
+                        else
+                        {
+                            labelPortValor.Text = "Falha";
+                            MessageBox.Show($"Não foi possível estabelecer conexão na porta {portas[0]}.",
+                                "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            checkBoxArduino.Checked = false;
+                        }
+                    }
+                    else
+                    {
+                        Form formPortas = new Form
+                        {
+                            Text = "Selecionar Porta COM",
+                            Size = new System.Drawing.Size(300, 150),
+                            FormBorderStyle = FormBorderStyle.FixedDialog,
+                            StartPosition = FormStartPosition.CenterParent,
+                            MaximizeBox = false,
+                            MinimizeBox = false
+                        };
+
+                        ComboBox comboPortas = new ComboBox
+                        {
+                            DropDownStyle = ComboBoxStyle.DropDownList,
+                            Location = new System.Drawing.Point(50, 20),
+                            Size = new System.Drawing.Size(200, 24),
+                            Font = new System.Drawing.Font("Microsoft Sans Serif", 10F)
+                        };
+                        comboPortas.Items.AddRange(portas);
+                        comboPortas.SelectedIndex = 0;
+
+                        Button btnOK = new Button
+                        {
+                            DialogResult = DialogResult.OK,
+                            Text = "Conectar",
+                            Location = new System.Drawing.Point(50, 60),
+                            Size = new System.Drawing.Size(90, 30)
+                        };
+
+                        Button btnCancelar = new Button
+                        {
+                            DialogResult = DialogResult.Cancel,
+                            Text = "Cancelar",
+                            Location = new System.Drawing.Point(160, 60),
+                            Size = new System.Drawing.Size(90, 30)
+                        };
+
+                        formPortas.Controls.Add(comboPortas);
+                        formPortas.Controls.Add(btnOK);
+                        formPortas.Controls.Add(btnCancelar);
+                        formPortas.AcceptButton = btnOK;
+                        formPortas.CancelButton = btnCancelar;
+
+                        if (formPortas.ShowDialog() == DialogResult.OK)
+                        {
+                            string portaSelecionada = comboPortas.SelectedItem.ToString();
+                            if (conexaoSerial.AbrirConexao(portaSelecionada))
+                            {
+                                labelPortValor.Text = portaSelecionada;
+                                toolStripStatusLabel1.Text = $"Conexão Arduino estabelecida em {portaSelecionada}";
+                            }
+                            else
+                            {
+                                labelPortValor.Text = "Falha";
+                                MessageBox.Show($"Não foi possível estabelecer conexão na porta {portaSelecionada}.",
+                                    "Erro de Conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                checkBoxArduino.Checked = false;
+                            }
+                        }
+                        else
+                        {
+                            checkBoxArduino.Checked = false;
+                            labelPort.Visible = false;
+                            labelPortValor.Visible = false;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao tentar abrir conexão: {ex.Message}",
+                        "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    checkBoxArduino.Checked = false;
+                    labelPort.Visible = false;
+                    labelPortValor.Visible = false;
+                }
+            }
+            else
+            {
+                conexaoSerial.FecharConexao();
                 labelPort.Visible = false;
                 labelPortValor.Visible = false;
+                toolStripStatusLabel1.Text = "Conexão Arduino encerrada";
             }
         }
     }
