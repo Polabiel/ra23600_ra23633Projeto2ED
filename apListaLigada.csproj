@@ -102,6 +102,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Enforcado.gif" />
     <None Include="packages\Forca__01.gif" />
     <None Include="packages\Forca__02.gif" />
     <None Include="packages\Forca__03.gif" />
@@ -121,6 +122,7 @@
     <None Include="packages\Forca_14.gif" />
     <None Include="packages\Forca_16.gif" />
     <None Include="packages\Forca_17.gif" />
+    <Content Include="packages\Enforcado.gif" />
     <Content Include="palavras.txt" />
   </ItemGroup>
   <ItemGroup>

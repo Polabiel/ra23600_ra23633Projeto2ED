@@ -126,18 +126,18 @@ namespace apListaLigada
         // Pesquisa binária: retorna índice se existir, -1 se não existir
         public int Existe(string palavra)
         {
-            int ini = 0, fim = qtosDados - 1;
-            while (ini <= fim)
+            // Converta a palavra buscada para maiúscula
+            string buscaUpper = palavra.ToUpper();
+
+            // Exemplo de pesquisa simples (linear)
+            for (int i = 0; i < qtosDados; i++)
             {
-                int meio = (ini + fim) / 2;
-                int cmp = string.Compare(dados[meio].Palavra, palavra, StringComparison.CurrentCultureIgnoreCase);
-                if (cmp == 0)
-                    return meio;
-                if (cmp < 0)
-                    ini = meio + 1;
-                else
-                    fim = meio - 1;
+                if (dados[i] != null &&
+                    dados[i].Palavra != null &&
+                    dados[i].Palavra.ToUpper() == buscaUpper)
+                    return i;
             }
+
             return -1;
         }
 
@@ -182,7 +182,16 @@ namespace apListaLigada
 
         internal void AlterarDica(int posicaoAtual, string dica)
         {
-            throw new NotImplementedException();
+            // Verificar se a posição é válida
+            if (posicaoAtual < 0 || posicaoAtual >= qtosDados)
+                throw new ArgumentOutOfRangeException(nameof(posicaoAtual), "Posição inválida para alteração de dica.");
+
+            // Verificar se há dados na posição indicada
+            if (dados[posicaoAtual] == null)
+                throw new InvalidOperationException("Não há registro na posição informada.");
+
+            // Atualizar a dica do objeto Dicionario na posição especificada
+            dados[posicaoAtual].Dica = dica;
         }
     }
 }

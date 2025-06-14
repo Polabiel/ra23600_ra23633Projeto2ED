@@ -58,6 +58,18 @@
             this.Dica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.tpForca = new System.Windows.Forms.TabPage();
+            this.enforcado = new System.Windows.Forms.PictureBox();
+            this.img_ERRO8 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO_0_7 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO_1_7 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO5 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO6 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.img_ERRO3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cabeca_normal = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.img_ERRO2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -120,7 +132,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelTempoRestante = new System.Windows.Forms.Label();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.checkBoxArduino = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
@@ -142,6 +154,18 @@
             this.tpCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableData)).BeginInit();
             this.tpForca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enforcado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO_0_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO_1_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO6)).BeginInit();
+            this.img_ERRO4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.img_ERRO3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cabeca_normal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.img_ERRO2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -319,6 +343,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(42, 35);
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnExcluir
             // 
@@ -415,6 +440,14 @@
             // 
             // tpForca
             // 
+            this.tpForca.Controls.Add(this.enforcado);
+            this.tpForca.Controls.Add(this.img_ERRO8);
+            this.tpForca.Controls.Add(this.img_ERRO_0_7);
+            this.tpForca.Controls.Add(this.img_ERRO_1_7);
+            this.tpForca.Controls.Add(this.img_ERRO5);
+            this.tpForca.Controls.Add(this.img_ERRO6);
+            this.tpForca.Controls.Add(this.img_ERRO4);
+            this.tpForca.Controls.Add(this.img_ERRO3);
             this.tpForca.Controls.Add(this.img_ERRO2);
             this.tpForca.Controls.Add(this.flowLayoutPanel10);
             this.tpForca.Controls.Add(this.flowLayoutPanel9);
@@ -434,6 +467,121 @@
             this.tpForca.TabIndex = 2;
             this.tpForca.Text = "Forca";
             this.tpForca.UseVisualStyleBackColor = true;
+            // 
+            // enforcado
+            // 
+            this.enforcado.Image = global::apListaLigada.Properties.Resources.Enforcado;
+            this.enforcado.Location = new System.Drawing.Point(211, 25);
+            this.enforcado.Name = "enforcado";
+            this.enforcado.Size = new System.Drawing.Size(153, 340);
+            this.enforcado.TabIndex = 61;
+            this.enforcado.TabStop = false;
+            this.enforcado.Visible = false;
+            // 
+            // img_ERRO8
+            // 
+            this.img_ERRO8.Image = global::apListaLigada.Properties.Resources.Forca_17;
+            this.img_ERRO8.Location = new System.Drawing.Point(133, 333);
+            this.img_ERRO8.Name = "img_ERRO8";
+            this.img_ERRO8.Size = new System.Drawing.Size(100, 92);
+            this.img_ERRO8.TabIndex = 60;
+            this.img_ERRO8.TabStop = false;
+            // 
+            // img_ERRO_0_7
+            // 
+            this.img_ERRO_0_7.Image = global::apListaLigada.Properties.Resources.Forca_14;
+            this.img_ERRO_0_7.Location = new System.Drawing.Point(99, 285);
+            this.img_ERRO_0_7.Name = "img_ERRO_0_7";
+            this.img_ERRO_0_7.Size = new System.Drawing.Size(100, 50);
+            this.img_ERRO_0_7.TabIndex = 59;
+            this.img_ERRO_0_7.TabStop = false;
+            // 
+            // img_ERRO_1_7
+            // 
+            this.img_ERRO_1_7.Image = global::apListaLigada.Properties.Resources.Forca_16;
+            this.img_ERRO_1_7.Location = new System.Drawing.Point(64, 332);
+            this.img_ERRO_1_7.Name = "img_ERRO_1_7";
+            this.img_ERRO_1_7.Size = new System.Drawing.Size(67, 83);
+            this.img_ERRO_1_7.TabIndex = 58;
+            this.img_ERRO_1_7.TabStop = false;
+            // 
+            // img_ERRO5
+            // 
+            this.img_ERRO5.Image = global::apListaLigada.Properties.Resources.Forca_10;
+            this.img_ERRO5.Location = new System.Drawing.Point(162, 189);
+            this.img_ERRO5.Name = "img_ERRO5";
+            this.img_ERRO5.Size = new System.Drawing.Size(72, 56);
+            this.img_ERRO5.TabIndex = 57;
+            this.img_ERRO5.TabStop = false;
+            // 
+            // img_ERRO6
+            // 
+            this.img_ERRO6.Image = global::apListaLigada.Properties.Resources.Forca_07;
+            this.img_ERRO6.Location = new System.Drawing.Point(43, 174);
+            this.img_ERRO6.Name = "img_ERRO6";
+            this.img_ERRO6.Size = new System.Drawing.Size(58, 41);
+            this.img_ERRO6.TabIndex = 56;
+            this.img_ERRO6.TabStop = false;
+            // 
+            // img_ERRO4
+            // 
+            this.img_ERRO4.Controls.Add(this.pictureBox8);
+            this.img_ERRO4.Controls.Add(this.pictureBox9);
+            this.img_ERRO4.Location = new System.Drawing.Point(98, 189);
+            this.img_ERRO4.Margin = new System.Windows.Forms.Padding(0);
+            this.img_ERRO4.Name = "img_ERRO4";
+            this.img_ERRO4.Size = new System.Drawing.Size(65, 100);
+            this.img_ERRO4.TabIndex = 55;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::apListaLigada.Properties.Resources.Forca_09;
+            this.pictureBox8.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(64, 82);
+            this.pictureBox8.TabIndex = 52;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::apListaLigada.Properties.Resources.Forca_14;
+            this.pictureBox9.Location = new System.Drawing.Point(0, 82);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(64, 17);
+            this.pictureBox9.TabIndex = 53;
+            this.pictureBox9.TabStop = false;
+            // 
+            // img_ERRO3
+            // 
+            this.img_ERRO3.Controls.Add(this.cabeca_normal);
+            this.img_ERRO3.Controls.Add(this.pictureBox4);
+            this.img_ERRO3.Location = new System.Drawing.Point(89, 82);
+            this.img_ERRO3.Margin = new System.Windows.Forms.Padding(0);
+            this.img_ERRO3.Name = "img_ERRO3";
+            this.img_ERRO3.Size = new System.Drawing.Size(107, 115);
+            this.img_ERRO3.TabIndex = 54;
+            // 
+            // cabeca_normal
+            // 
+            this.cabeca_normal.Image = global::apListaLigada.Properties.Resources.Forca_05;
+            this.cabeca_normal.Location = new System.Drawing.Point(0, 0);
+            this.cabeca_normal.Margin = new System.Windows.Forms.Padding(0);
+            this.cabeca_normal.Name = "cabeca_normal";
+            this.cabeca_normal.Size = new System.Drawing.Size(106, 94);
+            this.cabeca_normal.TabIndex = 70;
+            this.cabeca_normal.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::apListaLigada.Properties.Resources.Forca_08;
+            this.pictureBox4.Location = new System.Drawing.Point(10, 94);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(96, 17);
+            this.pictureBox4.TabIndex = 53;
+            this.pictureBox4.TabStop = false;
             // 
             // img_ERRO2
             // 
@@ -468,9 +616,9 @@
             // flowLayoutPanel10
             // 
             this.flowLayoutPanel10.Controls.Add(this.tableForca);
-            this.flowLayoutPanel10.Location = new System.Drawing.Point(364, 256);
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(307, 256);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
-            this.flowLayoutPanel10.Size = new System.Drawing.Size(586, 79);
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(643, 79);
             this.flowLayoutPanel10.TabIndex = 50;
             // 
             // tableForca
@@ -481,7 +629,7 @@
             this.tableForca.Location = new System.Drawing.Point(3, 3);
             this.tableForca.Name = "tableForca";
             this.tableForca.ReadOnly = true;
-            this.tableForca.Size = new System.Drawing.Size(573, 77);
+            this.tableForca.Size = new System.Drawing.Size(630, 74);
             this.tableForca.TabIndex = 0;
             // 
             // flowLayoutPanel9
@@ -929,7 +1077,7 @@
             this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel5.Controls.Add(this.btnIniciarJogo);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(364, 339);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(367, 339);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(586, 135);
             this.flowLayoutPanel5.TabIndex = 46;
@@ -1047,7 +1195,7 @@
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.Controls.Add(this.label9);
-            this.flowLayoutPanel4.Controls.Add(this.label8);
+            this.flowLayoutPanel4.Controls.Add(this.labelTempoRestante);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 68);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(536, 23);
@@ -1065,17 +1213,17 @@
             this.label9.TabIndex = 41;
             this.label9.Text = "Tempo Restante:";
             // 
-            // label8
+            // labelTempoRestante
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(148, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 24);
-            this.label8.TabIndex = 40;
-            this.label8.Text = "___";
+            this.labelTempoRestante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTempoRestante.AutoSize = true;
+            this.labelTempoRestante.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTempoRestante.ForeColor = System.Drawing.Color.Red;
+            this.labelTempoRestante.Location = new System.Drawing.Point(148, 0);
+            this.labelTempoRestante.Name = "labelTempoRestante";
+            this.labelTempoRestante.Size = new System.Drawing.Size(46, 24);
+            this.labelTempoRestante.TabIndex = 40;
+            this.labelTempoRestante.Text = "___";
             // 
             // flowLayoutPanel7
             // 
@@ -1098,6 +1246,7 @@
             this.checkBoxArduino.TabIndex = 49;
             this.checkBoxArduino.Text = "Arduino";
             this.checkBoxArduino.UseVisualStyleBackColor = true;
+            this.checkBoxArduino.CheckedChanged += new System.EventHandler(this.checkBoxArduino_CheckedChanged);
             // 
             // flowLayoutPanel8
             // 
@@ -1270,6 +1419,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableData)).EndInit();
             this.tpForca.ResumeLayout(false);
             this.tpForca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enforcado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO_0_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO_1_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_ERRO6)).EndInit();
+            this.img_ERRO4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.img_ERRO3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cabeca_normal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.img_ERRO2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -1379,27 +1540,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelDica;
-        private System.Windows.Forms.Label labelDicaValor;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label labelPontos;
-        private System.Windows.Forms.Label labelPontosValor;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.CheckBox checkBoxDica;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
-        private System.Windows.Forms.Button btnIniciarJogo;
-        private System.Windows.Forms.CheckBox checkBoxArduino;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
-        private System.Windows.Forms.Label labelPort;
-        private System.Windows.Forms.Label labelPortValor;
         private System.Windows.Forms.Button btnCC;
         private System.Windows.Forms.Button btnAA;
         private System.Windows.Forms.Button btnAAA;
@@ -1419,6 +1560,38 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
         private System.Windows.Forms.FlowLayoutPanel img_ERRO2;
         private System.Windows.Forms.DataGridView tableForca;
+        private System.Windows.Forms.PictureBox cabeca_normal;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.FlowLayoutPanel img_ERRO4;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.FlowLayoutPanel img_ERRO3;
+        private System.Windows.Forms.PictureBox enforcado;
+        private System.Windows.Forms.PictureBox img_ERRO8;
+        private System.Windows.Forms.PictureBox img_ERRO_0_7;
+        private System.Windows.Forms.PictureBox img_ERRO_1_7;
+        private System.Windows.Forms.PictureBox img_ERRO5;
+        private System.Windows.Forms.PictureBox img_ERRO6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label labelDica;
+        private System.Windows.Forms.Label labelDicaValor;
+        private System.Windows.Forms.CheckBox checkBoxDica;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Label labelPontos;
+        private System.Windows.Forms.Label labelPontosValor;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelTempoRestante;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        private System.Windows.Forms.CheckBox checkBoxArduino;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
+        private System.Windows.Forms.Label labelPort;
+        private System.Windows.Forms.Label labelPortValor;
+        private System.Windows.Forms.Button btnIniciarJogo;
     }
 }
 

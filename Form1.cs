@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using System.Timers; // Adicione se não existir, mas usaremos System.Windows.Forms.Timer
 
 // ra23600 ra23305
-// Gabriel - Andrew
+// Gabriel - Julio
 namespace apListaLigada
 {
     /// <summary>
@@ -20,7 +21,15 @@ namespace apListaLigada
         private string palavraAtual = string.Empty;
         private int contadorErros = 0;
         private int pontosAtuais = 0;
-        private const int MAX_ERROS = 6;
+        private const int MAX_ERROS = 8;
+
+        private System.Windows.Forms.Timer timerJogo;
+        private int tempoRestante = 0;
+        private const int TEMPO_INICIAL = 60; // segundos
+
+        private System.Windows.Forms.Timer timerEnforcado;
+        private int enforcadoElapsedTime = 0; // in seconds
+        private int enforcadoInitialTop = 0;
 
         private enum Modo { Navegacao, Inclusao, Edicao }
         private Modo modoAtual = Modo.Navegacao;
@@ -35,6 +44,32 @@ namespace apListaLigada
 
             // Registrar eventos para os botões de letras
             RegistrarEventosDosBotoes();
+
+            // Inicialização do timer
+            timerJogo = new System.Windows.Forms.Timer();
+            timerJogo.Interval = 1000; // 1 segundo
+            timerJogo.Tick += timerJogo_Tick;
+
+            // Inicialização do timer para animação do "enforcado"
+            timerEnforcado = new System.Windows.Forms.Timer();
+            timerEnforcado.Interval = 250; // adjust as desired for smoother/faster animation
+            timerEnforcado.Tick += timerEnforcado_Tick;
+
+            // Save the initial vertical position of the "enforcado" for later use
+            enforcadoInitialTop = enforcado.Top;
+
+            img_ERRO1.Visible = false;
+            img_ERRO2.Visible = false;
+            img_ERRO3.Visible = false;
+            img_ERRO4.Visible = false;
+            img_ERRO5.Visible = false;
+            img_ERRO6.Visible = false;
+            img_ERRO_0_7.Visible = false;
+            img_ERRO_1_7.Visible = false;
+            img_ERRO8.Visible = false;
+
+            labelPort.Visible = false;
+            labelPortValor.Visible = false;
         }
 
         /// <summary>
@@ -347,7 +382,12 @@ namespace apListaLigada
         /// </summary>
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (vetorDicionario.QtosDados == 0) return;
+            // Verificar se há registros e se a posição atual é válida
+            if (vetorDicionario.QtosDados == 0 || vetorDicionario.PosicaoAtual < 0 || vetorDicionario.PosicaoAtual >= vetorDicionario.QtosDados)
+            {
+                MessageBox.Show("Não há registro selecionado para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             modoAtual = Modo.Edicao;
             txtRA.Enabled = false;  // Não permite alterar a palavra, apenas a dica
@@ -355,10 +395,7 @@ namespace apListaLigada
             txtNome.Focus();
         }
 
-        /// <summary>
-        /// Handles the click event for the "Save" button.
-        /// Saves a new or edited record to VetorDicionario and updates the DataGridView.
-        /// </summary>
+        // No método btnSalvar_Click em Form1.cs
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (modoAtual == Modo.Inclusao)
@@ -408,17 +445,56 @@ namespace apListaLigada
                         tableData.Rows[novaPosicao].Selected = true;
                         tableData.FirstDisplayedScrollingRowIndex = novaPosicao;
                     }
+
+                    // Salva imediatamente após inclusão
+                    if (!string.IsNullOrEmpty(caminhoArquivoSelecionado))
+                    {
+                        try
+                        {
+                            vetorDicionario.SalvarArquivo(caminhoArquivoSelecionado);
+                            toolStripStatusLabel1.Text = "Palavra adicionada e arquivo salvo com sucesso!";
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Erro ao salvar o arquivo: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
             }
             else if (modoAtual == Modo.Edicao)
             {
+                // Verificar se há registros e se a posição atual é válida
+                if (vetorDicionario.QtosDados == 0 || vetorDicionario.PosicaoAtual < 0 || vetorDicionario.PosicaoAtual >= vetorDicionario.QtosDados)
+                {
+                    MessageBox.Show("Operação inválida: não há registro selecionado para salvar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    modoAtual = Modo.Navegacao;
+                    txtRA.Enabled = true;
+                    txtNome.Enabled = true;
+                    ExibirRegistroAtual();
+                    return;
+                }
+
                 string dica = txtNome.Text.Trim();
                 vetorDicionario.AlterarDica(vetorDicionario.PosicaoAtual, dica);
                 ExibirVetorDicionarioNaTabela();
+
+                // Salva imediatamente após edição
+                if (!string.IsNullOrEmpty(caminhoArquivoSelecionado))
+                {
+                    try
+                    {
+                        vetorDicionario.SalvarArquivo(caminhoArquivoSelecionado);
+                        toolStripStatusLabel1.Text = "Dica alterada e arquivo salvo com sucesso!";
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Erro ao salvar o arquivo: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
 
             modoAtual = Modo.Navegacao;
-            txtRA.Enabled = true; // Restaura o estado normal dos campos
+            txtRA.Enabled = true;
             txtNome.Enabled = true;
             ExibirRegistroAtual();
         }
@@ -522,7 +598,17 @@ namespace apListaLigada
             // Reset das imagens da forca
             img_ERRO1.Visible = false;
             img_ERRO2.Visible = false;
+            img_ERRO3.Visible = false;
+            img_ERRO4.Visible = false;
+            img_ERRO5.Visible = false;
+            img_ERRO6.Visible = false;
+            img_ERRO_0_7.Visible = false;
+            img_ERRO_1_7.Visible = false;
+            img_ERRO8.Visible = false;
             // Redefina outros componentes visuais da forca conforme necessário
+
+            cabeca_normal.Visible = true; // Exibe a cabeça normal do boneco da forca
+            cabeca_normal.Image = Properties.Resources.Forca_05;
 
             // Sorteia uma posição aleatória no vetor
             int posicaoSorteada = random.Next(vetorDicionario.QtosDados);
@@ -546,7 +632,7 @@ namespace apListaLigada
             // Configurar o tableForca
             tableForca.Rows.Clear();
             tableForca.Columns.Clear();
-            
+
             // Define o número de colunas baseado no comprimento da palavra processada
             for (int i = 0; i < palavraAtual.Length; i++)
             {
@@ -558,7 +644,7 @@ namespace apListaLigada
 
             // Adiciona uma linha para mostrar as letras
             tableForca.Rows.Add();
-            
+
             // Inicializa as células com espaços em branco ou outro caractere visual para representar letras ocultas
             for (int i = 0; i < palavraAtual.Length; i++)
             {
@@ -568,7 +654,7 @@ namespace apListaLigada
             // Ajustar a altura da linha
             tableForca.RowTemplate.Height = 30;
             tableForca.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            
+
             // Centralizar o conteúdo das células
             tableForca.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             tableForca.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 14, System.Drawing.FontStyle.Bold);
@@ -582,6 +668,14 @@ namespace apListaLigada
 
             // Exibe uma mensagem informativa
             toolStripStatusLabel1.Text = "Jogo iniciado! Adivinhe a palavra.";
+
+            // Tempo inicial do jogo
+            tempoRestante = TEMPO_INICIAL;
+            labelTempoRestante.Text = tempoRestante.ToString();
+
+            // Inicia o timer
+            timerJogo.Stop();
+            timerJogo.Start();
         }
 
         /// <summary>
@@ -591,7 +685,7 @@ namespace apListaLigada
         {
             if (jogoEmAndamento)
             {
-                // Restaura a guia de cadastro
+                timerJogo.Stop();
                 tpCadastro.Parent = tabControl1;
                 jogoEmAndamento = false;
             }
@@ -617,32 +711,32 @@ namespace apListaLigada
         {
             if (!jogoEmAndamento)
                 return;
-            
+
             Button btn = sender as Button;
-            if (btn == null) 
+            if (btn == null)
                 return;
-            
+
             // Obtém a letra do botão pressionado
             char letra = btn.Text[0];
-            
+
             // Desabilita o botão para que não possa ser clicado novamente
             btn.Enabled = false;
-            
+
             // Obtém o objeto Dicionario atual
             Dicionario dicionarioAtual = vetorDicionario[vetorDicionario.PosicaoAtual];
-            
+
             // Verifica se a letra existe na palavra
             bool acertou = dicionarioAtual.TentarLetra(letra);
-            
+
             if (acertou)
             {
                 // Atualiza a exibição das letras na tabela
                 AtualizarExibicaoPalavra(dicionarioAtual);
-                
+
                 // Incrementa pontos
                 pontosAtuais += 10;
                 labelPontosValor.Text = pontosAtuais.ToString();
-                
+
                 // Verifica se o jogo foi concluído com sucesso
                 VerificarFimDeJogo(dicionarioAtual);
             }
@@ -651,15 +745,24 @@ namespace apListaLigada
                 // Incrementa contador de erros
                 contadorErros++;
                 label6.Text = contadorErros.ToString(); // Atualiza o contador de erros na interface
-                
+
                 // Atualiza a representação visual do boneco da forca
                 AtualizarImagemForca();
-                
+
                 // Verifica se o jogo acabou por excesso de erros
                 if (contadorErros >= MAX_ERROS)
                 {
-                    MessageBox.Show($"Fim de jogo! A palavra era: {palavraAtual}", "Derrota", 
+                    cabeca_normal.Image = Properties.Resources.Forca_1_05;
+
+                    MessageBox.Show($"Fim de jogo! A palavra era: {palavraAtual}", "Derrota",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    enforcado.Top = enforcadoInitialTop;
+                    enforcado.Visible = true;
+                    enforcadoElapsedTime = 0;
+                    btnIniciarJogo.Enabled = false;
+
+                    timerEnforcado.Start();
                     FinalizarJogo();
                 }
             }
@@ -671,10 +774,10 @@ namespace apListaLigada
         private void AtualizarExibicaoPalavra(Dicionario dicionario)
         {
             if (dicionario == null) return;
-            
+
             bool[] acertos = dicionario.GetAcertou();
             string palavra = dicionario.Palavra.ToUpper().TrimEnd();
-            
+
             // Atualiza o grid com as letras descobertas
             for (int i = 0; i < palavra.Length && i < tableForca.Columns.Count; i++)
             {
@@ -689,11 +792,11 @@ namespace apListaLigada
         private void VerificarFimDeJogo(Dicionario dicionario)
         {
             if (dicionario == null) return;
-            
+
             bool[] acertos = dicionario.GetAcertou();
             string palavra = dicionario.Palavra.ToUpper().TrimEnd();
             bool ganhou = true;
-            
+
             // Verifica se todas as letras da palavra foram descobertas
             for (int i = 0; i < palavra.Length; i++)
             {
@@ -703,16 +806,16 @@ namespace apListaLigada
                     break;
                 }
             }
-            
+
             if (ganhou)
             {
                 // Adiciona pontuação bônus por finalizar a palavra
                 pontosAtuais += 50;
                 labelPontosValor.Text = pontosAtuais.ToString();
-                
-                MessageBox.Show($"Parabéns! Você acertou a palavra: {palavra}\nPontuação: {pontosAtuais}", 
+
+                MessageBox.Show($"Parabéns! Você acertou a palavra: {palavra}\nPontuação: {pontosAtuais}",
                     "Vitória", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
                 // Finaliza o jogo
                 FinalizarJogo();
             }
@@ -727,11 +830,31 @@ namespace apListaLigada
             {
                 case 1:
                     img_ERRO1.Visible = true;
-                    break;
-                case 2:
                     img_ERRO2.Visible = true;
                     break;
-                // Adicione mais casos conforme necessário para os outros componentes da forca
+                case 2:
+                    img_ERRO2.Visible = false;
+                    img_ERRO3.Visible = true;
+                    break;
+                case 3:
+                    img_ERRO4.Visible = true;
+                    break;
+                case 4:
+                    img_ERRO5.Visible = true;
+                    break;
+                case 5:
+                    img_ERRO6.Visible = true;
+                    break;
+                case 6:
+                    img_ERRO_0_7.Visible = true;
+                    break;
+                case 7:
+                    img_ERRO_1_7.Visible = true;
+                    break;
+                case 8:
+                    img_ERRO8.Visible = true;
+                    break;
+                    // Adicione mais casos conforme necessário para os outros componentes da forca
             }
         }
 
@@ -747,6 +870,64 @@ namespace apListaLigada
                 {
                     button.Click += LetraButton_Click;
                 }
+            }
+        }
+
+        /// <summary>
+        /// Handles the Tick event for the game timer.
+        /// </summary>
+        private void timerJogo_Tick(object sender, EventArgs e)
+        {
+            if (!jogoEmAndamento)
+            {
+                timerJogo.Stop();
+                return;
+            }
+
+            tempoRestante--;
+            labelTempoRestante.Text = tempoRestante.ToString();
+
+            if (tempoRestante <= 0)
+            {
+                timerJogo.Stop();
+                MessageBox.Show("Tempo esgotado! Você perdeu o jogo.", "Tempo Esgotado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FinalizarJogo();
+            }
+        }
+
+        /// <summary>
+        /// Handles the Tick event for the "enforcado" animation timer.
+        /// </summary>
+        private void timerEnforcado_Tick(object sender, EventArgs e)
+        {
+            enforcadoElapsedTime += timerEnforcado.Interval; // counts in ms
+
+            // Move the enforcado upward a bit each tick
+            enforcado.Top -= 2;
+
+            // After 4 seconds (4000ms), stop and reset
+            if (enforcadoElapsedTime >= 4000)
+            {
+                timerEnforcado.Stop();
+                // Optionally reset the position if desired:
+                enforcado.Top = enforcadoInitialTop;
+                // Re-enable the "Iniciar Jogo" button
+                btnIniciarJogo.Enabled = true;
+                enforcado.Visible = false;
+            }
+        }
+
+        private void checkBoxArduino_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxArduino.Checked)
+            {
+                labelPort.Visible = true;
+                labelPortValor.Visible = true;
+            }
+
+            else {
+                labelPort.Visible = false;
+                labelPortValor.Visible = false;
             }
         }
     }
