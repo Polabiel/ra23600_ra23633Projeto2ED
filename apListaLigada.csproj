@@ -52,7 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C:/Users/atacc/source/repos/Polabiel/ra23600_ra23633Projeto2ED/\ConexaoSerial.cs">
+    <Compile Include="ConexaoSerial.cs">
       <Link>ConexaoSerial.cs</Link>
     </Compile>
     <Compile Include="Dicionario.cs" />
